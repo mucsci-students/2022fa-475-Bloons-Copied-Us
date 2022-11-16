@@ -17,4 +17,6 @@ Controls:
   
   - Camera Scroll Up = Move Down In Y Direction (Strictly moves down regardless of camera direction)
   - Camera Scroll Down = Move Up In Y Direction (Strictly moves up regardless of camera direction) 
+  
+  - R = Reset camera to initial position
   ```
