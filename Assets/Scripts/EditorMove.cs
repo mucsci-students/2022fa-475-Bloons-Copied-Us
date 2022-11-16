@@ -2,9 +2,9 @@ using UnityEngine;
  
 public class EditorMove : MonoBehaviour
 {
-    [SerializeField] float speed = 0.5f;
-    [SerializeField] float sensitivity = 1.0f;
-    [SerializeField] float scrollSpeed = 1.0f;
+    [SerializeField] float speed = 0.2f;
+    [SerializeField] float sensitivity = 0.1f;
+    [SerializeField] float scrollSpeed = 3.0f;
  
     private Vector3 initial_pos;
     Quaternion initial_rot;
