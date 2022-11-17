@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Placeable
   - Unplaceable
+  - Enemy
+  - Path
   layers:
   - Default
   - TransparentFX
