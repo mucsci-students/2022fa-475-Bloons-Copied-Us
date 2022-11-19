@@ -9,11 +9,11 @@ public class EnemyMovement : MonoBehaviour
     private int curr;
 
 
-    void Update()
+    void FixedUpdate()
     {
         if (transform.position != target[curr].position)
         {
-            Vector3 pos = Vector3.MoveTowards(transform.position, target[curr].position, speed * Time.deltaTime);
+            Vector3 pos = Vector3.MoveTowards(transform.position, target[curr].position, speed * Time.fixedDeltaTime);
             GetComponent<Rigidbody>().MovePosition(pos);
         } 
         else
