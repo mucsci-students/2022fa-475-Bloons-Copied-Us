@@ -11,6 +11,9 @@ public class UpOnHover : MonoBehaviour
     private Vector3 dnPos;
     private Vector3 upPos;
     private Vector3 currPos;
+
+    public GameObject tower;
+    public GameObject tower2;
  
     void Start() {
         dnPos = transform.position;
@@ -19,9 +22,24 @@ public class UpOnHover : MonoBehaviour
     }
     
     void Update() {
-            transform.position = Vector3.MoveTowards(transform.position, currPos, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, currPos, speed * Time.deltaTime);
+        if (tower2 != null)
+        {
+            tower2.transform.position = transform.position;
+            tower2.transform.position += new Vector3(0f, 1f, 0f);
+        }
     }
  
-    void OnMouseEnter() { currPos = upPos; }
-    void OnMouseExit()  { currPos = dnPos; }
+    void OnMouseEnter() { 
+        currPos = upPos;
+        tower2 = Instantiate(tower);
+        tower2.transform.position = transform.position;
+        tower2.transform.position += new Vector3(0f, 1f, 0f);
+        GameObject range = tower2.transform.GetChild(2).gameObject;
+        range.SetActive(true);
+    }
+    void OnMouseExit()  { 
+        currPos = dnPos;
+        Destroy(tower2);
+    }
 }
