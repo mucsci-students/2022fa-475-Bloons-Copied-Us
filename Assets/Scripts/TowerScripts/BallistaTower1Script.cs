@@ -32,8 +32,11 @@ public class BallistaTower1Script : MonoBehaviour
         {
             Transform target = transform;
 
+            // Update target list
+
             if (fireMode == FireMode.FIRST)
             {
+
                 target = enemiesInRange[0].transform;
             }
 
