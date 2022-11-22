@@ -49,17 +49,15 @@ public class EditorMove : MonoBehaviour
             direction -= Vector3.up * speed;
         transform.Translate(direction);
  
-        if (Input.GetMouseButtonDown(1))
-        {
-            curr = new Vector3(Input.mousePosition.y, -Input.mousePosition.x);
-            Rotation_amount = transform.rotation;
-        }
         if (Input.GetMouseButton(1))
         {
             Quaternion Rotation = Rotation_amount;
             Vector3 dif = curr - new Vector3(Input.mousePosition.y, -Input.mousePosition.x);
             Rotation.eulerAngles += dif * sensitivity;
             transform.rotation = Rotation;
-        }
+        } else {
+			curr = new Vector3(Input.mousePosition.y, -Input.mousePosition.x);
+            Rotation_amount = transform.rotation;
+		}
     }
 }
