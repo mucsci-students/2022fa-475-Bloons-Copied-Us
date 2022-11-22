@@ -9,7 +9,6 @@ public class EditorMove : MonoBehaviour
     private Vector3 initial_pos;
     private Quaternion initial_rot;
 
-    private Camera camera;
     private Vector3 curr;
     private Quaternion Rotation;
     private Quaternion Rotation_amount;
@@ -21,7 +20,6 @@ public class EditorMove : MonoBehaviour
     {
         initial_pos = transform.position;
         initial_rot = transform.rotation;
-        camera = GetComponent<Camera>();
     }
    
     void FixedUpdate()

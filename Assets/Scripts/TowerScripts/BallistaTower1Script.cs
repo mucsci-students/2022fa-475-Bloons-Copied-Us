@@ -50,17 +50,24 @@ public class BallistaTower1Script : MonoBehaviour
             targetDirection.y = 0;
             Vector3 newDirection = Vector3.RotateTowards(ballista.transform.forward, targetDirection, rotateSpeed * Time.deltaTime, 0.0f);
             ballista.transform.rotation = Quaternion.LookRotation(newDirection);
+            Fire (target);
 
         }
 
         timer += Time.deltaTime;
     }
 
-    public void Fire()
+    public void Fire(Transform t)
     {
         if (timer > fireInterval)
         {
-
+            GameObject arrow = Instantiate (ArrowPrefab);
+            arrow.transform.rotation = ballista.transform.rotation;
+            arrow.transform.position = ballista.transform.position;
+            TrackerScript ts = arrow.GetComponent<TrackerScript>();
+            ts.target = t.gameObject;
+            ts.speed = 20f;
+            ts.damage = damage;
             timer = 0f;
         }
     }

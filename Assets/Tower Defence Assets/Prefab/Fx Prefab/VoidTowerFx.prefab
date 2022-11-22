@@ -4835,6 +4835,7 @@ GameObject:
   - component: {fileID: 2211445073731190314}
   - component: {fileID: 2211445073731190313}
   - component: {fileID: 2211445073731190312}
+  - component: {fileID: 5891790002359999387}
   m_Layer: 0
   m_Name: VoidTowerFx
   m_TagString: Untagged
@@ -9649,3 +9650,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &5891790002359999387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2211445073731190295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a571c75cd987453b9eaefa6ea0c60c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 1
