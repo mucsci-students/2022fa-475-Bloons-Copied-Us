@@ -28,6 +28,12 @@ public class BallistaTower1Script : MonoBehaviour
     void Update()
     {
 
+        for (int i = enemiesInRange.Count - 1; i >= 0; i--)
+		{
+			if (enemiesInRange[i] == null)
+				enemiesInRange.RemoveAt(i);
+		}
+
         if (enemiesInRange.Count > 0)
         {
             Transform target = transform;

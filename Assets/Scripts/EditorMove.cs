@@ -7,12 +7,12 @@ public class EditorMove : MonoBehaviour
     [SerializeField] float scrollSpeed = 3.0f;
  
     private Vector3 initial_pos;
-    Quaternion initial_rot;
+    private Quaternion initial_rot;
 
-    Camera camera = new Camera();
-    Vector3 curr;
-    Quaternion Rotation;
-    Quaternion Rotation_amount;
+    private Camera camera;
+    private Vector3 curr;
+    private Quaternion Rotation;
+    private Quaternion Rotation_amount;
     
     
 
