@@ -14,14 +14,14 @@ public class BallistaTower1Script : MonoBehaviour
     public int fireMode = FireMode.FIRST;
 
     private List<GameObject> enemiesInRange = new();
-    private GameObject ballista;
+    private GameObject pivot;
 
     private float timer;
 
 
     void Start()
     {
-        ballista = transform.GetChild(0).gameObject;
+        pivot = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
@@ -48,8 +48,8 @@ public class BallistaTower1Script : MonoBehaviour
 
             Vector3 targetDirection = target.position - transform.position;
             targetDirection.y = 0;
-            Vector3 newDirection = Vector3.RotateTowards(ballista.transform.forward, targetDirection, rotateSpeed * Time.deltaTime, 0.0f);
-            ballista.transform.rotation = Quaternion.LookRotation(newDirection);
+            Vector3 newDirection = Vector3.RotateTowards(pivot.transform.forward, targetDirection, rotateSpeed * Time.deltaTime, 0.0f);
+            pivot.transform.rotation = Quaternion.LookRotation(newDirection);
             Fire (target);
 
         }
@@ -62,8 +62,8 @@ public class BallistaTower1Script : MonoBehaviour
         if (timer > fireInterval)
         {
             GameObject arrow = Instantiate (ArrowPrefab);
-            arrow.transform.rotation = ballista.transform.rotation;
-            arrow.transform.position = ballista.transform.position;
+            arrow.transform.rotation = pivot.transform.rotation;
+            arrow.transform.position = pivot.transform.position;
             TrackerScript ts = arrow.GetComponent<TrackerScript>();
             ts.target = t.gameObject;
             ts.speed = 20f;
