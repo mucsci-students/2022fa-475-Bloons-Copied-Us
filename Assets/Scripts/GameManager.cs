@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         health = (100 / (int)(choice));
-        // Debug.Log(health);
+        // Debug.Log("health: "+ health);
     }   
 
     // Update is called once per frame

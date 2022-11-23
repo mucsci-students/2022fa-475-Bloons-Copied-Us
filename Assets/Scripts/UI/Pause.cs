@@ -14,4 +14,15 @@ public class Pause : MonoBehaviour
         isPaused = true;
         PauseScreen.SetActive(true);
     }
+
+        public void ResumeGame()
+    {
+        if(Pause.isPaused)
+        {
+        Time.timeScale = 1; //set equal to slider later
+        Pause.isPaused = false;
+        PauseScreen.SetActive(false);
+        }
+
+    }
 }
