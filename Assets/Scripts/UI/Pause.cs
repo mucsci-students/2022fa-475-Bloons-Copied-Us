@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Pause : MonoBehaviour
 {
     public static bool isPaused = false;
+    public Slider timeSlider;
+    public TextMeshProUGUI sliderspeed;
     [SerializeField] GameObject PauseScreen;
 
     public void pauseGame()
@@ -19,10 +22,17 @@ public class Pause : MonoBehaviour
     {
         if(Pause.isPaused)
         {
-        Time.timeScale = 1; //set equal to slider later
+        Time.timeScale = timeSlider.value; //set equal to slider later
         Pause.isPaused = false;
         PauseScreen.SetActive(false);
         }
 
+    }
+       
+    public void LateUpdate()
+    {
+        Debug.Log(timeSlider.value);
+        Time.timeScale = timeSlider.value;
+        sliderspeed.SetText("Speed: " + timeSlider.value + "x");
     }
 }

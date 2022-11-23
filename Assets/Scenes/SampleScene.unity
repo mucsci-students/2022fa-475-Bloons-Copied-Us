@@ -848,6 +848,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choice: 1
+  money: 0
+  health: 0
+  camOn: 0
+  HelathBar: {fileID: 1833563314}
+  MoneyUI: {fileID: 283190283}
 --- !u!4 &100379833
 Transform:
   m_ObjectHideFlags: 0
@@ -2431,7 +2436,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 963194230}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &430901755
 GameObject:
@@ -4974,7 +4991,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a982134464dd8fd40ab975d2bff4eaf7, type: 3}
   m_Name: 
@@ -6479,6 +6496,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8ce42a4f5d4d94480af89ab8ad9603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeSlider: {fileID: 1482066952}
+  sliderspeed: {fileID: 1514232164}
   PauseScreen: {fileID: 1534053945}
 --- !u!4 &1180494895
 Transform:
@@ -8218,7 +8237,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: slider, Assembly-CSharp
+        m_MethodName: LateUpdate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1499341007
 GameObject:
   m_ObjectHideFlags: 0

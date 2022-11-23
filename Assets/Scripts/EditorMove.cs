@@ -13,7 +13,6 @@ public class EditorMove : MonoBehaviour
     private Quaternion Rotation;
     private Quaternion Rotation_amount;
     
-    
 
 
     private void Awake()
