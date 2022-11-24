@@ -22,17 +22,20 @@ public class Pause : MonoBehaviour
     {
         if(Pause.isPaused)
         {
-        Time.timeScale = timeSlider.value; //set equal to slider later
-        Pause.isPaused = false;
-        PauseScreen.SetActive(false);
+            Time.timeScale = timeSlider.value; //set equal to slider later
+            Pause.isPaused = false;
+            PauseScreen.SetActive(false);
         }
 
     }
        
     public void LateUpdate()
     {
-        Debug.Log(timeSlider.value);
-        Time.timeScale = timeSlider.value;
-        sliderspeed.SetText("Speed: " + timeSlider.value + "x");
+        // Debug.Log(timeSlider.value);
+        if(!Pause.isPaused)
+        {
+            Time.timeScale = timeSlider.value;
+            sliderspeed.SetText("Speed: " + timeSlider.value + "x");
+        }
     }
 }

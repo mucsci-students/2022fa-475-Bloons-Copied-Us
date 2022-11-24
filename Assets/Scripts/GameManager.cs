@@ -20,8 +20,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI HelathBar;
     [SerializeField] TextMeshProUGUI MoneyUI;
 
-
-
     // Start is called before the first frame update
     void Start()
     {
