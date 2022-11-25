@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class UpOnHover : MonoBehaviour
 {
- 
     public float upAmount = .7f;
     public float speed = 1f;
     
@@ -12,34 +11,55 @@ public class UpOnHover : MonoBehaviour
     private Vector3 upPos;
     private Vector3 currPos;
 
-    public GameObject tower;
-    public GameObject tower2;
+    public GameObject towers;
+    public GameObject towers2;
+
+    [SerializeField] GameObject Gridmap;
+
+    public static bool placed = false;
  
-    void Start() {
+    void Start() 
+    {
         dnPos = transform.position;
         upPos = transform.position + Vector3.up * upAmount;
         currPos = dnPos;
     }
     
-    void Update() {
+    void Update() 
+    {
         transform.position = Vector3.MoveTowards(transform.position, currPos, speed * Time.deltaTime);
-        if (tower2 != null)
+        towers = OpenStore.tower;
+        if (towers2 != null)
         {
-            tower2.transform.position = transform.position;
-            tower2.transform.position += new Vector3(0f, 1f, 0f);
+            towers2.transform.position = transform.position;
+            towers2.transform.position += new Vector3(0f, 1f, 0f);
         }
     }
- 
-    void OnMouseEnter() { 
+
+    void OnMouseEnter() 
+    { 
         currPos = upPos;
-        tower2 = Instantiate(tower);
-        tower2.transform.position = transform.position;
-        tower2.transform.position += new Vector3(0f, 1f, 0f);
-        GameObject range = tower2.transform.GetChild(2).gameObject;
+        towers2 = Instantiate(towers);
+        towers2.transform.position = transform.position;
+        towers2.transform.position += new Vector3(0f, 1f, 0f);
+        GameObject range = towers2.transform.GetChild(2).gameObject;
         range.SetActive(true);
+
+        if(Input.GetMouseButtonDown(0) && GameManager.money >= OpenStore.towerprice)
+        {
+            GameManager.money -= OpenStore.towerprice;
+            placed = true;
+            Gridmap.SetActive(false);
+            OpenStore.tower = null;
+            OpenStore.towerprice = 0;
+        }
     }
-    void OnMouseExit()  { 
+
+    void OnMouseExit()  
+    { 
         currPos = dnPos;
-        Destroy(tower2);
+        if(!placed){
+            Destroy(towers2);
+        }
     }
 }

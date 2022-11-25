@@ -389,8 +389,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upAmount: 0.7
   speed: 1
-  tower: {fileID: 0}
-  tower2: {fileID: 0}
+  towers: {fileID: 0}
+  towers2: {fileID: 0}
+  Gridmap: {fileID: 0}
 --- !u!1 &81434952
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,6 +746,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 81434953}
     m_Modifications:
+    - target: {fileID: 550855200, guid: 68bf32f611e32dd468db202a7ae9986d, type: 3}
+      propertyPath: Gridmap
+      value: 
+      objectReference: {fileID: 81434952}
     - target: {fileID: 5425384017475636824, guid: 68bf32f611e32dd468db202a7ae9986d, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1172,6 +1177,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 81434953}
     m_Modifications:
+    - target: {fileID: 550855200, guid: 68bf32f611e32dd468db202a7ae9986d, type: 3}
+      propertyPath: Gridmap
+      value: 
+      objectReference: {fileID: 81434952}
+    - target: {fileID: 550855200, guid: 68bf32f611e32dd468db202a7ae9986d, type: 3}
+      propertyPath: Ballista
+      value: 
+      objectReference: {fileID: 3419380884433830562, guid: dded34849a8ecc94f82f1bc7422294c4, type: 3}
+    - target: {fileID: 550855200, guid: 68bf32f611e32dd468db202a7ae9986d, type: 3}
+      propertyPath: PortalTower
+      value: 
+      objectReference: {fileID: 8993664480491534570, guid: eaf8d1c15f32bb44babc3246105297a8, type: 3}
     - target: {fileID: 5425384017475636824, guid: 68bf32f611e32dd468db202a7ae9986d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1660,8 +1677,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upAmount: 0.7
   speed: 1
-  tower: {fileID: 0}
-  tower2: {fileID: 0}
+  towers: {fileID: 0}
+  towers2: {fileID: 0}
+  Gridmap: {fileID: 0}
 --- !u!1 &897224435
 GameObject:
   m_ObjectHideFlags: 0
@@ -2768,8 +2786,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upAmount: 0.7
   speed: 1
-  tower: {fileID: 0}
-  tower2: {fileID: 0}
+  towers: {fileID: 0}
+  towers2: {fileID: 0}
+  Gridmap: {fileID: 0}
 --- !u!1 &1639938901
 GameObject:
   m_ObjectHideFlags: 0
@@ -3516,6 +3535,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 451350757}
+    - target: {fileID: 4383581882591608531, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4383581882617522895, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3536,6 +3559,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 451350757}
+    - target: {fileID: 4383581883156707154, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4383581883165782041, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3548,6 +3575,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 451350757}
+    - target: {fileID: 4383581883413596559, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4383581883458754241, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3683,6 +3714,14 @@ PrefabInstance:
       propertyPath: storeui
       value: 
       objectReference: {fileID: 209514744}
+    - target: {fileID: 8657882646110541905, guid: fd28328c0221fd7408fb3dcb357f5aa5, type: 3}
+      propertyPath: Ballista
+      value: 
+      objectReference: {fileID: 3419380884433830562, guid: dded34849a8ecc94f82f1bc7422294c4, type: 3}
+    - target: {fileID: 8657882646110541905, guid: fd28328c0221fd7408fb3dcb357f5aa5, type: 3}
+      propertyPath: PortalTower
+      value: 
+      objectReference: {fileID: 8993664480491534570, guid: eaf8d1c15f32bb44babc3246105297a8, type: 3}
     - target: {fileID: 8657882646416205242, guid: fd28328c0221fd7408fb3dcb357f5aa5, type: 3}
       propertyPath: m_Name
       value: UIButtonElements

@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
     // after menu is made update game difficulty
     public complexity choice = complexity.Easy; 
 
-    public int money;
-    public int health;
+    public static int money = 200;
+    public static int health;
     public bool camOn = false;
 
     [SerializeField] TextMeshProUGUI HelathBar;
