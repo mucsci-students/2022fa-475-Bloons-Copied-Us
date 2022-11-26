@@ -32,6 +32,6 @@ public class GameManager : MonoBehaviour
     {
         HelathBar.SetText("Health: " + health); 
         MoneyUI.SetText("Money: "+ money);
-        
+
     }
 }
