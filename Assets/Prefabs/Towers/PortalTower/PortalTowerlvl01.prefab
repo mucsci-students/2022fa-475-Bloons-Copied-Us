@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5909634092441454705}
   - component: {fileID: 6005965769064154200}
   - component: {fileID: 979089189167561965}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Stand_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 4240426466088121357}
   - component: {fileID: 3131000418959671522}
   - component: {fileID: 2391435376934282617}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ring_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 8993664480489268778}
   - component: {fileID: 6704675953365466217}
   - component: {fileID: 1632048946182512991}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PortalTowerlvl01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 7041440840506869268}
   - component: {fileID: 3396426568506182221}
   - component: {fileID: 3590451370805239799}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,6 +381,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal_low
       objectReference: {fileID: 0}
+    - target: {fileID: 181796264306252332, guid: 82eb7647b32fe4525aefa09a95c02d86, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1696766730670005152, guid: 82eb7647b32fe4525aefa09a95c02d86, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -440,6 +444,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 8993664480491168970}
     m_Modifications:
     - target: {fileID: 2211445072823004683, guid: 8e72262996fb98f49806fec3880bee63, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211445072823004683, guid: 8e72262996fb98f49806fec3880bee63, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -474,6 +482,10 @@ PrefabInstance:
     - target: {fileID: 2211445073731190295, guid: 8e72262996fb98f49806fec3880bee63, type: 3}
       propertyPath: m_Name
       value: VoidTowerFx
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211445073731190295, guid: 8e72262996fb98f49806fec3880bee63, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2211445073731190312, guid: 8e72262996fb98f49806fec3880bee63, type: 3}
       propertyPath: m_Enabled

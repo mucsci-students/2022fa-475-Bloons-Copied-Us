@@ -16,7 +16,7 @@ public class UpOnHover : MonoBehaviour
 
     [SerializeField] GameObject Gridmap;
 
-    public static bool placed = false;
+    public bool placed = false;
  
     void Start() 
     {
@@ -34,29 +34,37 @@ public class UpOnHover : MonoBehaviour
             towers2.transform.position = transform.position;
             towers2.transform.position += new Vector3(0f, 1f, 0f);
         }
-    }
 
-    void OnMouseEnter() 
-    { 
-        currPos = upPos;
-        towers2 = Instantiate(towers);
-        towers2.transform.position = transform.position;
-        towers2.transform.position += new Vector3(0f, 1f, 0f);
-        GameObject range = towers2.transform.GetChild(2).gameObject;
-        range.SetActive(true);
-
-        if(Input.GetMouseButtonDown(0) && GameManager.money >= OpenStore.towerprice)
+        if (Input.GetMouseButtonDown(0) && GameManager.money >= OpenStore.towerprice && towers2 != null && !placed)
         {
+            Debug.Log(gameObject.name);
             GameManager.money -= OpenStore.towerprice;
             placed = true;
-            Gridmap.SetActive(false);
             OpenStore.tower = null;
             OpenStore.towerprice = 0;
         }
     }
 
+    void OnMouseEnter() 
+    {
+        Debug.Log("enter");
+        if (towers != null && !placed)
+        {
+            currPos = upPos;
+            towers2 = Instantiate(towers);
+            towers2.transform.position = transform.position;
+            towers2.transform.position += new Vector3(0f, 1f, 0f);
+            GameObject range = towers2.transform.GetChild(2).gameObject;
+            range.SetActive(true);
+        } else
+        {
+            Debug.Log("Null tower");
+        }
+    }
+
     void OnMouseExit()  
-    { 
+    {
+        Debug.Log("exit");
         currPos = dnPos;
         if(!placed){
             Destroy(towers2);

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3419380884434263680}
   - component: {fileID: 3419380884430872224}
   - component: {fileID: 3419380884431838304}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BallistaBuildinglvl01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4941353528611437751}
   - component: {fileID: 7209704826569126604}
   - component: {fileID: 8183699385762518860}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BallistaTowerlvl01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 3419380884434263684}
   - component: {fileID: 3419380884430872226}
   - component: {fileID: 3419380884431838306}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BowBallistalvl01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8260681610663511824}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 261891461677203727}
   - component: {fileID: 6339426559522651692}
   - component: {fileID: 5788171764817553073}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}

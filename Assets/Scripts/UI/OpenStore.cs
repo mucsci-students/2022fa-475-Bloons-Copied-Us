@@ -28,6 +28,7 @@ public class OpenStore : MonoBehaviour
     public void storeOpen()
     {
         if(!Pause.isPaused) storeui.SetActive(true);
+        Gridmap.SetActive(true);
     }
     public void storeClose()
     {
@@ -41,10 +42,8 @@ public class OpenStore : MonoBehaviour
 
     public void buyBallista()
     {
-        Gridmap.SetActive(true);
         tower = Ballista;
         towerprice = BallistaPrice;
-        UpOnHover.placed = false;
     }
     // public void buyMultiBallista()
     // {
@@ -67,8 +66,7 @@ public class OpenStore : MonoBehaviour
     //     TowerID = 5;
     // }
     public void buyPortalTower()
-    {
-        Gridmap.SetActive(true);
+    { 
         tower = PortalTower;
         towerprice = PortalTowerPrice;
     }
