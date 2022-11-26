@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -392,6 +392,7 @@ MonoBehaviour:
   towers: {fileID: 0}
   towers2: {fileID: 0}
   Gridmap: {fileID: 0}
+  placed: 0
 --- !u!1 &81434952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,6 +1681,7 @@ MonoBehaviour:
   towers: {fileID: 0}
   towers2: {fileID: 0}
   Gridmap: {fileID: 0}
+  placed: 0
 --- !u!1 &897224435
 GameObject:
   m_ObjectHideFlags: 0
@@ -2443,6 +2445,7 @@ MonoBehaviour:
   - {fileID: 1136154245}
   - {fileID: 1048519356}
   speed: 3
+  distanceTraveled: 0
 --- !u!135 &1247895072
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2637,6 +2640,7 @@ MonoBehaviour:
   - {fileID: 489975522}
   - {fileID: 1016358103}
   speed: 4
+  distanceTraveled: 0
 --- !u!4 &1463868666 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5079688318352240816, guid: 2ff8540d558945541a1ff4efced32a48, type: 3}
@@ -2789,6 +2793,7 @@ MonoBehaviour:
   towers: {fileID: 0}
   towers2: {fileID: 0}
   Gridmap: {fileID: 0}
+  placed: 0
 --- !u!1 &1639938901
 GameObject:
   m_ObjectHideFlags: 0
@@ -3551,6 +3556,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1180494894}
+    - target: {fileID: 4383581882830923320, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -27.95996
+      objectReference: {fileID: 0}
     - target: {fileID: 4383581882830923321, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3583,6 +3592,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 451350757}
+    - target: {fileID: 4383581883631150093, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
 --- !u!1001 &7405875796977976431
