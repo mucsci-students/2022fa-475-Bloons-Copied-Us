@@ -109,3 +109,6 @@ MonoBehaviour:
   speed: 0.2
   sensitivity: 0.1
   scrollSpeed: 3
+  topView: {fileID: 0}
+  enemyBaseView: {fileID: 0}
+  homeBaseView: {fileID: 0}
