@@ -40,6 +40,7 @@ public class UpOnHover : MonoBehaviour
             Debug.Log(gameObject.name);
             GameManager.money -= OpenStore.towerprice;
             placed = true;
+            towers2.transform.Find("Range").gameObject.SetActive(false);
             OpenStore.tower = null;
             OpenStore.towerprice = 0;
         }
@@ -54,8 +55,7 @@ public class UpOnHover : MonoBehaviour
             towers2 = Instantiate(towers);
             towers2.transform.position = transform.position;
             towers2.transform.position += new Vector3(0f, 1f, 0f);
-            GameObject range = towers2.transform.GetChild(2).gameObject;
-            range.SetActive(true);
+            towers2.transform.Find("Range").gameObject.SetActive(true);
         } else
         {
             Debug.Log("Null tower");

@@ -199,8 +199,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4240426466088121357}
-  - {fileID: 1032008050133422787}
   - {fileID: 7041440840506869268}
+  - {fileID: 1032008050133422787}
   - {fileID: 5909634092441454705}
   - {fileID: 4591370961787190168}
   m_Father: {fileID: 0}
@@ -318,7 +318,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8993664480491168970}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3396426568506182221
 MeshFilter:
@@ -387,7 +387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1696766730670005152, guid: 82eb7647b32fe4525aefa09a95c02d86, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1696766730670005152, guid: 82eb7647b32fe4525aefa09a95c02d86, type: 3}
       propertyPath: m_LocalPosition.x
