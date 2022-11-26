@@ -11,6 +11,8 @@ public class EnemyMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+
+
         if (transform.position != target[curr].position)
         {
             Vector3 previousPos = transform.position;
@@ -25,6 +27,27 @@ public class EnemyMovement : MonoBehaviour
                 curr = (curr + 1) % target.Length;
             }
         } 
+
+        if (target[curr].position.x < transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0f,270f,0f);
+            Debug.Log("triggered");
+        }
+        else if (target[curr].position.x > transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0f,90f,0f);
+            Debug.Log("triggered");
+        }
+        else if (target[curr].position.z < transform.position.z)
+        {
+            transform.rotation = Quaternion.Euler(0f,180f,0f);
+            Debug.Log("triggered");
+        }
+        else //if (target[curr].position.z > transform.position.z)
+        {
+            transform.rotation = Quaternion.Euler(0f,0f,0f);
+            Debug.Log("triggered");
+        }
         
     }
 }
