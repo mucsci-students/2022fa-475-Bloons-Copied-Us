@@ -146,10 +146,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b09c56411c7ac4386ec517fe766cc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  fireInterval: 2
+  damage: 1
+  fireInterval: 0.25
   cost: 0
-  rotateSpeed: 2
+  rotateSpeed: 10
   ArrowPrefab: {fileID: 7831799172750481848, guid: 76f1978aeaf514a4ca2cf99b95b90d28, type: 3}
   fireMode: 0
 --- !u!135 &8183699385762518860

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 875361786016818583}
   - component: {fileID: 875361786016818587}
   - component: {fileID: 875361786016818586}
+  - component: {fileID: 8874198610306378192}
   m_Layer: 0
   m_Name: fakeEnemy
   m_TagString: Enemy
@@ -129,3 +130,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: []
   speed: 5
+  distanceTraveled: 0
+--- !u!114 &8874198610306378192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875361786016818576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f308b2c0f81a334a88e150962d82a80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5

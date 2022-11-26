@@ -82,7 +82,7 @@ public class EditorMove : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.O) && !isOrthographic)
         {
             Camera.main.orthographic = true;
-            Camera.main.orthographicSize = 10;
+            Camera.main.orthographicSize = 12;
             isOrthographic = true;
         }
 

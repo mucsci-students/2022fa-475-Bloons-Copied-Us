@@ -60,8 +60,7 @@ public class PortalTower1Script : MonoBehaviour
         {
             GameObject fx = Instantiate(FxPrefab);
             fx.transform.position = target.transform.position;
-            enemiesInRange.Remove(target);
-            Destroy(target);
+            target.GetComponent<EnemyScript>().takeDamage(damage);
             timer = 0f;
         }
     }
