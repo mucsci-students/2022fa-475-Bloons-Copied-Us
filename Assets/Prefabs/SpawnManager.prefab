@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2595296699688714310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2595296699688714308}
+  - component: {fileID: 2595296699688714309}
+  m_Layer: 0
+  m_Name: SpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2595296699688714308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2595296699688714310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.951015, y: 26.823235, z: -30.663496}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2595296699688714309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2595296699688714310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbd9204afa32244f96c725f69ae8399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  spawn: {fileID: 0}
+  events:
+  - duration: 15
+    spawnInfos:
+    - spawnPrefab: {fileID: 875361786016818576, guid: 7f807d71780f9421387a631ec2c9de6a, type: 3}
+      amount: 10
+      interval: 1
+  - duration: 30
+    spawnInfos:
+    - spawnPrefab: {fileID: 875361786016818576, guid: 7f807d71780f9421387a631ec2c9de6a, type: 3}
+      amount: 10
+      interval: 2
+    - spawnPrefab: {fileID: 875361786016818576, guid: 7f807d71780f9421387a631ec2c9de6a, type: 3}
+      amount: 5
+      interval: 2.5
+  - duration: 60
+    spawnInfos:
+    - spawnPrefab: {fileID: 875361786016818576, guid: 7f807d71780f9421387a631ec2c9de6a, type: 3}
+      amount: 50
+      interval: 1
+    - spawnPrefab: {fileID: 8203885564744122938, guid: 22b6f5fc6667d4531a907673eb9b6419, type: 3}
+      amount: 5
+      interval: 7.75
+    - spawnPrefab: {fileID: 881130137890756554, guid: d15ab8e0e8e10084fb248251e4df39df, type: 3}
+      amount: 1
+      interval: 31.3
+  WaveNumber: 0
