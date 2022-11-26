@@ -1,5 +1,133 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &169867127956099551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4917181881239052266}
+  m_Layer: 0
+  m_Name: UIButtonElements
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4917181881239052266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169867127956099551}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -107.906494, y: -198.37622, z: 20.50543}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2495563689345883269}
+  - {fileID: 6057055384500459090}
+  m_Father: {fileID: 4383581881925144380}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &456367902778931468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2495563689345883269}
+  - component: {fileID: 4425721594720142255}
+  m_Layer: 0
+  m_Name: StoreObj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2495563689345883269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456367902778931468}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -89.77991, y: -0.30358887, z: 0.24359703}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4917181881239052266}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4425721594720142255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456367902778931468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f551ff2483aaa4ba9fe03a70356e5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeui: {fileID: 4383581883156707154}
+  Gridmap: {fileID: 0}
+  Ballista: {fileID: 3419380884433830562, guid: dded34849a8ecc94f82f1bc7422294c4, type: 3}
+  PortalTower: {fileID: 8993664480491534570, guid: eaf8d1c15f32bb44babc3246105297a8, type: 3}
+--- !u!1 &4192564266379836936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6057055384500459090}
+  - component: {fileID: 2283518476467593908}
+  m_Layer: 0
+  m_Name: pauseObj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6057055384500459090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4192564266379836936}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 120.81641, y: 270.6217, z: -13.55413}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4917181881239052266}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2283518476467593908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4192564266379836936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8ce42a4f5d4d94480af89ab8ad9603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeSlider: {fileID: 4383581881745984418}
+  sliderspeed: {fileID: 4383581881780215502}
+  PauseScreen: {fileID: 4383581881765431699}
 --- !u!1 &4383581881621122858
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,7 +1038,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
         m_MethodName: buyIceTower
         m_Mode: 1
@@ -1178,6 +1306,7 @@ RectTransform:
   - {fileID: 4383581883156707155}
   - {fileID: 4383581881745984429}
   - {fileID: 4383581882830923320}
+  - {fileID: 4917181881239052266}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1640,7 +1769,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
         m_MethodName: buyFireTower
         m_Mode: 1
@@ -2634,7 +2763,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2283518476467593908}
         m_TargetAssemblyTypeName: Pause, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -3161,7 +3290,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
         m_MethodName: buyPortalTower
         m_Mode: 1
@@ -4043,7 +4172,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
         m_MethodName: storeClose
         m_Mode: 1
@@ -4348,7 +4477,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.9053021, y: 0.81988895}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00024414, y: -0.0011597}
+  m_AnchoredPosition: {x: 0.00024414062, y: -0.001159668}
   m_SizeDelta: {x: 121.21, y: -285.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4383581882809798229
@@ -4433,7 +4562,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2283518476467593908}
         m_TargetAssemblyTypeName: Pause, Assembly-CSharp
         m_MethodName: pauseGame
         m_Mode: 1
@@ -4667,7 +4796,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
         m_MethodName: buyBallista
         m_Mode: 1
@@ -5348,7 +5477,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2283518476467593908}
         m_TargetAssemblyTypeName: Pause, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -5604,7 +5733,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
         m_MethodName: buyLightningTower
         m_Mode: 1
@@ -5874,7 +6003,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
         m_MethodName: buyMultiBallista
         m_Mode: 1
@@ -6299,7 +6428,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
         m_MethodName: storeOpen
         m_Mode: 1
