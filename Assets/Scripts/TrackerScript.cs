@@ -31,7 +31,7 @@ public class TrackerScript : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag ("Enemy"))
 		{
-			other.GetComponent<EnemyScript>().takeDamage(damage);
+			other.GetComponent<EnemyScript>().TakeDamage(damage);
 			Destroy (gameObject);
 		}
 	}

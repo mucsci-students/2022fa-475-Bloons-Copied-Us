@@ -63,23 +63,33 @@ MonoBehaviour:
     - spawnPrefab: {fileID: 875361786016818576, guid: 7f807d71780f9421387a631ec2c9de6a, type: 3}
       amount: 10
       interval: 1
-  - duration: 30
+  - duration: 15
     spawnInfos:
-    - spawnPrefab: {fileID: 875361786016818576, guid: 7f807d71780f9421387a631ec2c9de6a, type: 3}
-      amount: 10
-      interval: 2
-    - spawnPrefab: {fileID: 875361786016818576, guid: 7f807d71780f9421387a631ec2c9de6a, type: 3}
-      amount: 5
-      interval: 2.5
-  - duration: 60
-    spawnInfos:
-    - spawnPrefab: {fileID: 875361786016818576, guid: 7f807d71780f9421387a631ec2c9de6a, type: 3}
-      amount: 50
-      interval: 1
     - spawnPrefab: {fileID: 8203885564744122938, guid: 22b6f5fc6667d4531a907673eb9b6419, type: 3}
       amount: 5
-      interval: 7.75
+      interval: 1
+  - duration: 15
+    spawnInfos:
+    - spawnPrefab: {fileID: 8203885564744122938, guid: 22b6f5fc6667d4531a907673eb9b6419, type: 3}
+      amount: 2
+      interval: 5
+    - spawnPrefab: {fileID: 875361786016818576, guid: 7f807d71780f9421387a631ec2c9de6a, type: 3}
+      amount: 8
+      interval: 0.75
+  - duration: 20
+    spawnInfos:
+    - spawnPrefab: {fileID: 875361786016818576, guid: 7f807d71780f9421387a631ec2c9de6a, type: 3}
+      amount: 12
+      interval: 0.8
+    - spawnPrefab: {fileID: 875361786016818576, guid: 7f807d71780f9421387a631ec2c9de6a, type: 3}
+      amount: 6
+      interval: 2.8
+    - spawnPrefab: {fileID: 875361786016818576, guid: 7f807d71780f9421387a631ec2c9de6a, type: 3}
+      amount: 1
+      interval: 10
+  - duration: 25
+    spawnInfos:
     - spawnPrefab: {fileID: 881130137890756554, guid: d15ab8e0e8e10084fb248251e4df39df, type: 3}
       amount: 1
-      interval: 31.3
+      interval: 1
   WaveNumber: 0

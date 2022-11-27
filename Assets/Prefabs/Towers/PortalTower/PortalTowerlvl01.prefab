@@ -281,8 +281,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5026522d3542a46929874f75f93968b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2.5
-  fireInterval: 1
+  damage: 3
+  fireInterval: 0.9
   cost: 0
   rotateSpeed: 10
   FxPrefab: {fileID: 2211445073731190295, guid: 8e72262996fb98f49806fec3880bee63, type: 3}

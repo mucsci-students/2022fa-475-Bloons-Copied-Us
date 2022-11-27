@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  fireInterval: 0.25
+  fireInterval: 0.75
   cost: 0
   rotateSpeed: 10
   ArrowPrefab: {fileID: 7831799172750481848, guid: 76f1978aeaf514a4ca2cf99b95b90d28, type: 3}
@@ -163,7 +163,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 50
+  m_Radius: 35
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3419380884433830564
 GameObject:
@@ -307,7 +307,7 @@ Transform:
   m_GameObject: {fileID: 4972123756647425384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 100, y: 1, z: 100}
+  m_LocalScale: {x: 70, y: 1, z: 70}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3419380884434263682}

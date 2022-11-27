@@ -29,11 +29,15 @@ public class EnemyScript : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void takeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
         if (health <= 0)
+        {
             Die();
+            GameManager.money += (int) (damage + health);
+        } else
+            GameManager.money += (int) damage;
     }
 
 }

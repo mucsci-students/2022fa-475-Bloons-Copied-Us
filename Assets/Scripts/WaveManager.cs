@@ -47,6 +47,7 @@ public class WaveManager : MonoBehaviour
             }
             else
             {
+                GameManager.money += WaveNumber * 5;
                 ++WaveNumber;
                 events[0].StartEvent();
             }
