@@ -286,7 +286,7 @@ MonoBehaviour:
   cost: 0
   rotateSpeed: 10
   FxPrefab: {fileID: 2211445073731190295, guid: 8e72262996fb98f49806fec3880bee63, type: 3}
-  fireMode: 0
+  targetMode: 0
 --- !u!1 &9092374283886050903
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,10 +5,10 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
 
-    [SerializeField] float health;
+    public float health;
 
     // Used to set dead, so other enemies do not target if this enemy is about to die.
-    public static bool dead = false;
+    public bool isDead = false;
 
     // Start is called before the first frame update
     void Start()

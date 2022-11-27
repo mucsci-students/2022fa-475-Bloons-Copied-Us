@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static FireMode;
 
 public class BallistaTower1Script : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class BallistaTower1Script : MonoBehaviour
     [SerializeField] float rotateSpeed;
     [SerializeField] GameObject ArrowPrefab;
 
-    public int fireMode = FireMode.FIRST;
+    public TargetMode targetMode = TargetMode.FIRST;
 
     private List<GameObject> enemiesInRange = new();
     private GameObject pivot;
@@ -27,12 +28,37 @@ public class BallistaTower1Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject first = null;
+        GameObject strongest = null;
+        GameObject AITarget = null;
 
+        // Loop backwords since we are deleting elements in a list that shift on delete
         for (int i = enemiesInRange.Count - 1; i >= 0; i--)
-		{
-			if (enemiesInRange[i] == null)
-				enemiesInRange.RemoveAt(i);
-		}
+        {
+            // Delete null objects
+            if (enemiesInRange[i] == null || enemiesInRange[i].GetComponent<EnemyScript>().isDead)
+                enemiesInRange.RemoveAt(i);
+            else
+            {
+                // Find farthest enemy
+                if (first == null)
+                    first = enemiesInRange[i];
+                else if (enemiesInRange[i].GetComponent<EnemyMovement>().distanceTraveled > first.GetComponent<EnemyMovement>().distanceTraveled)
+                    first = enemiesInRange[i];
+
+                // Find strongest enemy
+                if (strongest == null)
+                    strongest = enemiesInRange[i];
+                else if (enemiesInRange[i].GetComponent<EnemyScript>().health > strongest.GetComponent<EnemyScript>().health)
+                    strongest = enemiesInRange[i];
+
+                // AI formula
+                if (AITarget == null)
+                    AITarget = enemiesInRange[i];
+                else if (AIWeight(enemiesInRange[i]) > AIWeight(AITarget))
+                    AITarget = enemiesInRange[i];
+            }
+        }
 
         if (enemiesInRange.Count > 0)
         {
@@ -40,10 +66,16 @@ public class BallistaTower1Script : MonoBehaviour
 
             // Update target list
 
-            if (fireMode == FireMode.FIRST)
+            if (targetMode == TargetMode.FIRST)
             {
-
-                target = enemiesInRange[0].transform;
+                target = first.transform;
+            }
+            else if (targetMode == TargetMode.STRONGEST)
+            {
+                target = strongest.transform;
+            } else if (targetMode == TargetMode.AI)
+            {
+                target = AITarget.transform;
             }
 
             Vector3 targetDirection = target.position - transform.position;
@@ -62,13 +94,16 @@ public class BallistaTower1Script : MonoBehaviour
         if (timer > fireInterval)
         {
             GameObject arrow = Instantiate (ArrowPrefab);
-            arrow.transform.rotation = pivot.transform.rotation;
-            arrow.transform.position = pivot.transform.position;
+            arrow.transform.SetPositionAndRotation(pivot.transform.position, pivot.transform.rotation);
             TrackerScript ts = arrow.GetComponent<TrackerScript>();
             ts.target = t.gameObject;
             ts.speed = 20f;
             ts.damage = damage;
             timer = 0f;
+
+            // Testing
+            //if (t.gameObject.GetComponent<EnemyScript>().health - damage <= 0)
+                //t.gameObject.GetComponent<EnemyScript>().isDead = true;
         }
     }
 

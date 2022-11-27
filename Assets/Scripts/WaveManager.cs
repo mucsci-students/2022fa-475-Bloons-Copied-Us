@@ -84,8 +84,7 @@ public class WaveManager : MonoBehaviour
 
                 if (spawnInfos[i].amount == 0)
                 {
-                    spawnInfos.RemoveAt(i);
-                    --i;
+                    spawnInfos.RemoveAt(i--);
                 }
             }
 

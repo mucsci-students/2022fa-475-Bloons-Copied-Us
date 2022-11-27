@@ -17,12 +17,12 @@ public class OpenStore : MonoBehaviour
     [SerializeField] GameObject PortalTower;
     // multiply prices by complexity? 
     // upgrade prices later
-    int BallistaPrice = 5;
+    int BallistaPrice = 75;
     int MultiBallistaPrice = 10;
-    int FireTowerPrice = 15;
+    int FireTowerPrice = 125;
     int IceTowerPrice = 20;
     int LightningTowerPrice = 25;
-    int PortalTowerPrice = 30;
+    int PortalTowerPrice = 100;
     //*********************************************
     // open and close store
     public void storeOpen()
