@@ -2,7 +2,7 @@
 Current controls for reference:
 ```
 Camera Controls are identcial to the controls in Unity's 3D editor and are largely dependent on the camera direction.
-
+CAMERA MUST BE ENABLED FOR THIS TO WORK. IF UNWANTED PRESS THE INGAME CAMERA BUTTON TO DISABLE MOVEMENT.
 Controls:
 
   - Right Click + Move Mouse = Move direction the camera is facing
@@ -19,4 +19,8 @@ Controls:
   - Camera Scroll Down = Move Up In Y Direction (Strictly moves up regardless of camera direction) 
   
   - R = Reset camera to initial position
+  - O = Switches to orthographic camera mode
+  - Keyrow 1 = Top down view
+  - Keyrow 2 = Enemy base view
+  - Keyrow 3 = Ally base view
   ```
