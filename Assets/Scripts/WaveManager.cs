@@ -9,7 +9,7 @@ public class WaveManager : MonoBehaviour
 
     public List<WaveEvent> events = new();
 
-    public int WaveNumber = 0;
+    public static int WaveNumber = 0;
 
     private bool isPlaying = false;
 
