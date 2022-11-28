@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class OpenStore : MonoBehaviour
 {
     [SerializeField] GameObject storeui;
+    [SerializeField] GameObject InsuffFundsMessage;
 
     //gridmap display when click on tower to buy
     [SerializeField] GameObject Gridmap;
@@ -27,13 +29,19 @@ public class OpenStore : MonoBehaviour
     // open and close store
     public void storeOpen()
     {
-        if(!Pause.isPaused) storeui.SetActive(true);
-        Gridmap.SetActive(true);
+        if(!Pause.isPaused)
+        {
+            storeui.SetActive(true);
+            Gridmap.SetActive(true);
+        }
     }
     public void storeClose()
     {
-        if (!Pause.isPaused) storeui.SetActive(false);
-        Gridmap.SetActive(false);
+        if (!Pause.isPaused)
+        {
+            storeui.SetActive(false);
+            Gridmap.SetActive(false);
+        }
     }
     //**********************************************
     // tower buying
@@ -42,34 +50,66 @@ public class OpenStore : MonoBehaviour
 
     public void buyBallista()
     {
+        bool check = storeHelper(BallistaPrice);
+        if (!check) return;
         tower = Ballista;
         towerprice = BallistaPrice;
     }
-    // public void buyMultiBallista()
-    // {
-    //     Gridmap.SetActive(true);
-    //     TowerID = 2;
-    // }
-    // public void buyFireTower()
-    // {
-    //     Gridmap.SetActive(true);
-    //     TowerID = 3;
-    // }
-    // public void buyIceTower()
-    // {
-    //     Gridmap.SetActive(true);
-    //     TowerID = 4;
-    // }
-    // public void buyLightningTower()
-    // {
-    //     Gridmap.SetActive(true);
-    //     TowerID = 5;
-    // }
+    //public void buymultiballista()
+    //{
+    //    bool check = storeHelper(MultiBallistaPrice);
+    //    if (!check) return;
+    //    tower = MultiBallista;
+    //    towerprice =  BallistaPrice;
+    //}
+    //public void buyfiretower()
+    //{
+    //    bool check =storeHelper(FireTowerPrice);
+    //    if (!check) return;
+    //    tower = FireTower;
+    //    towerprice = FireTowerPrice
+    //}
+    //public void buyicetower()
+    //{
+    //    bool check = storeHelper(IceTowerPrice);
+    //    if (!check) return;
+    //    tower = IceTower;
+    //    towerprice = IceTowerPrice;
+    //}
+    //public void buylightningtower()
+    //{
+    //    bool check = storeHelper(LightningTowerPrice);
+    //    if (!check) return;
+    //    tower = LightningTower;
+    //    towerprice = LightningTowerPrice;
+    //}
     public void buyPortalTower()
     { 
+        bool check = storeHelper(PortalTowerPrice);
+        if (!check) return;
         tower = PortalTower;
         towerprice = PortalTowerPrice;
     }
 
+    IEnumerator Waiter(float time)
+    {
+        InsuffFundsMessage.SetActive(true);
+        yield return new WaitForSeconds(time);
+        InsuffFundsMessage.SetActive(false);
+    }
+    public bool storeHelper(int moneycheck)
+    {
+        if (Pause.isPaused) return false;
+
+        if (GameManager.money < moneycheck)
+        {
+            StartCoroutine(Waiter(1f));
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
 
 }

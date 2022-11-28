@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17894407, g: 0.22406572, b: 0.30590865, a: 1}
+  m_IndirectSpecularColor: {r: 0.1789436, g: 0.22406486, b: 0.30590764, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9061,50 +9061,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4383581882591608531, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4383581882617522889, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4383581882809798225, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4383581882809798230, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.00024414062
-      objectReference: {fileID: 0}
-    - target: {fileID: 4383581882809798230, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.001159668
-      objectReference: {fileID: 0}
-    - target: {fileID: 4383581882830923320, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 8.193848
-      objectReference: {fileID: 0}
-    - target: {fileID: 4383581882830923320, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -27.95996
-      objectReference: {fileID: 0}
-    - target: {fileID: 4383581882830923321, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4383581882830923321, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4383581882830923321, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_enabled
-      objectReference: {fileID: 0}
-    - target: {fileID: 4383581882830923321, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4383581883156707154, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4383581883413596559, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
