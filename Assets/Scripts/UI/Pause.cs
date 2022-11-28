@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using JetBrains.Annotations;
 
 public class Pause : MonoBehaviour
 {
@@ -10,7 +11,13 @@ public class Pause : MonoBehaviour
     public Slider timeSlider;
     public TextMeshProUGUI sliderspeed;
     [SerializeField] GameObject PauseScreen;
+    public static float TimeSliderGet;
+    public static GameObject PauseMenu;
 
+    void Awake()
+    {
+        PauseMenu = PauseScreen;
+    }
     public void pauseGame()
     {
         Time.timeScale = 0;
@@ -34,6 +41,7 @@ public class Pause : MonoBehaviour
         // Debug.Log(timeSlider.value);
         if(!Pause.isPaused)
         {
+            TimeSliderGet = timeSlider.value;
             Time.timeScale = timeSlider.value;
             sliderspeed.SetText("Speed: " + timeSlider.value + "x");
         }

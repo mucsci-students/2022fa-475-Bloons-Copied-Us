@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     public static int money = 100;
     public static int health;
+    //deprecated?
     public bool camOn = false;
 
     [SerializeField] TextMeshProUGUI HelathBar;
@@ -30,6 +31,26 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //********************************************
+        // controls
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!Pause.isPaused)
+            {
+                Pause.PauseMenu.SetActive(true);
+                Time.timeScale = 0;
+                Pause.isPaused = !Pause.isPaused;
+            }
+            else
+            {
+                Pause.PauseMenu.SetActive(false);
+                Time.timeScale = Pause.TimeSliderGet;
+                Pause.isPaused = !Pause.isPaused;
+            }
+        }
+        //********************************************
+
         HelathBar.SetText("Health: " + health); 
         MoneyUI.SetText("Money: "+ money);
 
