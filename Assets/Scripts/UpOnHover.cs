@@ -14,8 +14,6 @@ public class UpOnHover : MonoBehaviour
     public GameObject towers;
     public GameObject towers2;
 
-    public GameObject[] towersList;
-
     [SerializeField] GameObject Gridmap;
 
     public bool placed = false;
@@ -45,22 +43,6 @@ public class UpOnHover : MonoBehaviour
             towers2.transform.Find("Range").gameObject.SetActive(false);
             OpenStore.tower = null;
             OpenStore.towerprice = 0;
-        }
-        // changing layer if store is open or not
-        towersList = GameObject.FindGameObjectsWithTag("Tower");
-        if (OpenStore.isStoreOpen)
-        {
-            foreach (GameObject go in towersList)
-            {
-                go.layer = 2;
-            }
-        }
-        else
-        {
-            foreach (GameObject go in towersList)
-            {
-                go.layer = 0;
-            }
         }
 
     }
