@@ -1,9 +1,12 @@
 # 2022fa-475-Bloons-Copied-Us
-Current controls for reference:
-```
+3D Tower Defense game with a low poly setting. Built in 3 weeks for game 3 (final) for the game dev course.
+
+## Controls
+
 Camera Controls are identcial to the controls in Unity's 3D editor and are largely dependent on the camera direction.
 CAMERA MUST BE ENABLED FOR THIS TO WORK. IF UNWANTED PRESS THE INGAME CAMERA BUTTON TO DISABLE MOVEMENT.
-Controls:
+
+### Camera Controls
 
   - Right Click + Move Mouse = Move direction the camera is facing
 
@@ -23,4 +26,16 @@ Controls:
   - Keyrow 1 = Top down view
   - Keyrow 2 = Enemy base view
   - Keyrow 3 = Ally base view
-  ```
+
+### Other
+  - Space = Starts first wave
+
+## Credits
+
+### Authors
+  - [Justin Stevens](https://github.com/JSteve0)
+  - [Jon](https://github.com/CodeDog3)
+  - [Christian](https://github.com/christianxxgames)
+
+### Assets
+
