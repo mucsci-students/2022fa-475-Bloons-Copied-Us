@@ -26,6 +26,7 @@ public class EnemyScript : MonoBehaviour
     // Made it a method, so in the future we can add animations here
     private void Die ()
     {
+        --WaveManager.enemies;
         Destroy(gameObject);
     }
 

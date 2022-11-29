@@ -4,22 +4,27 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
-    [SerializeField] private Transform[] path;
     [SerializeField] private Transform spawn;
+    [SerializeField] private float WaveTimer = 15f;
+    private float timer = 0f;
+    [SerializeField] private Transform[] path;
 
     public List<WaveEvent> events = new();
 
     public static int WaveNumber = 0;
+    public static int enemies = 0;
 
     private bool isPlaying = false;
+    private bool betweenRounds = false;
+    private bool autoPlay = false;
 
     public void StartWave()
     {
         isPlaying = true;
         ++WaveNumber;
-        if (!isPlaying && events.Count != 0)
+        if (events.Count != 0)
         {
-            events[0].StartEvent();
+            enemies = events[0].StartEvent();
         }
         else
         {
@@ -30,15 +35,15 @@ public class WaveManager : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !isPlaying)
             StartWave();
 
         if (!isPlaying)
             return;
 
-        if (!events[0].RunEvent(path, spawn))
+        if (!betweenRounds && !events[0].RunEvent(path, spawn) && enemies == 0)
         {
-            Debug.Log("End Event");
+            Debug.Log("Wave Ended");
             events.RemoveAt(0);
             if (events.Count == 0)
             {
@@ -48,8 +53,18 @@ public class WaveManager : MonoBehaviour
             else
             {
                 GameManager.money += WaveNumber * 5;
+                betweenRounds = true;
+            }
+        }
+        if (enemies == 0)
+        {
+            timer += Time.deltaTime;
+            if (timer > WaveTimer)
+            {
                 ++WaveNumber;
-                events[0].StartEvent();
+                enemies = events[0].StartEvent();
+                timer = 0;
+                betweenRounds = false;
             }
         }
     }
@@ -57,26 +72,24 @@ public class WaveManager : MonoBehaviour
     [System.Serializable]
     public class WaveEvent
     {
-        
-        public float duration = 15.0f;
+      
         public List<SpawnInfo> spawnInfos = new();
 
-        private float startTime;
-
-        public void StartEvent()
+        public int StartEvent()
         {
-            startTime = Time.time;
+            Debug.Log("Wave " + WaveManager.WaveNumber + " started");
+            int enemies = 0;
             foreach (var spawnInfo in spawnInfos)
             {
                 spawnInfo.Start();
+                enemies += spawnInfo.amount;
             }
+            return enemies;
         }
 
         public bool RunEvent(Transform[] path, Transform spawn)
         {
-            if (duration == 0.0f && spawnInfos.Count == 0)
-                return false;
-            else if (Time.time - startTime > duration && duration != 0.0f)
+            if (spawnInfos.Count == 0)
                 return false;
 
             for (int i = 0; i < spawnInfos.Count; i++)
