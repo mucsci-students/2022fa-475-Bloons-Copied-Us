@@ -13,10 +13,10 @@ public class OpenStore : MonoBehaviour
     [SerializeField] GameObject Gridmap;
 
     [SerializeField] GameObject Ballista;
-    // [SerializeField] GameObject MultiBallista;
-    // [SerializeField] GameObject FireTower;
-    // [SerializeField] GameObject IceTower;
-    // [SerializeField] GameObject LightningTower;
+    [SerializeField] GameObject MultiBallista;
+    [SerializeField] GameObject FireTower;
+    [SerializeField] GameObject IceTower;
+    [SerializeField] GameObject LightningTower;
     [SerializeField] GameObject PortalTower;
     // multiply prices by complexity? 
     // upgrade prices later
@@ -60,34 +60,34 @@ public class OpenStore : MonoBehaviour
         tower = Ballista;
         towerprice = BallistaPrice;
     }
-    //public void buymultiballista()
-    //{
-    //    bool check = storeHelper(MultiBallistaPrice);
-    //    if (!check) return;
-    //    tower = MultiBallista;
-    //    towerprice =  BallistaPrice;
-    //}
-    //public void buyfiretower()
-    //{
-    //    bool check =storeHelper(FireTowerPrice);
-    //    if (!check) return;
-    //    tower = FireTower;
-    //    towerprice = FireTowerPrice
-    //}
-    //public void buyicetower()
-    //{
-    //    bool check = storeHelper(IceTowerPrice);
-    //    if (!check) return;
-    //    tower = IceTower;
-    //    towerprice = IceTowerPrice;
-    //}
-    //public void buylightningtower()
-    //{
-    //    bool check = storeHelper(LightningTowerPrice);
-    //    if (!check) return;
-    //    tower = LightningTower;
-    //    towerprice = LightningTowerPrice;
-    //}
+    public void buymultiballista()
+    {
+        bool check = storeHelper(MultiBallistaPrice);
+        if (!check) return;
+        tower = MultiBallista;
+        towerprice =  BallistaPrice;
+    }
+    public void buyfiretower()
+    {
+        bool check =storeHelper(FireTowerPrice);
+        if (!check) return;
+        tower = FireTower;
+        towerprice = FireTowerPrice;
+    }
+    public void buyicetower()
+    {
+        bool check = storeHelper(IceTowerPrice);
+        if (!check) return;
+        tower = IceTower;
+        towerprice = IceTowerPrice;
+    }
+    public void buylightningtower()
+    {
+        bool check = storeHelper(LightningTowerPrice);
+        if (!check) return;
+        tower = LightningTower;
+        towerprice = LightningTowerPrice;
+    }
     public void buyPortalTower()
     { 
         bool check = storeHelper(PortalTowerPrice);

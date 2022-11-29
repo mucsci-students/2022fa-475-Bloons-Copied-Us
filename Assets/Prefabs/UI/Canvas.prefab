@@ -1650,6 +1650,10 @@ MonoBehaviour:
   InsuffFundsMessage: {fileID: 250594707}
   Gridmap: {fileID: 0}
   Ballista: {fileID: 3419380884433830562, guid: dded34849a8ecc94f82f1bc7422294c4, type: 3}
+  MultiBallista: {fileID: 975425628818340472, guid: e7eec4a4cf8054942b616fc4780edc55, type: 3}
+  FireTower: {fileID: 5994176029770567409, guid: b39a19358f009634a94885443b7c4f79, type: 3}
+  IceTower: {fileID: 5602294575269227299, guid: efbbc789115fc7f4781fd42457521ca4, type: 3}
+  LightningTower: {fileID: 1772950867402154908, guid: b15ddb8a5afa89e49b0f2150d893569b, type: 3}
   PortalTower: {fileID: 8993664480491534570, guid: eaf8d1c15f32bb44babc3246105297a8, type: 3}
 --- !u!1 &4192564266379836936
 GameObject:
@@ -2610,7 +2614,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
-        m_MethodName: buyIceTower
+        m_MethodName: buyicetower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3344,7 +3348,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
-        m_MethodName: buyFireTower
+        m_MethodName: buyfiretower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7308,7 +7312,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
-        m_MethodName: buyLightningTower
+        m_MethodName: buylightningtower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7578,7 +7582,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
-        m_MethodName: buyMultiBallista
+        m_MethodName: buymultiballista
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
