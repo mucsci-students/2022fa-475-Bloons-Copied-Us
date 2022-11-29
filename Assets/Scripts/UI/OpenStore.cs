@@ -6,6 +6,7 @@ using UnityEngine;
 public class OpenStore : MonoBehaviour
 {
     [SerializeField] GameObject storeui;
+    [SerializeField] GameObject removeui;
     [SerializeField] GameObject InsuffFundsMessage;
 
     //gridmap display when click on tower to buy
@@ -25,12 +26,15 @@ public class OpenStore : MonoBehaviour
     int IceTowerPrice = 140;
     int LightningTowerPrice = 160;
     int PortalTowerPrice = 100;
+
+    public static bool isStoreOpen = false;
     //*********************************************
     // open and close store
     public void storeOpen()
     {
         if(!Pause.isPaused)
         {
+            isStoreOpen = true;
             storeui.SetActive(true);
             Gridmap.SetActive(true);
         }
@@ -39,6 +43,7 @@ public class OpenStore : MonoBehaviour
     {
         if (!Pause.isPaused)
         {
+            isStoreOpen = false;
             storeui.SetActive(false);
             Gridmap.SetActive(false);
         }
@@ -111,5 +116,8 @@ public class OpenStore : MonoBehaviour
             return true;
         }
     }
-
 }
+
+
+
+

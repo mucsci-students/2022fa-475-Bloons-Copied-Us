@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     // after menu is made update game difficulty
     public complexity choice = complexity.Easy; 
 
-    public static int money = 100;
+    public static int money = 500;
     public static int health;
     //deprecated?
     public bool camOn = false;

@@ -14,6 +14,8 @@ public class UpOnHover : MonoBehaviour
     public GameObject towers;
     public GameObject towers2;
 
+    public GameObject[] towersList;
+
     [SerializeField] GameObject Gridmap;
 
     public bool placed = false;
@@ -27,6 +29,7 @@ public class UpOnHover : MonoBehaviour
     
     void Update() 
     {
+
         transform.position = Vector3.MoveTowards(transform.position, currPos, speed * Time.deltaTime);
         towers = OpenStore.tower;
         if (towers2 != null)
@@ -35,7 +38,7 @@ public class UpOnHover : MonoBehaviour
             towers2.transform.position += new Vector3(0f, 1f, 0f);
         }
 
-        if (Input.GetMouseButtonDown(0) && GameManager.money >= OpenStore.towerprice && towers2 != null && !placed)
+        if (Input.GetMouseButtonDown(0) && GameManager.money >= OpenStore.towerprice && towers2 != null && !placed && !Pause.isPaused)
         {
             Debug.Log(gameObject.name);
             GameManager.money -= OpenStore.towerprice;
@@ -44,11 +47,28 @@ public class UpOnHover : MonoBehaviour
             OpenStore.tower = null;
             OpenStore.towerprice = 0;
         }
+        // changing layer if store is open or not
+        towersList = GameObject.FindGameObjectsWithTag("Tower");
+        if (OpenStore.isStoreOpen)
+        {
+            foreach (GameObject go in towersList)
+            {
+                go.layer = 2;
+            }
+        }
+        else
+        {
+            foreach (GameObject go in towersList)
+            {
+                go.layer = 0;
+            }
+        }
+
     }
 
     void OnMouseEnter() 
     {
-        Debug.Log("enter");
+        //Debug.Log("enter");
         if (towers != null && !placed)
         {
             currPos = upPos;
@@ -58,13 +78,13 @@ public class UpOnHover : MonoBehaviour
             towers2.transform.Find("Range").gameObject.SetActive(true);
         } else
         {
-            Debug.Log("Null tower");
+            //Debug.Log("Null tower");
         }
     }
 
     void OnMouseExit()  
     {
-        Debug.Log("exit");
+        //Debug.Log("exit");
         currPos = dnPos;
         if(!placed){
             Destroy(towers2);

@@ -31,22 +31,22 @@ public class EnemyMovement : MonoBehaviour
         if (target[curr].position.x < transform.position.x)
         {
             transform.rotation = Quaternion.Euler(0f,270f,0f);
-            Debug.Log("triggered");
+            //Debug.Log("triggered");
         }
         if (target[curr].position.x > transform.position.x)
         {
             transform.rotation = Quaternion.Euler(0f,90f,0f);
-            Debug.Log("triggered");
+            //Debug.Log("triggered");
         }
         if (target[curr].position.z < transform.position.z)
         {
             transform.rotation = Quaternion.Euler(0f,180f,0f);
-            Debug.Log("triggered");
+            //Debug.Log("triggered");
         }
         if (target[curr].position.z > transform.position.z)
         {
             transform.rotation = Quaternion.Euler(0f,0f,0f);
-            Debug.Log("triggered");
+            //Debug.Log("triggered");
         }
         
     }
