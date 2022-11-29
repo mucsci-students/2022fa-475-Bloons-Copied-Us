@@ -40,7 +40,6 @@ public class UpOnHover : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && GameManager.money >= OpenStore.towerprice && towers2 != null && !placed && !Pause.isPaused)
         {
-            Debug.Log(gameObject.name);
             GameManager.money -= OpenStore.towerprice;
             placed = true;
             towers2.transform.Find("Range").gameObject.SetActive(false);
