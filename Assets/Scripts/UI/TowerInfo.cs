@@ -16,6 +16,14 @@ public class TowerInfo : MonoBehaviour
     float range;
     float attackSpeed;
 
+        public void TowerInfoClose()
+    {
+        if (!Pause.isPaused)
+        {
+            Towerinfo.SetActive(false);
+        }
+    }
+
     public TowerInfo(float damage, float range, float attackSpeed)
     {
         this.damage = damage;

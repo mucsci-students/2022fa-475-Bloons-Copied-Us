@@ -16,7 +16,6 @@ public class LayerChange : MonoBehaviour
     void Update()
     {
         GameObject[] towersList = GameObject.FindGameObjectsWithTag("Tower");
-        Debug.Log(towersList);
         if (OpenStore.isStoreOpen)
         {
             foreach (GameObject go in towersList)
