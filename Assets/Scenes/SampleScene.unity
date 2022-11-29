@@ -1322,6 +1322,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618500262}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &658122829 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1040666312, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
+  m_PrefabInstance: {fileID: 4383581882950371242}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &658122830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1040666313, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
@@ -2541,7 +2546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae8f37b07daa64945b97ca2d12d3714c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Towerinfo: {fileID: 0}
+  Towerinfo: {fileID: 658122829}
 --- !u!1 &1446125114
 GameObject:
   m_ObjectHideFlags: 0

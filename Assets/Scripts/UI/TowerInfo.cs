@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
+using UnityEngineInternal;
 
 public class TowerInfo : MonoBehaviour
 {
@@ -11,20 +12,31 @@ public class TowerInfo : MonoBehaviour
     Ray ray;
     RaycastHit hit;
 
-    // Start is called before the first frame update
-    void Start()
+    float damage;
+    float range;
+    float attackSpeed;
+
+    public TowerInfo(float damage, float range, float attackSpeed)
     {
-        
+        this.damage = damage;
+        this.range = range;
+        this.attackSpeed = attackSpeed;
     }
 
-    // Update is called once per frame
+    TowerInfo Ballista = new TowerInfo(1, 35, .75f);
+
+
+
     void Update()
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
         {
-            if (Input.GetMouseButtonDown(0))
-                Debug.Log(hit.collider.tag);
+            if (Input.GetMouseButtonDown(0) && hit.collider.tag == "Tower")
+            {
+                Towerinfo.SetActive(true);
+            }
+                
         }
     }
 }
