@@ -19,7 +19,7 @@ Controls:
   - Camera Scroll Down = Move Up In Y Direction (Strictly moves up regardless of camera direction) 
   
   - R = Reset camera to initial position
-  - O = Switches to orthographic camera mode
+  - O = Toggles orthographic camera mode (default = perspective)
   - Keyrow 1 = Top down view
   - Keyrow 2 = Enemy base view
   - Keyrow 3 = Ally base view
