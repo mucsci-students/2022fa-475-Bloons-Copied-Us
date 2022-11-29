@@ -8,6 +8,7 @@ using TMPro;
 
 public class TowerInfo : MonoBehaviour
 {
+    GameObject towerGameobject;
 
     public GameObject Towerinfotab;
     [SerializeField] TextMeshProUGUI TowerinfoText;
@@ -16,6 +17,12 @@ public class TowerInfo : MonoBehaviour
     [SerializeField] TextMeshProUGUI CurrentTowerName;
     [SerializeField] TextMeshProUGUI UpgradeCost;
     [SerializeField] TextMeshProUGUI SellCost;
+
+    [SerializeField] GameObject BallistaPrefab2;
+    [SerializeField] GameObject BallistaPrefab3;
+
+    [SerializeField] GameObject PortalPrefab2;
+    [SerializeField] GameObject PortalPrefab3;
 
     string Towertext;
     string TowertextUpgrade;
@@ -47,13 +54,81 @@ public class TowerInfo : MonoBehaviour
     //Buy Upgrade Method
     public void UpgradeTower()
     { 
+        if(Pause.isPaused) return;
+        Vector3 Tracker = towerGameobject.transform.position;
 
+        switch (towerSelected)
+        {
+            case "BallistaTowerlvl01(Clone)":
+                
+                Destroy(towerGameobject);
+                Instantiate(BallistaPrefab2, Tracker, BallistaPrefab2.transform.rotation);
+                GameManager.money -= Ballista1.upgrade;
+                break;
+            case "BallistaTowerlvl02(Clone)":
+
+                Destroy(towerGameobject);
+                Instantiate(BallistaPrefab3, Tracker, BallistaPrefab3.transform.rotation);
+                GameManager.money -= Ballista2.upgrade;
+                break;
+            case "PortalTowerlvl01(Clone)":
+                Destroy(towerGameobject);
+                Instantiate(PortalPrefab2, Tracker, PortalPrefab2.transform.rotation);
+                GameManager.money -= PortalTower1.upgrade;
+                break;
+            case "PortalTowerlvl02(Clone)":
+                Destroy(towerGameobject);
+                Instantiate(PortalPrefab3, Tracker, PortalPrefab3.transform.rotation);
+                GameManager.money -= PortalTower2.upgrade;
+                break;
+            default:
+                break;
+                
+        }
+        Towerinfotab.SetActive(false);
     }
 
     //Sell Tower Method
-        public void SellTower()
+    public void SellTower()
     { 
-
+        if(Pause.isPaused) return;
+        switch (towerSelected)
+        {
+            case "BallistaTowerlvl01(Clone)":
+                Destroy(towerGameobject);
+                GameManager.money += Ballista1.sell;
+                
+                break;
+            case "BallistaTowerlvl02(Clone)":
+                Destroy(towerGameobject);
+                GameManager.money += Ballista2.sell;
+                
+                break;
+            case "BallistaTowerlvl03(Clone)":
+                Destroy(towerGameobject);
+                GameManager.money += Ballista3.sell;
+                
+                break;
+            case "PortalTowerlvl01(Clone)":
+                Destroy(towerGameobject);
+                GameManager.money += PortalTower1.sell;
+                
+                break;
+            case "PortalTowerlvl02(Clone)":
+                Destroy(towerGameobject);
+                GameManager.money += PortalTower2.sell;
+                
+                break;
+            case "PortalTowerlvl03(Clone)":
+                Destroy(towerGameobject);
+                GameManager.money += PortalTower3.sell;
+                
+                break;
+            default:
+                break;
+        }
+        Towerinfotab.SetActive(false);
+        
     }
     //************************************************************************************************
                                         //Close info interface
@@ -75,7 +150,8 @@ public class TowerInfo : MonoBehaviour
             if (Input.GetMouseButtonDown(0) && hit.collider.tag == "Tower")
             {
                 Towerinfotab.SetActive(true);
-                towerSelected = hit.collider.name; 
+                towerSelected = hit.collider.name;
+                towerGameobject = hit.collider.gameObject; 
             }
                 
         }
