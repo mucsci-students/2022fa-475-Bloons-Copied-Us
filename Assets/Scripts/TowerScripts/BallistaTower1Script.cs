@@ -8,6 +8,7 @@ public class BallistaTower1Script : MonoBehaviour
 
     [SerializeField] float damage;
     [SerializeField] float fireInterval;
+    [SerializeField] float speed;
     [SerializeField] float cost;
     [SerializeField] float rotateSpeed;
     [SerializeField] GameObject ArrowPrefab;
@@ -97,7 +98,7 @@ public class BallistaTower1Script : MonoBehaviour
             arrow.transform.SetPositionAndRotation(pivot.transform.position, pivot.transform.rotation);
             TrackerScript ts = arrow.GetComponent<TrackerScript>();
             ts.target = t.gameObject;
-            ts.speed = 20f;
+            ts.speed = speed;
             ts.damage = damage;
             timer = 0f;
 

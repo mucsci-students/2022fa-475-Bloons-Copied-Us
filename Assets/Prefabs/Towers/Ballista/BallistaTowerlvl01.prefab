@@ -148,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   fireInterval: 0.75
+  speed: 20
   cost: 0
   rotateSpeed: 10
   ArrowPrefab: {fileID: 7831799172750481848, guid: 76f1978aeaf514a4ca2cf99b95b90d28, type: 3}
