@@ -189,7 +189,9 @@ GameObject:
   - component: {fileID: 2331210544731819511}
   - component: {fileID: 5431488024083438463}
   - component: {fileID: 2820945362358465837}
+  - component: {fileID: 4932191394060828667}
   - component: {fileID: 296718638487696777}
+  - component: {fileID: 1914950537939039940}
   m_Layer: 0
   m_Name: Slime_03 Leaf (1)
   m_TagString: Untagged
@@ -250,6 +252,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!135 &4932191394060828667
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3103489281664145229}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &296718638487696777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,8 +278,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: []
-  speed: 1
+  speed: 3
   distanceTraveled: 0
+--- !u!114 &1914950537939039940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3103489281664145229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f308b2c0f81a334a88e150962d82a80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+  isDead: 0
 --- !u!1 &4462672542927824853
 GameObject:
   m_ObjectHideFlags: 0

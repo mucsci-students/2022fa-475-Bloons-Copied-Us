@@ -13,6 +13,7 @@ public class WaveManager : MonoBehaviour
 
     public static int WaveNumber = 0;
     public static int enemies = 0;
+    public static float TimerRef;
 
     private bool isPlaying = false;
     private bool betweenRounds = false;
@@ -34,6 +35,7 @@ public class WaveManager : MonoBehaviour
 
     void Update()
     {
+        
 
         if (Input.GetKeyDown(KeyCode.Space) && !isPlaying)
             StartWave();
@@ -59,6 +61,7 @@ public class WaveManager : MonoBehaviour
         if (enemies == 0)
         {
             timer += Time.deltaTime;
+            TimerRef = timer; // used for ui
             if (timer > WaveTimer)
             {
                 ++WaveNumber;

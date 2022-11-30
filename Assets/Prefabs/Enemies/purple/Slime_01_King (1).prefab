@@ -189,6 +189,8 @@ GameObject:
   - component: {fileID: 1781273435798485996}
   - component: {fileID: 6076729383337833717}
   - component: {fileID: 1116055909301150249}
+  - component: {fileID: 2074394680616942511}
+  - component: {fileID: -244070812328341964}
   m_Layer: 0
   m_Name: Slime_01_King (1)
   m_TagString: Untagged
@@ -262,8 +264,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: []
-  speed: 1
+  speed: 3
   distanceTraveled: 0
+--- !u!114 &2074394680616942511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4080346336222432247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f308b2c0f81a334a88e150962d82a80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 15
+  isDead: 0
+--- !u!135 &-244070812328341964
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4080346336222432247}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4614255826105207978
 GameObject:
   m_ObjectHideFlags: 0

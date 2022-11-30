@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 5784416114446477144}
   - component: {fileID: 4331607156381722684}
   - component: {fileID: 3537678479673977907}
+  - component: {fileID: -7437118318530626846}
   - component: {fileID: 4072750570599624462}
+  - component: {fileID: 7039759880551778191}
   m_Layer: 0
   m_Name: Slime_01_MeltalHelmet (3)
   m_TagString: Untagged
@@ -72,6 +74,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!135 &-7437118318530626846
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2730098107597585308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4072750570599624462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,8 +100,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: []
-  speed: 1
+  speed: 3
   distanceTraveled: 0
+--- !u!114 &7039759880551778191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2730098107597585308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f308b2c0f81a334a88e150962d82a80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+  isDead: 0
 --- !u!1 &3244816692682307978
 GameObject:
   m_ObjectHideFlags: 0
