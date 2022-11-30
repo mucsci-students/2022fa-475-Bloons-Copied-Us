@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 3557177099896764619}
   m_Layer: 0
   m_Name: Slime_01_MeltalHelmet (3)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

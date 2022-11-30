@@ -230,9 +230,10 @@ GameObject:
   - component: {fileID: 463192203946210915}
   - component: {fileID: 2036711895472613608}
   - component: {fileID: 9025899321942959250}
+  - component: {fileID: 3612665068927343557}
   m_Layer: 0
   m_Name: Slime_02 (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -319,6 +320,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   isDead: 0
+--- !u!135 &3612665068927343557
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4506060487824126354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6019856253804912456
 GameObject:
   m_ObjectHideFlags: 0
