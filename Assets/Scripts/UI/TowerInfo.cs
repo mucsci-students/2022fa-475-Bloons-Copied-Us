@@ -144,14 +144,21 @@ public class TowerInfo : MonoBehaviour
     void Update()
     {
         // TowerInfo Ballista1 = new TowerInfo(1, 35, .75f);
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit))
+
         {
-            if (Input.GetMouseButtonDown(0) && hit.collider.tag == "Tower")
+            if (Input.GetMouseButtonDown(0))
             {
-                Towerinfotab.SetActive(true);
-                towerSelected = hit.collider.name;
-                towerGameobject = hit.collider.gameObject; 
+             
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit))
+                {
+
+                    Debug.Log(hit.collider.name);
+
+                    Towerinfotab.SetActive(true);
+                    towerSelected = hit.collider.name;
+                    towerGameobject = hit.collider.gameObject;
+                }
             }
                 
         }

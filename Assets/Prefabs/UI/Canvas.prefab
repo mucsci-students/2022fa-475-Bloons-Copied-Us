@@ -1067,7 +1067,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae8f37b07daa64945b97ca2d12d3714c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Towerinfo: {fileID: 1040666312}
+  Towerinfotab: {fileID: 1040666312}
+  TowerinfoText: {fileID: 775758467}
+  UpgradeTowerinfoText: {fileID: 1629247966}
+  CurrentTowerLevel: {fileID: 1213780013}
+  CurrentTowerName: {fileID: 1144706852}
+  UpgradeCost: {fileID: 1815857551}
+  SellCost: {fileID: 1818319370}
+  BallistaPrefab2: {fileID: 8699166899353854431, guid: 15275c798d0572a4398e8814ba5fd15d, type: 3}
+  BallistaPrefab3: {fileID: 7833941157049236830, guid: 7a12d3a6e92d4854285e9f87570e671e, type: 3}
+  PortalPrefab2: {fileID: 6328982832741759644, guid: fc3fb898b9e525d46b8d84d750fae89f, type: 3}
+  PortalPrefab3: {fileID: 8655559165314570745, guid: 322fe11d6999ff84c89dd2d60d76ecf6, type: 3}
 --- !u!1 &1345427212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,8 +1264,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.53339624, y: 0.014777778}
   m_AnchorMax: {x: 0.6617585, y: 0.124000005}
-  m_AnchoredPosition: {x: 250, y: -340.7255}
-  m_SizeDelta: {x: 159.99188, y: 30.466316}
+  m_AnchoredPosition: {x: 234.79773, y: -340.7255}
+  m_SizeDelta: {x: 190.3965, y: 30.4663}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1473482362
 CanvasRenderer:
@@ -1338,7 +1348,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1473482361}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1334786095}
+        m_TargetAssemblyTypeName: TowerInfo, Assembly-CSharp
+        m_MethodName: SellTower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1487912270
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,8 +1398,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.53339624, y: 0.014777778}
   m_AnchorMax: {x: 0.6617585, y: 0.124000005}
-  m_AnchoredPosition: {x: 12, y: -340.7255}
-  m_SizeDelta: {x: 159.99188, y: 30.466316}
+  m_AnchoredPosition: {x: -12.0703, y: -340.7255}
+  m_SizeDelta: {x: 208.1327, y: 30.4663}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1487912274
 CanvasRenderer:
@@ -1460,7 +1482,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1487912273}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1334786095}
+        m_TargetAssemblyTypeName: TowerInfo, Assembly-CSharp
+        m_MethodName: UpgradeTower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1629247964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,7 +1700,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Upgrade
+  m_text: 'Upgrade: <value>
 
 '
   m_isRightToLeft: 0
@@ -8929,7 +8963,7 @@ GameObject:
   - component: {fileID: 7795817143116107132}
   - component: {fileID: 6262290742331497454}
   m_Layer: 5
-  m_Name: CloseStoreButton (1)
+  m_Name: CloseTowerInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9012,7 +9046,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.6226415, g: 0.5486294, b: 0.5486294, a: 1}
@@ -9037,9 +9071,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4425721594720142255}
-        m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
-        m_MethodName: storeClose
+      - m_Target: {fileID: 1334786095}
+        m_TargetAssemblyTypeName: TowerInfo, Assembly-CSharp
+        m_MethodName: TowerInfoClose
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
