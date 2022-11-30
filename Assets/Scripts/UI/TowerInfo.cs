@@ -60,23 +60,25 @@ public class TowerInfo : MonoBehaviour
         switch (towerSelected)
         {
             case "BallistaTowerlvl01(Clone)":
-                
+                if (GameManager.money < Ballista1.upgrade) break;
                 Destroy(towerGameobject);
                 Instantiate(BallistaPrefab2, Tracker, BallistaPrefab2.transform.rotation);
                 GameManager.money -= Ballista1.upgrade;
                 break;
             case "BallistaTowerlvl02(Clone)":
-
+                if (GameManager.money < Ballista2.upgrade) break;
                 Destroy(towerGameobject);
                 Instantiate(BallistaPrefab3, Tracker, BallistaPrefab3.transform.rotation);
                 GameManager.money -= Ballista2.upgrade;
                 break;
             case "PortalTowerlvl01(Clone)":
+                if (GameManager.money < PortalTower1.upgrade) break;
                 Destroy(towerGameobject);
                 Instantiate(PortalPrefab2, Tracker, PortalPrefab2.transform.rotation);
                 GameManager.money -= PortalTower1.upgrade;
                 break;
             case "PortalTowerlvl02(Clone)":
+                if (GameManager.money < PortalTower2.upgrade) break;
                 Destroy(towerGameobject);
                 Instantiate(PortalPrefab3, Tracker, PortalPrefab3.transform.rotation);
                 GameManager.money -= PortalTower2.upgrade;
@@ -152,12 +154,14 @@ public class TowerInfo : MonoBehaviour
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit))
                 {
-
                     Debug.Log(hit.collider.name);
+                    if (hit.collider.tag == "Tower")
+                    {
+                        Towerinfotab.SetActive(true);
+                        towerSelected = hit.collider.name;
+                        towerGameobject = hit.collider.gameObject;
+                    }
 
-                    Towerinfotab.SetActive(true);
-                    towerSelected = hit.collider.name;
-                    towerGameobject = hit.collider.gameObject;
                 }
             }
                 
@@ -188,9 +192,9 @@ public class TowerInfo : MonoBehaviour
            CurrentTowerName.SetText("Tower: <"+Ballista2.name+">");
          }
          if(towerSelected == "BallistaTowerlvl03(Clone)"){
-           Towertext = "Damage: Max"+ "\x0A" + "Range: Max"+  "\x0A" + "Attack Speed: Max";
+          Towertext = "Damage: " + Ballista3.damage + "\x0A" + "Range: " + Ballista3.range + "\x0A" + "Attack Speed: " + Ballista3.attackSpeed; 
            TowerinfoText.SetText(Towertext);
-           TowertextUpgrade = "Damage: " + Ballista3.damage+ "\x0A" + "Range: "+ Ballista3.range+ "\x0A" + "Attack Speed: "+ Ballista3.attackSpeed;
+           TowertextUpgrade = "Damage: Max" + "\x0A" + "Range: Max" + "\x0A" + "Attack Speed: Max";
            UpgradeTowerinfoText.SetText(TowertextUpgrade);
 
            UpgradeCost.SetText("Upgrade: MAX");
@@ -223,9 +227,9 @@ public class TowerInfo : MonoBehaviour
            CurrentTowerName.SetText("Tower: <"+PortalTower2.name+">");
          }
          if(towerSelected == "PortalTowerlvl03(Clone)"){
-           Towertext = "Damage: Max"+ "\x0A" + "Range: Max"+  "\x0A" + "Attack Speed: Max";
+           Towertext = "Damage: " + PortalTower3.damage + "\x0A" + "Range: " + PortalTower3.range + "\x0A" + "Attack Speed: " + PortalTower3.attackSpeed;
            TowerinfoText.SetText(Towertext);
-           TowertextUpgrade = "Damage: " + PortalTower3.damage+ "\x0A" + "Range: "+ PortalTower3.range+ "\x0A" + "Attack Speed: "+ PortalTower3.attackSpeed;
+           TowertextUpgrade = "Damage: Max" + "\x0A" + "Range: Max" + "\x0A" + "Attack Speed: Max";
            UpgradeTowerinfoText.SetText(TowertextUpgrade);
 
            UpgradeCost.SetText("Upgrade: MAX");
