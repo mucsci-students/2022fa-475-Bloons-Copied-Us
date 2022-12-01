@@ -26,17 +26,17 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
 
-   public float health;
+    public float health;
 
-   // types of slimes 
-   //public Enemy NormalSlime = new Enemy("Normal_slime", 3, Color.WHITE, Ability.DEFAULT);
-   //public Enemy HelmetSlime = new Enemy("Helmet_slime", 3, Color.WHITE, Ability.DEFAULT);
-   //public Enemy RabbitSlime = new Enemy("Rabbit_slime", 3, Color.WHITE, Ability.DEFAULT);
-   //public Enemy LeafSlime = new Enemy("Leaf_slime", 3, Color.WHITE, Ability.DEFAULT);
-   //public Enemy SapplingSlime = new Enemy("Sappling_slime", 3, Color.WHITE, Ability.DEFAULT);
-   //public Enemy Slime3 = new Enemy("Slime_03", 3, Color.WHITE, Ability.DEFAULT);
-   //public Enemy VikingSlime = new Enemy("Viking_slime", 3, Color.WHITE, Ability.DEFAULT);
-   //public Enemy KingSlime = new Enemy("King_slime", 3, Color.WHITE, Ability.DEFAULT);
+    // types of slimes 
+    //public Enemy NormalSlime = new Enemy("Normal_slime", 3, Color.WHITE, Ability.DEFAULT);
+    //public Enemy HelmetSlime = new Enemy("Helmet_slime", 3, Color.WHITE, Ability.DEFAULT);
+    //public Enemy RabbitSlime = new Enemy("Rabbit_slime", 3, Color.WHITE, Ability.DEFAULT);
+    //public Enemy LeafSlime = new Enemy("Leaf_slime", 3, Color.WHITE, Ability.DEFAULT);
+    //public Enemy SapplingSlime = new Enemy("Sappling_slime", 3, Color.WHITE, Ability.DEFAULT);
+    //public Enemy Slime3 = new Enemy("Slime_03", 3, Color.WHITE, Ability.DEFAULT);
+    //public Enemy VikingSlime = new Enemy("Viking_slime", 3, Color.WHITE, Ability.DEFAULT);
+    //public Enemy KingSlime = new Enemy("King_slime", 3, Color.WHITE, Ability.DEFAULT);
 
     // Used to set dead, so other enemies do not target if this enemy is about to die.
     public bool isDead = false;
@@ -44,7 +44,7 @@ public class EnemyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -55,7 +55,7 @@ public class EnemyScript : MonoBehaviour
     }
 
     // Made it a method, so in the future we can add animations here
-    private void Die ()
+    private void Die()
     {
         --WaveManager.enemies;
         Destroy(gameObject);
@@ -67,9 +67,10 @@ public class EnemyScript : MonoBehaviour
         if (health <= 0)
         {
             Die();
-            GameManager.money += (int) (damage + health);
-        } else
-            GameManager.money += (int) damage;
+            GameManager.money += (int)(damage + health);
+        }
+        else
+            GameManager.money += (int)damage;
     }
 
 }

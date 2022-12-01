@@ -32,7 +32,7 @@ public class OpenStore : MonoBehaviour
     // open and close store
     public void storeOpen()
     {
-        if(!Pause.isPaused)
+        if (!Pause.isPaused)
         {
             isStoreOpen = true;
             storeui.SetActive(true);
@@ -65,11 +65,11 @@ public class OpenStore : MonoBehaviour
         bool check = storeHelper(MultiBallistaPrice);
         if (!check) return;
         tower = MultiBallista;
-        towerprice =  BallistaPrice;
+        towerprice = BallistaPrice;
     }
     public void buyfiretower()
     {
-        bool check =storeHelper(FireTowerPrice);
+        bool check = storeHelper(FireTowerPrice);
         if (!check) return;
         tower = FireTower;
         towerprice = FireTowerPrice;
@@ -89,7 +89,7 @@ public class OpenStore : MonoBehaviour
         towerprice = LightningTowerPrice;
     }
     public void buyPortalTower()
-    { 
+    {
         bool check = storeHelper(PortalTowerPrice);
         if (!check) return;
         tower = PortalTower;

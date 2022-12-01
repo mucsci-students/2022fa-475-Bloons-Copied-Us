@@ -35,7 +35,7 @@ public class WaveManager : MonoBehaviour
 
     void Update()
     {
-        
+
 
         if (Input.GetKeyDown(KeyCode.Space) && !isPlaying)
             StartWave();
@@ -75,7 +75,7 @@ public class WaveManager : MonoBehaviour
     [System.Serializable]
     public class WaveEvent
     {
-      
+
         public List<SpawnInfo> spawnInfos = new();
 
         public int StartEvent()

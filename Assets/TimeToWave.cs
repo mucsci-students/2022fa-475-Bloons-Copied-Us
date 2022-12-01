@@ -21,7 +21,7 @@ public class TimeToWave : MonoBehaviour
         {
             timer.gameObject.SetActive(false);
             timerText.SetText("");
-        } 
+        }
         else if (WaveManager.WaveNumber > 0)
         {
             timer.gameObject.SetActive(true);

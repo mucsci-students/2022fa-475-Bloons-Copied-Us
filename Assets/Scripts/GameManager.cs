@@ -5,13 +5,14 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public enum complexity : int{
+    public enum complexity : int
+    {
         Easy = 1,
-        Medium, 
+        Medium,
         Hard
     }
     // after menu is made update game difficulty
-    public complexity choice = complexity.Easy; 
+    public complexity choice = complexity.Easy;
 
     public static int money = 500;
     public static int health;
@@ -24,9 +25,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = (100 / (int)(choice));
+        health = (100 / ((int)choice));
         // Debug.Log("health: "+ health);
-    }   
+    }
 
     // Update is called once per frame
     void Update()
@@ -51,8 +52,8 @@ public class GameManager : MonoBehaviour
         }
         //********************************************
 
-        HelathBar.SetText("Health: " + health); 
-        MoneyUI.SetText("Money: "+ money);
+        HelathBar.SetText("Health: " + health);
+        MoneyUI.SetText("Money: " + money);
 
     }
 }

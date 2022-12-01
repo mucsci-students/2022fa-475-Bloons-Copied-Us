@@ -6,7 +6,7 @@ public class UpOnHover : MonoBehaviour
 {
     public float upAmount = .7f;
     public float speed = 1f;
-    
+
     private Vector3 dnPos;
     private Vector3 upPos;
     private Vector3 currPos;
@@ -16,15 +16,15 @@ public class UpOnHover : MonoBehaviour
     [SerializeField] GameObject Gridmap;
 
     public bool placed = false;
- 
-    void Start() 
+
+    void Start()
     {
         dnPos = transform.position;
         upPos = transform.position + Vector3.up * upAmount;
         currPos = dnPos;
     }
-    
-    void Update() 
+
+    void Update()
     {
 
         transform.position = Vector3.MoveTowards(transform.position, currPos, speed * Time.deltaTime);
@@ -46,7 +46,7 @@ public class UpOnHover : MonoBehaviour
 
     }
 
-    void OnMouseEnter() 
+    void OnMouseEnter()
     {
         if (OpenStore.tower != null && !placed)
         {
@@ -55,17 +55,19 @@ public class UpOnHover : MonoBehaviour
             tower.transform.position = transform.position;
             tower.transform.position += new Vector3(0f, 1f, 0f);
             tower.transform.Find("Range").gameObject.SetActive(true);
-        } else
+        }
+        else
         {
             //Debug.Log("Null tower");
         }
     }
 
-    void OnMouseExit()  
+    void OnMouseExit()
     {
         //Debug.Log("exit");
         currPos = dnPos;
-        if (!placed) {
+        if (!placed)
+        {
             Destroy(tower);
         }
     }

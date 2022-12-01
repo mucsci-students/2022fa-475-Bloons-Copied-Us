@@ -35,14 +35,14 @@ public class TowerInfo : MonoBehaviour
     //TowerInformation(string name, int level, float damage, float range, float attackSpeed, int upgrade, int sell)
 
     // ballista objects
-    public TowerInformation Ballista1 = new ("Ballista", 1, 1, 35, .75f, 100, 60);
-    public TowerInformation Ballista2 = new ("Ballista", 2, 2, 40, .5f, 200, 120);
-    public TowerInformation Ballista3 = new ("Ballista", 3, 3, 50, .25f, 999999, 180);
+    public TowerInformation Ballista1 = new("Ballista", 1, 1, 35, .75f, 100, 60);
+    public TowerInformation Ballista2 = new("Ballista", 2, 2, 40, .5f, 200, 120);
+    public TowerInformation Ballista3 = new("Ballista", 3, 3, 50, .25f, 999999, 180);
 
     // portal tower objects
-    public TowerInformation PortalTower1 = new ("PortalTower", 1, 3, 3, .9f, 120, 80);
-    public TowerInformation PortalTower2 = new ("PortalTower", 2, 4, 32.5f, .8f, 240, 160);
-    public TowerInformation PortalTower3 = new ("PortalTower", 3, 5, 35, .75f, 999999, 240);
+    public TowerInformation PortalTower1 = new("PortalTower", 1, 3, 3, .9f, 120, 80);
+    public TowerInformation PortalTower2 = new("PortalTower", 2, 4, 32.5f, .8f, 240, 160);
+    public TowerInformation PortalTower3 = new("PortalTower", 3, 5, 35, .75f, 999999, 240);
     //continue with towers
 
 
@@ -54,24 +54,16 @@ public class TowerInfo : MonoBehaviour
     {
         if (Pause.isPaused) return;
 
-        switch (towerSelected)
-        {
-            case "BallistaTowerlvl01(Clone)":
-                UpgradeTowerHelper(Ballista1, BallistaPrefab2);
-                break;
-            case "BallistaTowerlvl02(Clone)":
-                UpgradeTowerHelper(Ballista2, BallistaPrefab3);
-                break;
-            case "PortalTowerlvl01(Clone)":
-                UpgradeTowerHelper(PortalTower1, PortalPrefab2);
-                break;
-            case "PortalTowerlvl02(Clone)":
-                UpgradeTowerHelper(PortalTower2, PortalPrefab3);
-                break;
-            default:
-                break;
+        // Everytower must have TowerScript!
+        TowerScript tower = towerGameobject.GetComponent<TowerScript>();
 
-        }
+        //Ballista
+        if (tower.type == TowerScript.TowerType.Ballista && tower.level == 1) UpgradeTowerHelper(Ballista1, BallistaPrefab2);
+        else if (tower.type == TowerScript.TowerType.Ballista && tower.level == 2) UpgradeTowerHelper(Ballista2, BallistaPrefab3);
+        //Void
+        else if (tower.type == TowerScript.TowerType.Void && tower.level == 1) UpgradeTowerHelper(PortalTower1, PortalPrefab2);
+        else if (tower.type == TowerScript.TowerType.Void && tower.level == 2) UpgradeTowerHelper(PortalTower2, PortalPrefab3);
+
         Towerinfotab.SetActive(false);
     }
 
@@ -96,7 +88,6 @@ public class TowerInfo : MonoBehaviour
                 break;
             case "PortalTowerlvl02(Clone)":
                 GameManager.money += PortalTower2.sell;
-
                 break;
             case "PortalTowerlvl03(Clone)":
                 GameManager.money += PortalTower3.sell;
@@ -120,23 +111,36 @@ public class TowerInfo : MonoBehaviour
         if (!Pause.isPaused)
         {
             Towerinfotab.SetActive(false);
+
+            //Reset tower position
+            towerGameobject.transform.localPosition -= new Vector3(0.0f, 0.5f, 0.0f);
         }
     }
     //************************************************************************************************
 
     void Update()
     {
+        // Left click check
         if (Input.GetMouseButtonDown(0))
         {
+            // Create a ray that has direction Camera -> mouse
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            // Raycast a ray 500 units without a layercast(-1) and ignoreing colliders set to triggers
             if (Physics.Raycast(ray, out RaycastHit hit, 500f, -1, QueryTriggerInteraction.Ignore))
             {
                 Debug.Log(hit.collider.name);
-                if (hit.collider.CompareTag("Tower"))
+
+                // Only count as tower selected if it has right tower and the store is closed
+                if (hit.collider.CompareTag("Tower") && !OpenStore.isStoreOpen)
                 {
+                    // Open tower info on gui
                     Towerinfotab.SetActive(true);
                     towerSelected = hit.collider.name;
                     towerGameobject = hit.collider.gameObject;
+
+                    // Move tower up to signal that the tower is selected
+                    towerGameobject.transform.localPosition += new Vector3(0.0f, 0.5f, 0.0f);
                 }
             }
         }
@@ -147,7 +151,7 @@ public class TowerInfo : MonoBehaviour
         // Ballista Selection
         if (towerSelected == "BallistaTowerlvl01(Clone)")
         {
-            SetTowerStats (Ballista1, Ballista2);
+            SetTowerStats(Ballista1, Ballista2);
         }
         else if (towerSelected == "BallistaTowerlvl02(Clone)")
         {
@@ -176,7 +180,7 @@ public class TowerInfo : MonoBehaviour
 
     }
 
-    private void SetTowerStats ( TowerInformation tower1, TowerInformation tower2)
+    private void SetTowerStats(TowerInformation tower1, TowerInformation tower2)
     {
         Towertext = "Damage: " + tower1.damage + "\x0A" + "Range: " + tower1.range + "\x0A" + "Attack Speed: " + tower1.attackSpeed;
         TowerinfoText.SetText(Towertext);
@@ -202,11 +206,12 @@ public class TowerInfo : MonoBehaviour
         CurrentTowerName.SetText("Tower: <" + tower1.name + ">");
     }
 
-    private void UpgradeTowerHelper (TowerInformation oldTower, GameObject newTower)
+    private void UpgradeTowerHelper(TowerInformation oldTower, GameObject newTower)
     {
         if (GameManager.money >= oldTower.upgrade)
         {
-            Instantiate(newTower, towerGameobject.transform.position, newTower.transform.rotation);
+            var temp = Instantiate(newTower, towerGameobject.transform.position, newTower.transform.rotation);
+            temp.GetComponent<TowerScript>().GroundBelow = towerGameobject.GetComponent<TowerScript>().GroundBelow;
             Destroy(towerGameobject);
             GameManager.money -= oldTower.upgrade;
         }

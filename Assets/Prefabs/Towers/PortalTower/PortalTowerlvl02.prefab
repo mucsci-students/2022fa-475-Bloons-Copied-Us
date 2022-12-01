@@ -638,6 +638,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GroundBelow: {fileID: 0}
+  type: 1
+  level: 2
 --- !u!135 &1235378721680767095
 SphereCollider:
   m_ObjectHideFlags: 0

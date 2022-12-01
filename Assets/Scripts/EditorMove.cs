@@ -1,5 +1,5 @@
 using UnityEngine;
- 
+
 public class EditorMove : MonoBehaviour
 {
     [SerializeField] float speed = 0.2f;
@@ -8,7 +8,7 @@ public class EditorMove : MonoBehaviour
     [SerializeField] Transform topView;
     [SerializeField] Transform enemyBaseView;
     [SerializeField] Transform homeBaseView;
- 
+
     private Vector3 initial_pos;
     private Quaternion initial_rot;
 
@@ -17,7 +17,7 @@ public class EditorMove : MonoBehaviour
     private Quaternion Rotation_amount;
 
     private bool isOrthographic = false;
-    
+
 
 
     private void Awake()
@@ -26,10 +26,10 @@ public class EditorMove : MonoBehaviour
         initial_rot = transform.rotation;
         Camera.main.orthographicSize = 10;
     }
-   
+
     void Update()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") != 0) 
+        if (Input.GetAxis("Mouse ScrollWheel") != 0)
             transform.position += scrollSpeed * new Vector3(0, -Input.GetAxis("Mouse ScrollWheel"), 0);
 
         Vector3 direction = Vector3.zero;
@@ -60,7 +60,7 @@ public class EditorMove : MonoBehaviour
         if (Input.GetKey(KeyCode.Q))
             direction -= Vector3.up * speed;
         transform.Translate(direction);
- 
+
         // Mouse movement
         if (Input.GetMouseButton(1))
         {
@@ -68,17 +68,19 @@ public class EditorMove : MonoBehaviour
             Vector3 dif = curr - new Vector3(Input.mousePosition.y, -Input.mousePosition.x);
             Rotation.eulerAngles += dif * sensitivity;
             transform.rotation = Rotation;
-        } else {
-			curr = new Vector3(Input.mousePosition.y, -Input.mousePosition.x);
+        }
+        else
+        {
+            curr = new Vector3(Input.mousePosition.y, -Input.mousePosition.x);
             Rotation_amount = transform.rotation;
-		}
+        }
 
         // Orthographic toggle
         if (Input.GetKeyDown(KeyCode.O) && isOrthographic)
         {
             Camera.main.orthographic = false;
             isOrthographic = false;
-        } 
+        }
         else if (Input.GetKeyDown(KeyCode.O) && !isOrthographic)
         {
             Camera.main.orthographic = true;
@@ -88,7 +90,7 @@ public class EditorMove : MonoBehaviour
 
     }
 
-    private void MoveTo (Vector3 pos, Quaternion rot)
+    private void MoveTo(Vector3 pos, Quaternion rot)
     {
         transform.position = pos;
         transform.rotation = rot;

@@ -5,11 +5,14 @@ using System;
 
 public class LayerChange : MonoBehaviour
 {
-    
+
+    private readonly int DEFAULT_LAYER = 0;
+    private readonly int IGNORE_RAYCAST_LAYER = 2;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -21,14 +24,14 @@ public class LayerChange : MonoBehaviour
         {
             foreach (GameObject tower in towersList)
             {
-                tower.layer = 2;
+                tower.layer = IGNORE_RAYCAST_LAYER;
             }
         }
         else
         {
             foreach (GameObject tower in towersList)
             {
-                tower.layer = 0;
+                tower.layer = DEFAULT_LAYER;
             }
         }
     }

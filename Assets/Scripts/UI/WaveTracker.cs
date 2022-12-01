@@ -15,6 +15,6 @@ public class WaveTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Wave.SetText("Wave: "+WaveManager.WaveNumber.ToString());
+        Wave.SetText("Wave: " + WaveManager.WaveNumber.ToString());
     }
 }
