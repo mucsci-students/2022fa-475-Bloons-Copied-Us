@@ -1374,7 +1374,6 @@ GameObject:
   - component: {fileID: 1447410762}
   - component: {fileID: 1447410765}
   - component: {fileID: 1447410764}
-  - component: {fileID: 1447410763}
   m_Layer: 5
   m_Name: value
   m_TagString: Untagged
@@ -1499,19 +1498,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &1447410763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1447410761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62631bd9cca72184a95bd5ae8982b588, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: {fileID: 1447410764}
 --- !u!1 &1473482358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,6 +1810,7 @@ GameObject:
   - component: {fileID: 1597903068}
   - component: {fileID: 1597903070}
   - component: {fileID: 1597903069}
+  - component: {fileID: 6030217911444906655}
   m_Layer: 5
   m_Name: TimeToWaveRemainTracker
   m_TagString: Untagged
@@ -1949,6 +1936,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6030217911444906655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597903067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62631bd9cca72184a95bd5ae8982b588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 1447410764}
+  timerText: {fileID: 1597903069}
 --- !u!1 &1629247964
 GameObject:
   m_ObjectHideFlags: 0
