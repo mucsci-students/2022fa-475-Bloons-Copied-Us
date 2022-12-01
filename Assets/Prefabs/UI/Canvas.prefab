@@ -3557,7 +3557,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
-        m_MethodName: buyicetower
+        m_MethodName: Buyicetower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4305,7 +4305,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
-        m_MethodName: buyfiretower
+        m_MethodName: Buyfiretower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5822,7 +5822,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
-        m_MethodName: buyPortalTower
+        m_MethodName: BuyPortalTower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6704,7 +6704,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
-        m_MethodName: storeClose
+        m_MethodName: StoreClose
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7330,7 +7330,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
-        m_MethodName: buyBallista
+        m_MethodName: BuyBallista
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8269,7 +8269,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
-        m_MethodName: buylightningtower
+        m_MethodName: Buylightningtower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8539,7 +8539,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
-        m_MethodName: buymultiballista
+        m_MethodName: Buymultiballista
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8964,7 +8964,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4425721594720142255}
         m_TargetAssemblyTypeName: OpenStore, Assembly-CSharp
-        m_MethodName: storeOpen
+        m_MethodName: StoreOpen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

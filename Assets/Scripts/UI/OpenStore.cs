@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class OpenStore : MonoBehaviour
@@ -30,7 +28,7 @@ public class OpenStore : MonoBehaviour
     public static bool isStoreOpen = false;
     //*********************************************
     // open and close store
-    public void storeOpen()
+    public void StoreOpen()
     {
         if (!Pause.isPaused)
         {
@@ -39,7 +37,7 @@ public class OpenStore : MonoBehaviour
             Gridmap.SetActive(true);
         }
     }
-    public void storeClose()
+    public void StoreClose()
     {
         if (!Pause.isPaused)
         {
@@ -53,44 +51,44 @@ public class OpenStore : MonoBehaviour
     public static GameObject tower;
     public static int towerprice = 0;
 
-    public void buyBallista()
+    public void BuyBallista()
     {
-        bool check = storeHelper(BallistaPrice);
+        bool check = StoreHelper(BallistaPrice);
         if (!check) return;
         tower = Ballista;
         towerprice = BallistaPrice;
     }
-    public void buymultiballista()
+    public void Buymultiballista()
     {
-        bool check = storeHelper(MultiBallistaPrice);
+        bool check = StoreHelper(MultiBallistaPrice);
         if (!check) return;
         tower = MultiBallista;
         towerprice = BallistaPrice;
     }
-    public void buyfiretower()
+    public void Buyfiretower()
     {
-        bool check = storeHelper(FireTowerPrice);
+        bool check = StoreHelper(FireTowerPrice);
         if (!check) return;
         tower = FireTower;
         towerprice = FireTowerPrice;
     }
-    public void buyicetower()
+    public void Buyicetower()
     {
-        bool check = storeHelper(IceTowerPrice);
+        bool check = StoreHelper(IceTowerPrice);
         if (!check) return;
         tower = IceTower;
         towerprice = IceTowerPrice;
     }
-    public void buylightningtower()
+    public void Buylightningtower()
     {
-        bool check = storeHelper(LightningTowerPrice);
+        bool check = StoreHelper(LightningTowerPrice);
         if (!check) return;
         tower = LightningTower;
         towerprice = LightningTowerPrice;
     }
-    public void buyPortalTower()
+    public void BuyPortalTower()
     {
-        bool check = storeHelper(PortalTowerPrice);
+        bool check = StoreHelper(PortalTowerPrice);
         if (!check) return;
         tower = PortalTower;
         towerprice = PortalTowerPrice;
@@ -102,7 +100,7 @@ public class OpenStore : MonoBehaviour
         yield return new WaitForSeconds(time);
         InsuffFundsMessage.SetActive(false);
     }
-    public bool storeHelper(int moneycheck)
+    public bool StoreHelper(int moneycheck)
     {
         if (Pause.isPaused) return false;
 

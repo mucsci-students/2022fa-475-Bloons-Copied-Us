@@ -114,6 +114,9 @@ public class TowerInfo : MonoBehaviour
 
             //Reset tower position
             towerGameobject.transform.localPosition -= new Vector3(0.0f, 0.5f, 0.0f);
+
+            // Remove link
+            towerGameobject = null;
         }
     }
     //************************************************************************************************
@@ -131,8 +134,8 @@ public class TowerInfo : MonoBehaviour
             {
                 Debug.Log(hit.collider.name);
 
-                // Only count as tower selected if it has right tower and the store is closed
-                if (hit.collider.CompareTag("Tower") && !OpenStore.isStoreOpen)
+                // Only count as tower selected if it has right tower and the store is closed and it is not the same object, so the height doesnt increase more
+                if (hit.collider.CompareTag("Tower") && !OpenStore.isStoreOpen && hit.collider.gameObject != towerGameobject)
                 {
                     // Open tower info on gui
                     Towerinfotab.SetActive(true);
