@@ -11,8 +11,7 @@ public class UpOnHover : MonoBehaviour
     private Vector3 upPos;
     private Vector3 currPos;
 
-    public GameObject towers;
-    public GameObject towers2;
+    public GameObject tower;
 
     [SerializeField] GameObject Gridmap;
 
@@ -29,18 +28,17 @@ public class UpOnHover : MonoBehaviour
     {
 
         transform.position = Vector3.MoveTowards(transform.position, currPos, speed * Time.deltaTime);
-        towers = OpenStore.tower;
-        if (towers2 != null)
+        if (tower != null)
         {
-            towers2.transform.position = transform.position;
-            towers2.transform.position += new Vector3(0f, 1f, 0f);
+            tower.transform.position = transform.position;
+            tower.transform.position += new Vector3(0f, 1f, 0f);
         }
 
-        if (Input.GetMouseButtonDown(0) && GameManager.money >= OpenStore.towerprice && towers2 != null && !placed && !Pause.isPaused)
+        if (Input.GetMouseButtonDown(0) && GameManager.money >= OpenStore.towerprice && tower != null && !placed && !Pause.isPaused)
         {
             GameManager.money -= OpenStore.towerprice;
             placed = true;
-            towers2.transform.Find("Range").gameObject.SetActive(false);
+            tower.transform.Find("Range").gameObject.SetActive(false);
             OpenStore.tower = null;
             OpenStore.towerprice = 0;
         }
@@ -49,14 +47,13 @@ public class UpOnHover : MonoBehaviour
 
     void OnMouseEnter() 
     {
-        //Debug.Log("enter");
-        if (towers != null && !placed)
+        if (OpenStore.tower != null && !placed)
         {
             currPos = upPos;
-            towers2 = Instantiate(towers);
-            towers2.transform.position = transform.position;
-            towers2.transform.position += new Vector3(0f, 1f, 0f);
-            towers2.transform.Find("Range").gameObject.SetActive(true);
+            tower = Instantiate(OpenStore.tower);
+            tower.transform.position = transform.position;
+            tower.transform.position += new Vector3(0f, 1f, 0f);
+            tower.transform.Find("Range").gameObject.SetActive(true);
         } else
         {
             //Debug.Log("Null tower");
@@ -67,8 +64,8 @@ public class UpOnHover : MonoBehaviour
     {
         //Debug.Log("exit");
         currPos = dnPos;
-        if(!placed){
-            Destroy(towers2);
+        if (!placed) {
+            Destroy(tower);
         }
     }
 }

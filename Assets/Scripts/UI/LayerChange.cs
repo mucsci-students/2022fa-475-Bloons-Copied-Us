@@ -15,19 +15,20 @@ public class LayerChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // This should be changed to only be ran when the store button is clicked, find is a slow method
         GameObject[] towersList = GameObject.FindGameObjectsWithTag("Tower");
         if (OpenStore.isStoreOpen)
         {
-            foreach (GameObject go in towersList)
+            foreach (GameObject tower in towersList)
             {
-                go.layer = 2;
+                tower.layer = 2;
             }
         }
         else
         {
-            foreach (GameObject go in towersList)
+            foreach (GameObject tower in towersList)
             {
-                go.layer = 0;
+                tower.layer = 0;
             }
         }
     }
