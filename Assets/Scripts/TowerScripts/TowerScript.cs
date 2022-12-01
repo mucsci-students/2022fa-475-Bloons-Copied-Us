@@ -17,9 +17,9 @@ public class TowerScript : MonoBehaviour
         Ice = 5
     }
 
-    public readonly TowerType type;
+    public TowerType type;
 
     // Should never be changed since we instantiate a new tower when upgrading
-    public readonly int level = 1;
+    public int level = 1;
 
 }
