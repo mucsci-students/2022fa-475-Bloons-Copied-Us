@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: []
-  speed: 3
+  speed: 1.5
   distanceTraveled: 0
 --- !u!114 &-9116995211929761570
 MonoBehaviour:
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f308b2c0f81a334a88e150962d82a80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 8
+  health: 24
   isDead: 0
 --- !u!135 &934863967428453354
 SphereCollider:
