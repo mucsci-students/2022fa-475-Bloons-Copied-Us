@@ -41,6 +41,7 @@ public class UpOnHover : MonoBehaviour
             tower.transform.Find("Range").gameObject.SetActive(false);
             OpenStore.tower = null;
             OpenStore.towerprice = 0;
+            tower.GetComponent<TowerScript>().GroundBelow = this;
         }
 
     }

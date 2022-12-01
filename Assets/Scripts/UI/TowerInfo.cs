@@ -105,7 +105,11 @@ public class TowerInfo : MonoBehaviour
                 flag = false;
                 break;
         }
-        if (flag) Destroy(towerGameobject); ;
+        if (flag)
+        {
+            towerGameobject.GetComponent<TowerScript>().GroundBelow.placed = false;
+            Destroy(towerGameobject);
+        }
         Towerinfotab.SetActive(false);
 
     }
