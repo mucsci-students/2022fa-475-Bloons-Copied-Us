@@ -525,6 +525,7 @@ GameObject:
   - component: {fileID: 6328982832743752796}
   - component: {fileID: 1235378721680767095}
   - component: {fileID: 3040680920456083311}
+  - component: {fileID: 7284816021791016941}
   m_Layer: 0
   m_Name: PortalTowerlvl02
   m_TagString: Tower
@@ -636,6 +637,19 @@ MonoBehaviour:
   rotateSpeed: 10
   FxPrefab: {fileID: 2211445073731190295, guid: 8e72262996fb98f49806fec3880bee63, type: 3}
   targetMode: 0
+--- !u!65 &7284816021791016941
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6328982832741759644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 18, z: 10}
+  m_Center: {x: 0, y: 9, z: 0}
 --- !u!1 &6449019501037056558
 GameObject:
   m_ObjectHideFlags: 0
