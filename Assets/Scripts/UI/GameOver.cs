@@ -1,0 +1,42 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+using System;
+
+public class GameOver : MonoBehaviour
+    
+{
+    public static int EnemiesKilled = 0;
+
+    [SerializeField] GameObject GameOverMenu;
+    [SerializeField] TextMeshProUGUI WaveReached;
+    [SerializeField] TextMeshProUGUI EnemiesSlain;
+    public static bool isDead = false;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (GameManager.health <= 0)
+        {
+            Debug.Log("health gone");
+            death();
+
+        }
+    }
+
+    public void death()
+    {
+        WaveReached.SetText("Wave Reached: " + WaveManager.WaveNumber.ToString());
+        EnemiesSlain.SetText("Enemies Slain: "+EnemiesKilled);
+        GameOverMenu.SetActive(true);
+        Time.timeScale = 0;
+        isDead = true;
+    }
+}

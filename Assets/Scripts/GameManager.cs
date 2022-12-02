@@ -35,21 +35,23 @@ public class GameManager : MonoBehaviour
 
         //********************************************
         // controls
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (!Pause.isPaused)
+        if (GameOver.isDead) return;
+
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Pause.PauseMenu.SetActive(true);
-                Time.timeScale = 0;
-                Pause.isPaused = !Pause.isPaused;
+                if (!Pause.isPaused)
+                {
+                    Pause.PauseMenu.SetActive(true);
+                    Time.timeScale = 0;
+                    Pause.isPaused = !Pause.isPaused;
+                }
+                else
+                {
+                    Pause.PauseMenu.SetActive(false);
+                    Time.timeScale = Pause.TimeSliderGet;
+                    Pause.isPaused = !Pause.isPaused;
+                }
             }
-            else
-            {
-                Pause.PauseMenu.SetActive(false);
-                Time.timeScale = Pause.TimeSliderGet;
-                Pause.isPaused = !Pause.isPaused;
-            }
-        }
         //********************************************
 
         HelathBar.SetText("Health: " + health);
