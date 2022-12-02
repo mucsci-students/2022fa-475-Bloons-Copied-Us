@@ -58,11 +58,13 @@ public class WaveManager : MonoBehaviour
                 betweenRounds = true;
             }
         }
-        if (enemies == 0)
+        if (enemies <= 0)
         {
+            // Hide bug
+            enemies = 0;
             timer += Time.deltaTime;
             TimerRef = timer; // used for ui
-            if (timer > WaveTimer)
+            if (timer > WaveTimer || Input.GetKeyDown(KeyCode.Space))
             {
                 ++WaveNumber;
                 enemies = events[0].StartEvent();
@@ -115,17 +117,26 @@ public class WaveManager : MonoBehaviour
             public GameObject spawnPrefab;
             public int amount;
             public float interval;
+            public float timeToStart;
 
             private float lastTime;
+            private float startTime;
+            private bool spawnInstant = true;
 
             public void Start()
             {
                 lastTime = Time.time;
+                startTime = Time.time;
+                if (timeToStart == 0.0f)
+                    spawnInstant = false;
             }
 
             public void ReadyToSpawn(Transform[] path, Transform spawn)
             {
-                if (Time.time - lastTime >= interval)
+                if (Time.time - startTime < timeToStart)
+                    return;
+
+                if (spawnInstant || Time.time - lastTime >= interval)
                 {
                     GameObject temp = Instantiate(spawnPrefab);
                     temp.transform.position = spawn.position;
@@ -133,6 +144,7 @@ public class WaveManager : MonoBehaviour
                     temp.GetComponent<EnemyMovement>().target = path;
                     --amount;
                     lastTime = Time.time;
+                    spawnInstant = false;
                 }
             }
 

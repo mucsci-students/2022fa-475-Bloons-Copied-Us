@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 6653027612860095911}
   m_Layer: 0
   m_Name: Slime_03 Sprout (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

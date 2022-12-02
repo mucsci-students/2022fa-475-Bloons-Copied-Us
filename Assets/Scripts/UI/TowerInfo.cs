@@ -42,8 +42,8 @@ public class TowerInfo : MonoBehaviour
     public TowerInformation Ballista3 = new("Ballista", 3, 3, 45, .45f, 999999, 280);
 
     // portal tower objects
-    public TowerInformation PortalTower1 = new("PortalTower", 1, 2, 3, .9f, 120, 80);
-    public TowerInformation PortalTower2 = new("PortalTower", 2, 4, 32.5f, .8f, 240, 176);
+    public TowerInformation PortalTower1 = new("PortalTower", 1, 2, 3, .9f, 220, 80);
+    public TowerInformation PortalTower2 = new("PortalTower", 2, 4, 32.5f, .8f, 400, 176);
     public TowerInformation PortalTower3 = new("PortalTower", 3, 6, 35, .75f, 999999, 320);
     //continue with towers
 
