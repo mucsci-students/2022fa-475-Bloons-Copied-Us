@@ -28,6 +28,10 @@ public class PortalTower1Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!gameObject.GetComponent<TowerScript>().IsPlaced)
+        {
+            return;
+        }
 
         GameObject first = null;
         GameObject strongest = null;

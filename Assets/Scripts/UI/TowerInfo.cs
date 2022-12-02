@@ -139,6 +139,10 @@ public class TowerInfo : MonoBehaviour
                 {
                     // Open tower info on gui
                     Towerinfotab.SetActive(true);
+
+                    // Fix nasa tower bug
+                    if (towerGameobject != null) towerGameobject.transform.localPosition -= new Vector3(0.0f, 0.5f, 0.0f);
+
                     towerSelected = hit.collider.name;
                     towerGameobject = hit.collider.gameObject;
 

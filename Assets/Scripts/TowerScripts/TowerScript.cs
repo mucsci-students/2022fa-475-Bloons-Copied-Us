@@ -22,4 +22,7 @@ public class TowerScript : MonoBehaviour
     // Should never be changed since we instantiate a new tower when upgrading
     public int level = 1;
 
+    // Only target if tower is placed
+    public bool IsPlaced = false;
+
 }

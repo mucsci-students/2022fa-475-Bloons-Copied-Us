@@ -42,6 +42,7 @@ public class UpOnHover : MonoBehaviour
             OpenStore.tower = null;
             OpenStore.towerprice = 0;
             tower.GetComponent<TowerScript>().GroundBelow = this;
+            tower.GetComponent<TowerScript>().IsPlaced = true;
         }
 
     }
