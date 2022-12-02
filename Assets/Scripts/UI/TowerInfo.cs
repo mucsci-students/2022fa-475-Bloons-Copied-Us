@@ -206,7 +206,7 @@ public class TowerInfo : MonoBehaviour
         TowertextUpgrade = "Damage: Max" + "\x0A" + "Range: Max" + "\x0A" + "Attack Speed: Max";
         UpgradeTowerinfoText.SetText(TowertextUpgrade);
 
-        UpgradeCost.SetText("Upgrade: $" + tower1.upgrade);
+        UpgradeCost.SetText("Upgrade: MAX");
         SellCost.SetText("Sell: $" + tower1.sell);
         CurrentTowerLevel.SetText("Current Level: <" + tower1.level.ToString() + ">");
         CurrentTowerName.SetText("Tower: <" + tower1.name + ">");
