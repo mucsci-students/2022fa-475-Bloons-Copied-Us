@@ -35,14 +35,16 @@ public class TowerInfo : MonoBehaviour
     //TowerInformation(string name, int level, float damage, float range, float attackSpeed, int upgrade, int sell)
 
     // ballista objects
-    public TowerInformation Ballista1 = new("Ballista", 1, 1, 35, .75f, 100, 60);
-    public TowerInformation Ballista2 = new("Ballista", 2, 2, 40, .5f, 200, 120);
-    public TowerInformation Ballista3 = new("Ballista", 3, 3, 50, .25f, 999999, 180);
+
+    // ballista objects
+    public TowerInformation Ballista1 = new("Ballista", 1, 1, 35, .75f, 150, 60);
+    public TowerInformation Ballista2 = new("Ballista", 2, 2, 40, .6f, 350, 120);
+    public TowerInformation Ballista3 = new("Ballista", 3, 3, 45, .45f, 999999, 280);
 
     // portal tower objects
-    public TowerInformation PortalTower1 = new("PortalTower", 1, 3, 3, .9f, 120, 80);
-    public TowerInformation PortalTower2 = new("PortalTower", 2, 4, 32.5f, .8f, 240, 160);
-    public TowerInformation PortalTower3 = new("PortalTower", 3, 5, 35, .75f, 999999, 240);
+    public TowerInformation PortalTower1 = new("PortalTower", 1, 2, 3, .9f, 120, 80);
+    public TowerInformation PortalTower2 = new("PortalTower", 2, 4, 32.5f, .8f, 240, 176);
+    public TowerInformation PortalTower3 = new("PortalTower", 3, 6, 35, .75f, 999999, 320);
     //continue with towers
 
 
