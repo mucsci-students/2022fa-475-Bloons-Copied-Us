@@ -63,7 +63,6 @@ public class TowerInfo : MonoBehaviour
         //Void
         else if (tower.type == TowerScript.TowerType.Void && tower.level == 1) UpgradeTowerHelper(PortalTower1, PortalPrefab2);
         else if (tower.type == TowerScript.TowerType.Void && tower.level == 2) UpgradeTowerHelper(PortalTower2, PortalPrefab3);
-
         TowerInfoClose();
     }
 
@@ -221,6 +220,7 @@ public class TowerInfo : MonoBehaviour
             temp.GetComponent<TowerScript>().GroundBelow = towerGameobject.GetComponent<TowerScript>().GroundBelow;
             Destroy(towerGameobject);
             towerGameobject = temp;
+            towerGameobject.GetComponent<TowerScript>().IsPlaced = true;
             GameManager.money -= oldTower.upgrade;
         }
     }
