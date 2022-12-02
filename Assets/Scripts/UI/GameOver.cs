@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
     
@@ -25,7 +26,7 @@ public class GameOver : MonoBehaviour
     {
         if (GameManager.health <= 0)
         {
-            Debug.Log("health gone");
+            //Debug.Log("health gone");
             death();
 
         }
@@ -38,5 +39,13 @@ public class GameOver : MonoBehaviour
         GameOverMenu.SetActive(true);
         Time.timeScale = 0;
         isDead = true;
+    }
+    public void Menu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
