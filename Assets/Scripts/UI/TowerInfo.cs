@@ -38,14 +38,14 @@ public class TowerInfo : MonoBehaviour
     // ballista objects
 
     // ballista objects
-    public TowerInformation Ballista1 = new("Ballista", 1, 1, 35, .75f, 150, 60);
-    public TowerInformation Ballista2 = new("Ballista", 2, 2, 40, .6f, 350, 120);
-    public TowerInformation Ballista3 = new("Ballista", 3, 3, 45, .45f, 999999, 280);
+    public TowerInformation Ballista1 = new("Ballista", 1, 1, 35, .75f, 135, 45);
+    public TowerInformation Ballista2 = new("Ballista", 2, 2, 40, .6f, 325, 100);
+    public TowerInformation Ballista3 = new("Ballista", 3, 4, 45, .45f, 999999, 245);
 
     // portal tower objects
-    public TowerInformation PortalTower1 = new("PortalTower", 1, 2, 30, .9f, 220, 80);
-    public TowerInformation PortalTower2 = new("PortalTower", 2, 4, 32.5f, .8f, 400, 176);
-    public TowerInformation PortalTower3 = new("PortalTower", 3, 6, 35, .75f, 999999, 320);
+    public TowerInformation PortalTower1 = new("PortalTower", 1, 2, 30, .9f, 220, 75);
+    public TowerInformation PortalTower2 = new("PortalTower", 2, 4, 32.5f, .8f, 400, 158);
+    public TowerInformation PortalTower3 = new("PortalTower", 3, 7, 35, .75f, 999999, 300);
     //continue with towers
 
 

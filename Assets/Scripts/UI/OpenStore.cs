@@ -18,7 +18,7 @@ public class OpenStore : MonoBehaviour
     [SerializeField] GameObject PortalTower;
     // multiply prices by complexity? 
     // upgrade prices later
-    int BallistaPrice = 75;
+    int BallistaPrice = 60;
     int MultiBallistaPrice = 85;
     int FireTowerPrice = 125;
     int IceTowerPrice = 140;
