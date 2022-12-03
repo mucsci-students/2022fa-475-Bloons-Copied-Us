@@ -56,6 +56,7 @@ public class EnemyScript : MonoBehaviour
     public void Die()
     {
         --WaveManager.enemies;
+        GameOver.EnemiesKilled++;
         Destroy(gameObject);
     }
 

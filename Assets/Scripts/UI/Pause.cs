@@ -39,7 +39,7 @@ public class Pause : MonoBehaviour
     public void LateUpdate()
     {
         // Debug.Log(timeSlider.value);
-        if(!Pause.isPaused)
+        if(!Pause.isPaused && !GameOver.isDead)
         {
             TimeSliderGet = timeSlider.value;
             Time.timeScale = timeSlider.value;
