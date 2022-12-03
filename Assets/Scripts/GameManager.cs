@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         health = (100 / ((int)choice));
+        OnRestart();
+
+
         // Debug.Log("health: "+ health);
     }
 
@@ -57,5 +60,13 @@ public class GameManager : MonoBehaviour
         HelathBar.SetText("Health: " + health);
         MoneyUI.SetText("Money: " + money);
 
+    }
+
+    void OnRestart()
+    {
+        Time.timeScale = 1;
+        GameOver.isDead = false;
+        WaveManager.WaveNumber = 0;
+        GameManager.money = 100;
     }
 }
