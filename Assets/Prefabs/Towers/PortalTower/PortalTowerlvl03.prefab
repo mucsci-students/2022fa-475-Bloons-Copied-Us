@@ -703,8 +703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5026522d3542a46929874f75f93968b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
-  fireInterval: 0.75
+  damage: 7
+  fireInterval: 0.65
   cost: 0
   rotateSpeed: 10
   FxPrefab: {fileID: 2211445073731190295, guid: 8e72262996fb98f49806fec3880bee63, type: 3}
@@ -724,6 +724,7 @@ MonoBehaviour:
   GroundBelow: {fileID: 0}
   type: 1
   level: 3
+  IsPlaced: 0
 --- !u!135 &-5007499492405800655
 SphereCollider:
   m_ObjectHideFlags: 0

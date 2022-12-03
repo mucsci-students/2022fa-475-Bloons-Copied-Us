@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5026522d3542a46929874f75f93968b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
+  damage: 2
   fireInterval: 0.9
   cost: 0
   rotateSpeed: 10
@@ -291,6 +291,7 @@ MonoBehaviour:
   GroundBelow: {fileID: 0}
   type: 1
   level: 1
+  IsPlaced: 0
 --- !u!135 &6704675953365466217
 SphereCollider:
   m_ObjectHideFlags: 0
