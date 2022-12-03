@@ -4,7 +4,7 @@ using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngineInternal;
 using TMPro;
-
+using UnityEngine.UI;
 
 public class TowerInfo : MonoBehaviour
 {
@@ -43,7 +43,7 @@ public class TowerInfo : MonoBehaviour
     public TowerInformation Ballista3 = new("Ballista", 3, 3, 45, .45f, 999999, 280);
 
     // portal tower objects
-    public TowerInformation PortalTower1 = new("PortalTower", 1, 2, 3, .9f, 220, 80);
+    public TowerInformation PortalTower1 = new("PortalTower", 1, 2, 30, .9f, 220, 80);
     public TowerInformation PortalTower2 = new("PortalTower", 2, 4, 32.5f, .8f, 400, 176);
     public TowerInformation PortalTower3 = new("PortalTower", 3, 6, 35, .75f, 999999, 320);
     //continue with towers
@@ -161,7 +161,7 @@ public class TowerInfo : MonoBehaviour
         if (towerSelected == "BallistaTowerlvl01(Clone)")
         {
             SetTowerStats(Ballista1, Ballista2);
-            TowerImage = Resources.Load<GameObject>("Assets/UI/Towers1/Ballista");
+            TowerImage = Resources.Load<GameObject>("Assets/Resources/Towers1/Ballista");
         }
         else if (towerSelected == "BallistaTowerlvl02(Clone)")
         {
@@ -176,7 +176,7 @@ public class TowerInfo : MonoBehaviour
         else if (towerSelected == "PortalTowerlvl01(Clone)")
         {
             SetTowerStats(PortalTower1, PortalTower2);
-            TowerImage = Resources.Load<GameObject>("Assets/UI/Towers1/PortalTower");
+            TowerImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Towers1/PortalTower");
         }
         else if (towerSelected == "PortalTowerlvl02(Clone)")
         {

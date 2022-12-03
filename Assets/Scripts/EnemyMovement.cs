@@ -27,30 +27,11 @@ public class EnemyMovement : MonoBehaviour
         {
             if (curr != target.Length -1)
             {
-                curr = (curr + 1) % target.Length;
+                curr = (curr + 1);
             }
-        } 
+        }
 
-        if (target[curr].position.x < transform.position.x)
-        {
-            transform.rotation = Quaternion.Euler(0f,270f,0f);
-        }
-        else if (target[curr].position.x > transform.position.x)
-        {
-            transform.rotation = Quaternion.Euler(0f,90f,0f);
-        }
-        else if (target[curr].position.z < transform.position.z)
-        {
-            transform.rotation = Quaternion.Euler(0f,180f,0f);
-        }
-        else if (target[curr].position.z > transform.position.z)
-        {
-            transform.rotation = Quaternion.Euler(0f,0f,0f);
-        }
-        else
-        {
-
-        }
+        transform.LookAt(target[curr].position);
         
     }
 }
