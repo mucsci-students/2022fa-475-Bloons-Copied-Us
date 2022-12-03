@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public complexity choice = complexity.Easy;
 
     public static int money = 100;
+    public static int moneyPerKill = 5;
     public static int health;
     //deprecated?
     public bool camOn = false;

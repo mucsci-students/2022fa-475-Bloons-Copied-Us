@@ -61,17 +61,12 @@ public class EnemyScript : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
-        if (health <= 0)
-        {
-            Die();
-            GameManager.money += (int)(damage + health);
-        }
-        else
-            GameManager.money += (int)damage;
     }
 
+    // Prevents die from being called twice which was a previous bug
     void OnDestroy()
     {
+        GameManager.money += GameManager.moneyPerKill;
         --WaveManager.enemies;
         GameOver.EnemiesKilled++;
     }
