@@ -30,7 +30,6 @@ public class EnemyMovement : MonoBehaviour
             gameObject.GetComponent<Animator>().Play("Idle");
         }
 
-        GetComponent<Rigidbody>().MoveRotation(target[curr].rotation);
         transform.LookAt(target[curr].position);
 
         Vector3 previousPos = transform.position;
