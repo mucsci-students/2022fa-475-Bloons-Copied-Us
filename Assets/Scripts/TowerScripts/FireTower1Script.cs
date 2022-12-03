@@ -14,12 +14,14 @@ public class FireTower1Script : MonoBehaviour
 
     private List<GameObject> enemiesInRange = new();
 
+    private GameObject pivot;
+
     private float timer;
 
 
     void Start()
     {
-        //pivot = transform.GetChild(0).gameObject;
+        pivot = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
@@ -92,12 +94,12 @@ public class FireTower1Script : MonoBehaviour
         if (timer > fireInterval)
         {
             GameObject FireBall = Instantiate(FireBallPrefab);
-            FireBall.transform.position = t.position;
-            FireBall.transform.LookAt(t);
-            TrackerScript ts = FireBall.GetComponent<TrackerScript>();
+            FireBall.transform.SetPositionAndRotation(pivot.transform.position, pivot.transform.rotation);
+            ExplosionScript ts = FireBall.GetComponent<ExplosionScript>();
             ts.target = t.gameObject;
             ts.speed = speed;
             ts.damage = damage;
+            ts.range = transform.Find("Range").localScale.x / 2.0f;
             timer = 0f;
 
             // Testing

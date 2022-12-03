@@ -127,6 +127,8 @@ GameObject:
   - component: {fileID: 5994176029769405169}
   - component: {fileID: 5994176029768306737}
   - component: {fileID: 6058391151857918751}
+  - component: {fileID: 6086888190797948701}
+  - component: {fileID: 2443282358520858261}
   m_Layer: 0
   m_Name: FireTowerlvl01
   m_TagString: Tower
@@ -216,6 +218,41 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 25
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6086888190797948701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5994176029770567409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd8cf37f856d14468d67dd5c401bf6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  fireInterval: 1
+  speed: 15
+  rotateSpeed: 10
+  FireBallPrefab: {fileID: 4206464604673414884, guid: 3ca8084b067bf1b469bef3aedcd0e4e0, type: 3}
+  targetMode: 0
+--- !u!114 &2443282358520858261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5994176029770567409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ec9f84e68adab4288bc4882a9b2f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GroundBelow: {fileID: 0}
+  type: 2
+  target: 0
+  level: 1
+  IsPlaced: 0
 --- !u!1 &7474429246349198986
 GameObject:
   m_ObjectHideFlags: 0

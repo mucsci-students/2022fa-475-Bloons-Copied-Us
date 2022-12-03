@@ -20,7 +20,7 @@ public class OpenStore : MonoBehaviour
     // upgrade prices later
     int BallistaPrice = 60;
     int MultiBallistaPrice = 85;
-    int FireTowerPrice = 125;
+    int FireTowerPrice = 100;
     int IceTowerPrice = 140;
     int LightningTowerPrice = 160;
     int PortalTowerPrice = 100;
