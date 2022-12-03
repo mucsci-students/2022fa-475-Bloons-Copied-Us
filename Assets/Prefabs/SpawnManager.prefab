@@ -134,3 +134,37 @@ MonoBehaviour:
       amount: 20
       interval: 0.2
       timeToStart: 20
+  - spawnInfos:
+    - spawnPrefab: {fileID: 2730098107597585308, guid: 63ed6bcec71a85d4a8e5251f333258d3, type: 3}
+      amount: 10
+      interval: 5
+      timeToStart: 0
+    - spawnPrefab: {fileID: 5616791392313965323, guid: aa311aa39405db249b647d662107f50d, type: 3}
+      amount: 20
+      interval: 0.25
+      timeToStart: 60
+    - spawnPrefab: {fileID: 9098272077525102529, guid: fb1526078549e3548ae3a1329eb519b0, type: 3}
+      amount: 15
+      interval: 0.66
+      timeToStart: 15
+    - spawnPrefab: {fileID: 6353084866034299320, guid: e5d2cdaf366508748a3597d7b74405a4, type: 3}
+      amount: 5
+      interval: 6.88
+      timeToStart: 12
+  - spawnInfos:
+    - spawnPrefab: {fileID: 2730098107597585308, guid: 63ed6bcec71a85d4a8e5251f333258d3, type: 3}
+      amount: 20
+      interval: 3
+      timeToStart: 0
+    - spawnPrefab: {fileID: 4941627022092671116, guid: 0bb5ce74966f7dd4985f5d48e1f80340, type: 3}
+      amount: 35
+      interval: 1.43
+      timeToStart: 0
+    - spawnPrefab: {fileID: 3612496524209784688, guid: c86438452b8e09a4cbfde0521c45f9fb, type: 3}
+      amount: 10
+      interval: 1.1
+      timeToStart: 30
+    - spawnPrefab: {fileID: 1769728913727559303, guid: c4a96f65555c7d14c844b66f364bfa67, type: 3}
+      amount: 50
+      interval: 0.33
+      timeToStart: 50
