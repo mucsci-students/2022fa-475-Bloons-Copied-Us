@@ -55,8 +55,6 @@ public class EnemyScript : MonoBehaviour
     // Made it a method, so in the future we can add animations here
     public void Die()
     {
-        --WaveManager.enemies;
-        GameOver.EnemiesKilled++;
         Destroy(gameObject);
     }
 
@@ -70,6 +68,12 @@ public class EnemyScript : MonoBehaviour
         }
         else
             GameManager.money += (int)damage;
+    }
+
+    void OnDestroy()
+    {
+        --WaveManager.enemies;
+        GameOver.EnemiesKilled++;
     }
 
 }
