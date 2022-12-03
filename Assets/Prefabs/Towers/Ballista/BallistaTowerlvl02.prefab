@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
-  fireInterval: 0.5
+  fireInterval: 0.6
   speed: 25
   cost: 0
   rotateSpeed: 10
@@ -408,6 +408,7 @@ MonoBehaviour:
   GroundBelow: {fileID: 0}
   type: 0
   level: 2
+  IsPlaced: 0
 --- !u!135 &534582191514688720
 SphereCollider:
   m_ObjectHideFlags: 0
