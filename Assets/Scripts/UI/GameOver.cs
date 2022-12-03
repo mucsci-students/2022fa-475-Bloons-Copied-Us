@@ -21,8 +21,8 @@ public class GameOver : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    // Called in late update so updates after health display 
+    void LateUpdate()
     {
         if (GameManager.health <= 0)
         {

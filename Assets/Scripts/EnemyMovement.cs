@@ -35,17 +35,21 @@ public class EnemyMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0f,270f,0f);
         }
-        if (target[curr].position.x > transform.position.x)
+        else if (target[curr].position.x > transform.position.x)
         {
             transform.rotation = Quaternion.Euler(0f,90f,0f);
         }
-        if (target[curr].position.z < transform.position.z)
+        else if (target[curr].position.z < transform.position.z)
         {
             transform.rotation = Quaternion.Euler(0f,180f,0f);
         }
-        if (target[curr].position.z > transform.position.z)
+        else if (target[curr].position.z > transform.position.z)
         {
             transform.rotation = Quaternion.Euler(0f,0f,0f);
+        }
+        else
+        {
+
         }
         
     }

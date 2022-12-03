@@ -8,6 +8,7 @@ using TMPro;
 
 public class TowerInfo : MonoBehaviour
 {
+    [SerializeField] GameObject TowerImage;
     GameObject towerGameobject;
 
     public GameObject Towerinfotab;
@@ -160,6 +161,7 @@ public class TowerInfo : MonoBehaviour
         if (towerSelected == "BallistaTowerlvl01(Clone)")
         {
             SetTowerStats(Ballista1, Ballista2);
+            TowerImage = Resources.Load<GameObject>("Assets/UI/Towers1/Ballista");
         }
         else if (towerSelected == "BallistaTowerlvl02(Clone)")
         {
@@ -174,6 +176,7 @@ public class TowerInfo : MonoBehaviour
         else if (towerSelected == "PortalTowerlvl01(Clone)")
         {
             SetTowerStats(PortalTower1, PortalTower2);
+            TowerImage = Resources.Load<GameObject>("Assets/UI/Towers1/PortalTower");
         }
         else if (towerSelected == "PortalTowerlvl02(Clone)")
         {

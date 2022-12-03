@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
 
     void OnRestart()
     {
+        //need to reset these class variables after reloading scene
         Time.timeScale = 1;
         GameOver.isDead = false;
         WaveManager.WaveNumber = 0;
