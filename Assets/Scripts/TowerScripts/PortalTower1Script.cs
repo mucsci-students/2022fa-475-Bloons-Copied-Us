@@ -8,7 +8,6 @@ public class PortalTower1Script : MonoBehaviour
 
     [SerializeField] float damage;
     [SerializeField] float fireInterval;
-    [SerializeField] float cost;
     [SerializeField] float rotateSpeed;
     [SerializeField] GameObject FxPrefab;
 

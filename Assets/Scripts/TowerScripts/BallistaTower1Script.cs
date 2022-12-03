@@ -9,7 +9,6 @@ public class BallistaTower1Script : MonoBehaviour
     [SerializeField] float damage;
     [SerializeField] float fireInterval;
     [SerializeField] float speed;
-    [SerializeField] float cost;
     [SerializeField] float rotateSpeed;
     [SerializeField] GameObject ArrowPrefab;
 
@@ -105,17 +104,13 @@ public class BallistaTower1Script : MonoBehaviour
             ts.target = t.gameObject;
             ts.speed = speed;
             ts.damage = damage;
+            ts.range = transform.Find("Range").localScale.x / 2.0f;
             timer = 0f;
 
             // Testing
             //if (t.gameObject.GetComponent<EnemyScript>().health - damage <= 0)
                 //t.gameObject.GetComponent<EnemyScript>().isDead = true;
         }
-    }
-
-    private void Upgrade()
-    {
-
     }
 
     private void OnTriggerEnter(Collider other)
