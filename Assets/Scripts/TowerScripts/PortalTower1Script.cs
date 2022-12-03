@@ -60,7 +60,7 @@ public class PortalTower1Script : MonoBehaviour
                 // AI formula
                 if (AITarget == null)
                     AITarget = enemiesInRange[i];
-                else if (AIWeight(enemiesInRange[i]) > AIWeight(AITarget))
+                else if (TowerScript.AIWeight(enemiesInRange[i]) > TowerScript.AIWeight(AITarget))
                     AITarget = enemiesInRange[i];
             }
         }

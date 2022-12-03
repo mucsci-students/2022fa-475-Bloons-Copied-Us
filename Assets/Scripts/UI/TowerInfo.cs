@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class TowerInfo : MonoBehaviour
 {
     [SerializeField] GameObject TowerImage;
-    GameObject towerGameobject;
+    public static GameObject towerGameobject;
 
     public GameObject Towerinfotab;
     [SerializeField] TextMeshProUGUI TowerinfoText;
@@ -161,7 +161,7 @@ public class TowerInfo : MonoBehaviour
         if (towerSelected == "BallistaTowerlvl01(Clone)")
         {
             SetTowerStats(Ballista1, Ballista2);
-            TowerImage = Resources.Load<GameObject>("Assets/Resources/Towers1/Ballista");
+            TowerImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Towers1/Ballista");
         }
         else if (towerSelected == "BallistaTowerlvl02(Clone)")
         {

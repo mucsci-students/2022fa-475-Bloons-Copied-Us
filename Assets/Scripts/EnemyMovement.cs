@@ -27,7 +27,6 @@ public class EnemyMovement : MonoBehaviour
             {
                 curr++;
             }
-            gameObject.GetComponent<Animator>().Play("Idle");
         }
 
         transform.LookAt(target[curr].position);
