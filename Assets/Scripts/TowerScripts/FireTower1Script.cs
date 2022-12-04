@@ -8,6 +8,7 @@ public class FireTower1Script : MonoBehaviour
     [SerializeField] float fireInterval;
     [SerializeField] float speed;
     [SerializeField] float rotateSpeed;
+    [SerializeField] float explosionRadius;
     [SerializeField] GameObject FireBallPrefab;
 
     public TargetMode targetMode = TargetMode.FIRST;
@@ -100,6 +101,7 @@ public class FireTower1Script : MonoBehaviour
             ts.speed = speed;
             ts.damage = damage;
             ts.range = transform.Find("Range").localScale.x / 2.0f;
+            FireBall.GetComponent<SphereCollider>().radius = explosionRadius;
             timer = 0f;
 
             // Testing
