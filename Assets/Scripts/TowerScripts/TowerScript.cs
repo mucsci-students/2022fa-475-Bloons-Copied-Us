@@ -35,43 +35,43 @@ public class TowerScript : MonoBehaviour
         Ice = 5
     }
 
-    void Update()
-    {
-        if (TowerInfo.towerGameobject == null) 
-        {
-            return;
-        }
+    //void LateUpdate()
+    //{
+    //    if (TowerInfo.towerGameobject == null)
+    //    {
+    //        return;
+    //    }
+
+    //    //accesses and sets tower mode in respective tower scripts
+    //    //if (TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Ballista)
+    //    //{
+
+    //    //    TowerInfo.towerGameobject.GetComponent<BallistaTower1Script>().targetMode = target;
+    //    //}
+    //    //Debug.Log(TowerInfo.towerGameobject.GetComponent<BallistaTower1Script>().targetMode);
 
 
-        //accesses and sets tower mode in respective tower scripts
-        if(TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Ballista)
-        {
-            TowerInfo.towerGameobject.GetComponent<BallistaTower1Script>().targetMode = target;
-        }
-        else if(TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Void)
-        {
-            TowerInfo.towerGameobject.GetComponent<PortalTower1Script>().targetMode = target;
-        }
-        //else if(TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Fire)
-        //{
-        //    TowerInfo.towerGameobject.GetComponent<PortalTower1Script>().targetMode = target;
-        //}        
-        //else if(TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Lightning)
-        //{
-        //    TowerInfo.towerGameobject.GetComponent<PortalTower1Script>().targetMode = target;
-        //}        
-        //else if(TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Ballista3)
-        //{
-        //    TowerInfo.towerGameobject.GetComponent<PortalTower1Script>().targetMode = target;
-        //}      
-        //else if(TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Ice)
-        //{
-        //    TowerInfo.towerGameobject.GetComponent<PortalTower1Script>().targetMode = target;
-        //}
-
-        
-
-    }
+    //    //if (TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Void)
+    //    //{
+    //    //    TowerInfo.towerGameobject.GetComponent<PortalTower1Script>().targetMode = target;
+    //    //}
+    //    //else if(TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Fire)
+    //    //{
+    //    //    TowerInfo.towerGameobject.GetComponent<PortalTower1Script>().targetMode = target;
+    //    //}        
+    //    //else if(TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Lightning)
+    //    //{
+    //    //    TowerInfo.towerGameobject.GetComponent<PortalTower1Script>().targetMode = target;
+    //    //}        
+    //    //else if(TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Ballista3)
+    //    //{
+    //    //    TowerInfo.towerGameobject.GetComponent<PortalTower1Script>().targetMode = target;
+    //    //}      
+    //    //else if(TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Ice)
+    //    //{
+    //    //    TowerInfo.towerGameobject.GetComponent<PortalTower1Script>().targetMode = target;
+    //    //}
+    //}
 
 
     public static float AIWeight(GameObject target)

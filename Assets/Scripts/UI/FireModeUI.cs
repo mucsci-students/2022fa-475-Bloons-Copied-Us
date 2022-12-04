@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Runtime.ExceptionServices;
 using UnityEngine;
 using UnityEngine.UI;
+using static TowerScript;
+using static UnityEngine.GraphicsBuffer;
 
 public class FireModeUI : MonoBehaviour
 {
@@ -11,25 +13,47 @@ public class FireModeUI : MonoBehaviour
     TargetMode Strongest = TargetMode.STRONGEST; // 1 index
     TargetMode Optimal = TargetMode.AI; // 2 index
 
+    TargetMode selected;
+
+
+
 
     //called on event selection
+    void Update()
+    {
+        if (TowerInfo.towerGameobject == null) return;
+
+            Dropdown.GetComponentInChildren<Text>().text = TowerInfo.towerGameobject.GetComponent<TowerScript>().target.ToString();
+
+    }
+
     public void OnSubmit()
     {
-        Debug.Log(Dropdown.value);
+
         switch (Dropdown.value)
         {
             case 0:
-                TowerInfo.towerGameobject.GetComponent<TowerScript>().target = First;
+                   selected = First;
                 break;
             case 1:
-                TowerInfo.towerGameobject.GetComponent<TowerScript>().target = Strongest;
+                   selected = Strongest;
                 break;
             case 2:
-                TowerInfo.towerGameobject.GetComponent<TowerScript>().target = Optimal;
+                selected = Optimal;
                 break;
             default:
                 break;
         }
-        Debug.Log(TowerInfo.towerGameobject.GetComponent<TowerScript>().target);
+        TowerInfo.towerGameobject.GetComponent<TowerScript>().target = selected;
+
+        if(TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Ballista)
+        {
+            TowerInfo.towerGameobject.GetComponent<BallistaTower1Script>().targetMode = selected;
+        }
+        else if (TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Void)
+        {
+            TowerInfo.towerGameobject.GetComponent<PortalTower1Script>().targetMode = selected;
+        }
+            
     }
 }

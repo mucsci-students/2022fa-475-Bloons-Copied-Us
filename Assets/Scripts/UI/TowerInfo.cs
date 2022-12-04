@@ -148,6 +148,7 @@ public class TowerInfo : MonoBehaviour
                     towerSelected = hit.collider.name;
                     towerGameobject = hit.collider.gameObject;
 
+
                     // Move tower up to signal that the tower is selected
                     towerGameobject.transform.localPosition += new Vector3(0.0f, 0.5f, 0.0f);
                 }
