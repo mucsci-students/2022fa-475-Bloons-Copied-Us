@@ -261,11 +261,12 @@ GameObject:
   - component: {fileID: 5440267042326877870}
   - component: {fileID: 1518074657011774698}
   - component: {fileID: 8544928144735889590}
+  - component: {fileID: 525918880465406138}
   - component: {fileID: 4433675868731988080}
   - component: {fileID: 6951516328401759653}
   m_Layer: 0
   m_Name: FireTowerlvl03
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -356,6 +357,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 30
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &525918880465406138
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6017897722388203714}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 18, z: 10}
+  m_Center: {x: 0, y: 9, z: 0}
 --- !u!114 &4433675868731988080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,7 +404,7 @@ MonoBehaviour:
   GroundBelow: {fileID: 0}
   type: 2
   target: 0
-  level: 2
+  level: 3
   IsPlaced: 0
 --- !u!1 &7389314378455011463
 GameObject:
