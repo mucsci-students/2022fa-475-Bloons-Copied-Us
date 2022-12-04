@@ -44,6 +44,9 @@ public class FireModeUI : MonoBehaviour
             default:
                 break;
         }
+        //sets the value as dummy value to unselect selected value 
+        Dropdown.value = 3;
+
         TowerInfo.towerGameobject.GetComponent<TowerScript>().target = selected;
 
         if(TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Ballista)

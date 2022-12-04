@@ -45,8 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choice: 1
-  money: 0
-  health: 0
   camOn: 0
   HelathBar: {fileID: 0}
   MoneyUI: {fileID: 0}
