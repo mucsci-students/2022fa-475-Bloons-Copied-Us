@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1722605313891556796}
   m_LocalRotation: {x: 0.00044892053, y: 0.00074823375, z: 0.005096027, w: 0.99998665}
   m_LocalPosition: {x: 0.22824132, y: 0, z: 1.958581}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5217710043738797802}
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: []
-  speed: 3
+  speed: 0.75
   distanceTraveled: 0
 --- !u!114 &-825422174506742877
 MonoBehaviour:
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f308b2c0f81a334a88e150962d82a80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 8
+  health: 80
   isDead: 0
 --- !u!135 &-5106806489295411917
 SphereCollider:
