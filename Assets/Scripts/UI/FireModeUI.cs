@@ -53,6 +53,10 @@ public class FireModeUI : MonoBehaviour
         else if (TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Void)
         {
             TowerInfo.towerGameobject.GetComponent<PortalTower1Script>().targetMode = selected;
+        }        
+        else if (TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Fire)
+        {
+            TowerInfo.towerGameobject.GetComponent<FireTower1Script>().targetMode = selected;
         }
             
     }
