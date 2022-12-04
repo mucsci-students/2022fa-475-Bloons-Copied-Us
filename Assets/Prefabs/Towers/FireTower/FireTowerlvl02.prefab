@@ -230,11 +230,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd8cf37f856d14468d67dd5c401bf6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
-  fireInterval: 1.9
+  damage: 4
+  fireInterval: 1.5
   speed: 15
   rotateSpeed: 10
-  explosionRadius: 12.5
+  explosionRadius: 15
   FireBallPrefab: {fileID: 4206464604673414884, guid: 3ca8084b067bf1b469bef3aedcd0e4e0, type: 3}
   targetMode: 0
 --- !u!114 &6203635927990168290
