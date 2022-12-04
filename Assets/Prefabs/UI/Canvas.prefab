@@ -2686,8 +2686,8 @@ MonoBehaviour:
   BallistaPrefab3: {fileID: 7833941157049236830, guid: 7a12d3a6e92d4854285e9f87570e671e, type: 3}
   PortalPrefab2: {fileID: 6328982832741759644, guid: fc3fb898b9e525d46b8d84d750fae89f, type: 3}
   PortalPrefab3: {fileID: 8655559165314570745, guid: 322fe11d6999ff84c89dd2d60d76ecf6, type: 3}
-  FirePrefab2: {fileID: 0}
-  FirePrefab3: {fileID: 0}
+  FirePrefab2: {fileID: 1286383218548459431, guid: d2c6ac91eecbe90429d54bfce74aee79, type: 3}
+  FirePrefab3: {fileID: 6017897722388203714, guid: a6c772b3a2d8df4409c4b9ebbddd2566, type: 3}
 --- !u!1 &1345427212
 GameObject:
   m_ObjectHideFlags: 0
