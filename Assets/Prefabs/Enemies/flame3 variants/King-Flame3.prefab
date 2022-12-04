@@ -106,9 +106,11 @@ GameObject:
   - component: {fileID: 156899684043061519}
   - component: {fileID: 5675046268038936086}
   - component: {fileID: 1578572423031464138}
+  - component: {fileID: -5087176329984217763}
+  - component: {fileID: 9195932157173477703}
   m_Layer: 0
-  m_Name: Slime_01_King
-  m_TagString: Untagged
+  m_Name: King-Flame3
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,7 +181,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: []
-  speed: 1
+  speed: 0.75
+  distanceTraveled: 0
+--- !u!114 &-5087176329984217763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2465013746444044564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f308b2c0f81a334a88e150962d82a80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 500
+  isDead: 0
+--- !u!135 &9195932157173477703
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2465013746444044564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6205374694857075796
 GameObject:
   m_ObjectHideFlags: 0

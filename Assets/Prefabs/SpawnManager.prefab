@@ -365,3 +365,54 @@ MonoBehaviour:
       amount: 10
       interval: 3
       timeToStart: 2
+  - spawnInfos:
+    - spawnPrefab: {fileID: 3612496524209784688, guid: c86438452b8e09a4cbfde0521c45f9fb, type: 3}
+      amount: 30
+      interval: 0.5
+      timeToStart: 30
+    - spawnPrefab: {fileID: 4080346336222432247, guid: 519bbb6801391d34eb93dbc7c4834c46, type: 3}
+      amount: 10
+      interval: 2
+      timeToStart: 0
+    - spawnPrefab: {fileID: 9098272077525102529, guid: fb1526078549e3548ae3a1329eb519b0, type: 3}
+      amount: 20
+      interval: 1
+      timeToStart: 25
+    - spawnPrefab: {fileID: 7988236518089615572, guid: e6bbe95d58d7ef943b71e86a09a6ee6d, type: 3}
+      amount: 10
+      interval: 0.5
+      timeToStart: 20
+  - spawnInfos:
+    - spawnPrefab: {fileID: 3612496524209784688, guid: c86438452b8e09a4cbfde0521c45f9fb, type: 3}
+      amount: 30
+      interval: 0.25
+      timeToStart: 20
+    - spawnPrefab: {fileID: 7417129551158670024, guid: e279f4ef046f63447b91f15cbab9e2a3, type: 3}
+      amount: 20
+      interval: 1.25
+      timeToStart: 0
+    - spawnPrefab: {fileID: 8757839372936513252, guid: 712fdbe95c35be64c901cda708a6e8ec, type: 3}
+      amount: 20
+      interval: 1
+      timeToStart: 0
+    - spawnPrefab: {fileID: 7988236518089615572, guid: e6bbe95d58d7ef943b71e86a09a6ee6d, type: 3}
+      amount: 50
+      interval: 0.5
+      timeToStart: 20
+  - spawnInfos:
+    - spawnPrefab: {fileID: 1144690485160927591, guid: 0e3075183039e3043a0b34f2438a67b8, type: 3}
+      amount: 12
+      interval: 0.25
+      timeToStart: 1
+    - spawnPrefab: {fileID: 4080346336222432247, guid: 519bbb6801391d34eb93dbc7c4834c46, type: 3}
+      amount: 10
+      interval: 1.33
+      timeToStart: 0
+    - spawnPrefab: {fileID: 8757839372936513252, guid: 712fdbe95c35be64c901cda708a6e8ec, type: 3}
+      amount: 20
+      interval: 1
+      timeToStart: 35
+    - spawnPrefab: {fileID: 7417129551158670024, guid: e279f4ef046f63447b91f15cbab9e2a3, type: 3}
+      amount: 50
+      interval: 0.5
+      timeToStart: 20
