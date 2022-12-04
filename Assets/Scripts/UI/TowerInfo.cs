@@ -161,30 +161,34 @@ public class TowerInfo : MonoBehaviour
         if (towerSelected == "BallistaTowerlvl01(Clone)")
         {
             SetTowerStats(Ballista1, Ballista2);
-            TowerImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Towers1/Ballista");
+            TowerImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Towers1/Ballista1");
         }
         else if (towerSelected == "BallistaTowerlvl02(Clone)")
         {
             SetTowerStats(Ballista2, Ballista3);
+            TowerImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Towers2/Ballista2");
         }
         else if (towerSelected == "BallistaTowerlvl03(Clone)")
         {
             SetTowerStatsMax(Ballista3);
+            TowerImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Towers3/Ballista3");
         }
 
         // PortalTower Selection
         else if (towerSelected == "PortalTowerlvl01(Clone)")
         {
             SetTowerStats(PortalTower1, PortalTower2);
-            TowerImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Towers1/PortalTower");
+            TowerImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Towers1/PortalTower1");
         }
         else if (towerSelected == "PortalTowerlvl02(Clone)")
         {
             SetTowerStats(PortalTower2, PortalTower3);
+            TowerImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Towers2/PortalTower2");
         }
         else if (towerSelected == "PortalTowerlvl03(Clone)")
         {
             SetTowerStatsMax(PortalTower3);
+            TowerImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Towers3/PortalTower3");
         }
         // Other tower continue from here
         //************************************************************************************************
