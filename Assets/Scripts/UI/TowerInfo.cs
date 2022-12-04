@@ -25,6 +25,9 @@ public class TowerInfo : MonoBehaviour
     [SerializeField] GameObject PortalPrefab2;
     [SerializeField] GameObject PortalPrefab3;
 
+    [SerializeField] GameObject FirePrefab2;
+    [SerializeField] GameObject FirePrefab3;
+
     string Towertext;
     string TowertextUpgrade;
 
@@ -46,6 +49,11 @@ public class TowerInfo : MonoBehaviour
     public TowerInformation PortalTower1 = new("PortalTower", 1, 2, 30, .9f, 220, 75);
     public TowerInformation PortalTower2 = new("PortalTower", 2, 4, 32.5f, .8f, 400, 158);
     public TowerInformation PortalTower3 = new("PortalTower", 3, 7, 35, .75f, 999999, 300);
+
+    // fire tower objects
+    public TowerInformation FireTower1 = new("FireTower", 1, 2, 25, 2f, 300, 113);
+    public TowerInformation FireTower2 = new("FireTower", 2, 3, 27.5f, 1.9f, 550, 225);
+    public TowerInformation FireTower3 = new("FireTower", 3, 4, 30, 1.8f, 999999, 414);
     //continue with towers
 
 
@@ -66,6 +74,9 @@ public class TowerInfo : MonoBehaviour
         //Void
         else if (tower.type == TowerScript.TowerType.Void && tower.level == 1) UpgradeTowerHelper(PortalTower1, PortalPrefab2);
         else if (tower.type == TowerScript.TowerType.Void && tower.level == 2) UpgradeTowerHelper(PortalTower2, PortalPrefab3);
+        //Fire
+        else if (tower.type == TowerScript.TowerType.Fire && tower.level == 1) UpgradeTowerHelper(FireTower1, FirePrefab2);
+        else if (tower.type == TowerScript.TowerType.Fire && tower.level == 2) UpgradeTowerHelper(FireTower2, FirePrefab3);
         TowerInfoClose();
     }
 
@@ -93,6 +104,15 @@ public class TowerInfo : MonoBehaviour
                 break;
             case "PortalTowerlvl03(Clone)":
                 GameManager.money += PortalTower3.sell;
+                break;
+            case "FireTowerlvl01(Clone)":
+                GameManager.money += FireTower1.sell;
+                break;
+            case "FireTowerlvl02(Clone)":
+                GameManager.money += FireTower2.sell;
+                break;
+            case "FireTowerlvl03(Clone)":
+                GameManager.money += FireTower3.sell;
                 break;
             default:
                 flag = false;
@@ -175,6 +195,23 @@ public class TowerInfo : MonoBehaviour
         }
 
         // PortalTower Selection
+        else if (towerSelected == "FireTowerlvl01(Clone)")
+        {
+            SetTowerStats(FireTower1, FireTower2);
+            TowerImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Towers1/FireTower1");
+        }
+        else if (towerSelected == "FireTowerlvl02(Clone)")
+        {
+            SetTowerStats(FireTower2, FireTower3);
+            TowerImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Towers2/FireTower2");
+        }
+        else if (towerSelected == "FireTowerlvl03(Clone)")
+        {
+            SetTowerStatsMax(PortalTower3);
+            TowerImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Towers3/FireTower3");
+        }
+
+        // FireTower Selection
         else if (towerSelected == "PortalTowerlvl01(Clone)")
         {
             SetTowerStats(PortalTower1, PortalTower2);
