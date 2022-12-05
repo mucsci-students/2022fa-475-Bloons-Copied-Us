@@ -62,7 +62,7 @@ public class WaveManager : MonoBehaviour
         {
             // Hide bug
             enemies = 0;
-            timer += Time.deltaTime;
+            timer += Time.unscaledDeltaTime;
             TimerRef = timer; // used for ui
             if (timer > WaveTimer || Input.GetKeyDown(KeyCode.Space))
             {
