@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngineInternal;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
 public class TowerInfo : MonoBehaviour
 {
@@ -235,9 +236,9 @@ public class TowerInfo : MonoBehaviour
 
     private void SetTowerStats(TowerInformation tower1, TowerInformation tower2)
     {
-        Towertext = "Damage: " + tower1.damage + "\x0A" + "Range: " + tower1.range + "\x0A" + "Attack Speed: " + tower1.attackSpeed;
+        Towertext = "Damage: " + tower1.damage + "\x0A" + "Range: " + tower1.range + "\x0A" + "Attack Speed: " + Math.Round(1.0f/tower1.attackSpeed,2);
         TowerinfoText.SetText(Towertext);
-        TowertextUpgrade = "Damage: " + tower2.damage + "\x0A" + "Range: " + tower2.range + "\x0A" + "Attack Speed: " + tower2.attackSpeed;
+        TowertextUpgrade = "Damage: " + tower2.damage + "\x0A" + "Range: " + tower2.range + "\x0A" + "Attack Speed: " + Math.Round(1.0f / tower2.attackSpeed,2);
         UpgradeTowerinfoText.SetText(TowertextUpgrade);
 
         UpgradeCost.SetText("Upgrade: $" + tower1.upgrade);
@@ -248,7 +249,7 @@ public class TowerInfo : MonoBehaviour
 
     private void SetTowerStatsMax(TowerInformation tower1)
     {
-        Towertext = "Damage: " + tower1.damage + "\x0A" + "Range: " + tower1.range + "\x0A" + "Attack Speed: " + tower1.attackSpeed;
+        Towertext = "Damage: " + tower1.damage + "\x0A" + "Range: " + tower1.range + "\x0A" + "Attack Speed: " + Math.Round(1.0f / tower1.attackSpeed,2);
         TowerinfoText.SetText(Towertext);
         TowertextUpgrade = "Damage: Max" + "\x0A" + "Range: Max" + "\x0A" + "Attack Speed: Max";
         UpgradeTowerinfoText.SetText(TowertextUpgrade);

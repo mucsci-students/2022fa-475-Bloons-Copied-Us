@@ -109,7 +109,7 @@ MonoBehaviour:
     - spawnPrefab: {fileID: 5287728118951516180, guid: 45dead24fe73eca47a05121902767d6f, type: 3}
       amount: 3
       interval: 5
-      timeToStart: 20
+      timeToStart: 15
   - spawnInfos:
     - spawnPrefab: {fileID: 2600102407150721283, guid: 1f276967a1cbcb9428ca26f604551c28, type: 3}
       amount: 14
@@ -337,7 +337,7 @@ MonoBehaviour:
       interval: 1
       timeToStart: 20
     - spawnPrefab: {fileID: 8638022055795865448, guid: 1c83240b6e2b7a5459a1f67f180e5d3a, type: 3}
-      amount: 20
+      amount: 30
       interval: 0.5
       timeToStart: 40
     - spawnPrefab: {fileID: 3612496524209784688, guid: c86438452b8e09a4cbfde0521c45f9fb, type: 3}
@@ -351,7 +351,7 @@ MonoBehaviour:
   - spawnInfos:
     - spawnPrefab: {fileID: 5616791392313965323, guid: aa311aa39405db249b647d662107f50d, type: 3}
       amount: 100
-      interval: 1
+      interval: 0.66
       timeToStart: 20
     - spawnPrefab: {fileID: 9186129618696545304, guid: e1174a50427387848849e2fe364598f5, type: 3}
       amount: 20
@@ -475,6 +475,10 @@ MonoBehaviour:
       amount: 5
       interval: 1
       timeToStart: 0
+    - spawnPrefab: {fileID: 5616791392313965323, guid: aa311aa39405db249b647d662107f50d, type: 3}
+      amount: 30
+      interval: 1
+      timeToStart: 25
   - spawnInfos:
     - spawnPrefab: {fileID: 2730098107597585308, guid: 63ed6bcec71a85d4a8e5251f333258d3, type: 3}
       amount: 30
@@ -550,4 +554,170 @@ MonoBehaviour:
     - spawnPrefab: {fileID: 1208810476485999063, guid: 8f5b8c3f63d35f440ae04240acf835f4, type: 3}
       amount: 20
       interval: 0.25
+      timeToStart: 0
+  - spawnInfos:
+    - spawnPrefab: {fileID: 2465013746444044564, guid: c7a6d81587880ae48b30e843d6af9928, type: 3}
+      amount: 15
+      interval: 0.5
+      timeToStart: 0
+    - spawnPrefab: {fileID: 1144690485160927591, guid: 0e3075183039e3043a0b34f2438a67b8, type: 3}
+      amount: 15
+      interval: 0.5
+      timeToStart: 0.25
+    - spawnPrefab: {fileID: 3612496524209784688, guid: c86438452b8e09a4cbfde0521c45f9fb, type: 3}
+      amount: 50
+      interval: 0.33
+      timeToStart: 25
+  - spawnInfos:
+    - spawnPrefab: {fileID: 2465013746444044564, guid: c7a6d81587880ae48b30e843d6af9928, type: 3}
+      amount: 10
+      interval: 0.5
+      timeToStart: 0
+    - spawnPrefab: {fileID: 4604267180768740651, guid: ecb789ace6db862439a4284010196544, type: 3}
+      amount: 25
+      interval: 0.5
+      timeToStart: 10
+    - spawnPrefab: {fileID: 8757839372936513252, guid: 712fdbe95c35be64c901cda708a6e8ec, type: 3}
+      amount: 40
+      interval: 0.75
+      timeToStart: 25
+    - spawnPrefab: {fileID: 1208810476485999063, guid: 8f5b8c3f63d35f440ae04240acf835f4, type: 3}
+      amount: 40
+      interval: 0.5
+      timeToStart: 25
+  - spawnInfos:
+    - spawnPrefab: {fileID: 4604267180768740651, guid: ecb789ace6db862439a4284010196544, type: 3}
+      amount: 25
+      interval: 0.2
+      timeToStart: 0
+    - spawnPrefab: {fileID: 2730098107597585308, guid: 63ed6bcec71a85d4a8e5251f333258d3, type: 3}
+      amount: 40
+      interval: 0.2
+      timeToStart: 15
+    - spawnPrefab: {fileID: 3409240798957922828, guid: 890ccd3929a1a534dad12b01d1e10b30, type: 3}
+      amount: 40
+      interval: 0.2
+      timeToStart: 40
+    - spawnPrefab: {fileID: 5287728118951516180, guid: 45dead24fe73eca47a05121902767d6f, type: 3}
+      amount: 40
+      interval: 0.2
+      timeToStart: 65
+    - spawnPrefab: {fileID: 3612496524209784688, guid: c86438452b8e09a4cbfde0521c45f9fb, type: 3}
+      amount: 80
+      interval: 0.5
+      timeToStart: 30
+  - spawnInfos:
+    - spawnPrefab: {fileID: 4604267180768740651, guid: ecb789ace6db862439a4284010196544, type: 3}
+      amount: 25
+      interval: 0.5
+      timeToStart: 10
+    - spawnPrefab: {fileID: 4559395394937851192, guid: 2aa27da0654ac16428e877ed50f6ee66, type: 3}
+      amount: 40
+      interval: 0.5
+      timeToStart: 25
+    - spawnPrefab: {fileID: 2465013746444044564, guid: c7a6d81587880ae48b30e843d6af9928, type: 3}
+      amount: 10
+      interval: 0.2
+      timeToStart: 0
+    - spawnPrefab: {fileID: 3334472296491287535, guid: 4e8bc792ee38f4d4f9c1122d04162d2a, type: 3}
+      amount: 20
+      interval: 0.2
+      timeToStart: 35
+  - spawnInfos:
+    - spawnPrefab: {fileID: 3612496524209784688, guid: c86438452b8e09a4cbfde0521c45f9fb, type: 3}
+      amount: 80
+      interval: 0.5
+      timeToStart: 10
+    - spawnPrefab: {fileID: 2730098107597585308, guid: 63ed6bcec71a85d4a8e5251f333258d3, type: 3}
+      amount: 30
+      interval: 0.5
+      timeToStart: 25
+    - spawnPrefab: {fileID: 4604267180768740651, guid: ecb789ace6db862439a4284010196544, type: 3}
+      amount: 30
+      interval: 0.5
+      timeToStart: 25
+    - spawnPrefab: {fileID: 3334472296491287535, guid: 4e8bc792ee38f4d4f9c1122d04162d2a, type: 3}
+      amount: 40
+      interval: 0.2
+      timeToStart: 0
+  - spawnInfos:
+    - spawnPrefab: {fileID: 2465013746444044564, guid: c7a6d81587880ae48b30e843d6af9928, type: 3}
+      amount: 30
+      interval: 0.5
+      timeToStart: 0
+    - spawnPrefab: {fileID: 3612496524209784688, guid: c86438452b8e09a4cbfde0521c45f9fb, type: 3}
+      amount: 80
+      interval: 0.5
+      timeToStart: 20
+  - spawnInfos:
+    - spawnPrefab: {fileID: 3334472296491287535, guid: 4e8bc792ee38f4d4f9c1122d04162d2a, type: 3}
+      amount: 30
+      interval: 2
+      timeToStart: 0
+    - spawnPrefab: {fileID: 3612496524209784688, guid: c86438452b8e09a4cbfde0521c45f9fb, type: 3}
+      amount: 30
+      interval: 2
+      timeToStart: 0.25
+    - spawnPrefab: {fileID: 8638022055795865448, guid: 1c83240b6e2b7a5459a1f67f180e5d3a, type: 3}
+      amount: 30
+      interval: 2
+      timeToStart: 0.5
+    - spawnPrefab: {fileID: 8831423930925208705, guid: eb5f9f337fb26284c8858ae40e3ee459, type: 3}
+      amount: 30
+      interval: 2
+      timeToStart: 0.75
+    - spawnPrefab: {fileID: 5616791392313965323, guid: aa311aa39405db249b647d662107f50d, type: 3}
+      amount: 30
+      interval: 2
+      timeToStart: 1
+    - spawnPrefab: {fileID: 6353084866034299320, guid: e5d2cdaf366508748a3597d7b74405a4, type: 3}
+      amount: 30
+      interval: 2
+      timeToStart: 1.25
+    - spawnPrefab: {fileID: 4506060487824126354, guid: 1e6aabc9d2044314581d3e80709edb0e, type: 3}
+      amount: 30
+      interval: 2
+      timeToStart: 1.5
+    - spawnPrefab: {fileID: 1437820603104199390, guid: 784945ea6c52bbf4abcd40846840d103, type: 3}
+      amount: 30
+      interval: 2
+      timeToStart: 1.75
+    - spawnPrefab: {fileID: 1769728913727559303, guid: c4a96f65555c7d14c844b66f364bfa67, type: 3}
+      amount: 30
+      interval: 2
+      timeToStart: 2
+  - spawnInfos:
+    - spawnPrefab: {fileID: 1208810476485999063, guid: 8f5b8c3f63d35f440ae04240acf835f4, type: 3}
+      amount: 50
+      interval: 2
+      timeToStart: 0
+  - spawnInfos:
+    - spawnPrefab: {fileID: 4604267180768740651, guid: ecb789ace6db862439a4284010196544, type: 3}
+      amount: 100
+      interval: 2
+      timeToStart: 0
+    - spawnPrefab: {fileID: 3334472296491287535, guid: 4e8bc792ee38f4d4f9c1122d04162d2a, type: 3}
+      amount: 100
+      interval: 2
+      timeToStart: 25
+    - spawnPrefab: {fileID: 8638022055795865448, guid: 1c83240b6e2b7a5459a1f67f180e5d3a, type: 3}
+      amount: 100
+      interval: 2
+      timeToStart: 26
+  - spawnInfos:
+    - spawnPrefab: {fileID: 4604267180768740651, guid: ecb789ace6db862439a4284010196544, type: 3}
+      amount: 100
+      interval: 2
+      timeToStart: 0
+    - spawnPrefab: {fileID: 2465013746444044564, guid: c7a6d81587880ae48b30e843d6af9928, type: 3}
+      amount: 40
+      interval: 2
+      timeToStart: 0
+    - spawnPrefab: {fileID: 3334472296491287535, guid: 4e8bc792ee38f4d4f9c1122d04162d2a, type: 3}
+      amount: 100
+      interval: 2
+      timeToStart: 26
+    - spawnPrefab: {fileID: 4559395394937851192, guid: 2aa27da0654ac16428e877ed50f6ee66, type: 3}
+      amount: 50
+      interval: 1
       timeToStart: 0
