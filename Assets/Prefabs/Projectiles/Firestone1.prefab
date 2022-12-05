@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7438849365863894763}
   - component: {fileID: 4547401536921354647}
   m_Layer: 0
-  m_Name: Firestone
+  m_Name: Firestone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

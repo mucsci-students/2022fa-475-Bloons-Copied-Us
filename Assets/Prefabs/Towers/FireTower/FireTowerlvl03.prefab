@@ -387,7 +387,7 @@ MonoBehaviour:
   speed: 15
   rotateSpeed: 10
   explosionRadius: 20
-  FireBallPrefab: {fileID: 4206464604673414884, guid: 3ca8084b067bf1b469bef3aedcd0e4e0, type: 3}
+  FireBallPrefab: {fileID: 4206464604673414884, guid: 5e9d394f8003f35499d5a4a0c0056049, type: 3}
   targetMode: 0
 --- !u!114 &6951516328401759653
 MonoBehaviour:
