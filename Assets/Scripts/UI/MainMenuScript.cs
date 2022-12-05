@@ -38,6 +38,12 @@ public class MainMenuScript : MonoBehaviour
         StartCoroutine(LoadAsyncScene(1));
     }
 
+    public void Play(int level)
+    {
+        LoadingIcon.SetActive(true);
+        StartCoroutine(LoadAsyncScene(level));
+    }
+
     IEnumerator LoadAsyncScene(int index)
     {
         // The Application loads the Scene in the background as the current Scene runs.
