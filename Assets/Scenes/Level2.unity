@@ -16412,10 +16412,6 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2595296699688714309, guid: 14ef263f709581a48b5571fb2d0f89eb, type: 3}
-      propertyPath: events.Array.data[37].spawnInfos.Array.data[1].amount
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2595296699688714309, guid: 14ef263f709581a48b5571fb2d0f89eb, type: 3}
       propertyPath: events.Array.data[37].spawnInfos.Array.data[2].amount
       value: 30
       objectReference: {fileID: 0}
@@ -16462,10 +16458,6 @@ PrefabInstance:
     - target: {fileID: 2595296699688714309, guid: 14ef263f709581a48b5571fb2d0f89eb, type: 3}
       propertyPath: events.Array.data[35].spawnInfos.Array.data[3].interval
       value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2595296699688714309, guid: 14ef263f709581a48b5571fb2d0f89eb, type: 3}
-      propertyPath: events.Array.data[37].spawnInfos.Array.data[1].interval
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2595296699688714309, guid: 14ef263f709581a48b5571fb2d0f89eb, type: 3}
       propertyPath: events.Array.data[37].spawnInfos.Array.data[2].interval
@@ -16523,14 +16515,6 @@ PrefabInstance:
       propertyPath: events.Array.data[35].spawnInfos.Array.data[3].spawnPrefab
       value: 
       objectReference: {fileID: 3334472296491287535, guid: 4e8bc792ee38f4d4f9c1122d04162d2a, type: 3}
-    - target: {fileID: 2595296699688714309, guid: 14ef263f709581a48b5571fb2d0f89eb, type: 3}
-      propertyPath: events.Array.data[37].spawnInfos.Array.data[1].spawnPrefab
-      value: 
-      objectReference: {fileID: 3612496524209784688, guid: c86438452b8e09a4cbfde0521c45f9fb, type: 3}
-    - target: {fileID: 2595296699688714309, guid: 14ef263f709581a48b5571fb2d0f89eb, type: 3}
-      propertyPath: events.Array.data[37].spawnInfos.Array.data[1].timeToStart
-      value: 0.25
-      objectReference: {fileID: 0}
     - target: {fileID: 2595296699688714309, guid: 14ef263f709581a48b5571fb2d0f89eb, type: 3}
       propertyPath: events.Array.data[37].spawnInfos.Array.data[2].spawnPrefab
       value: 
