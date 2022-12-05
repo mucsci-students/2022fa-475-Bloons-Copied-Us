@@ -21,10 +21,19 @@ public class Goblin : MonoBehaviour
     public float damage = 1;
     public int price = 200;
 
+    BoxCollider coll;
+    
+    void Awake()
+    {
+        coll = this.GetComponent<BoxCollider>();
+        coll.enabled = false;
+    }
+
     public void startGoblin(){
         if(isActive == false){
             Debug.Log("Goblin Started");
             isActive = true;
+            coll.enabled = true;
         }
     }
 
@@ -57,6 +66,7 @@ public class Goblin : MonoBehaviour
                 else 
                 {
                     curr = 0;
+                    coll.enabled = false;
                     isActive = false;
                     //transform.position = new Vector3(-27, -2, -2);
                 }

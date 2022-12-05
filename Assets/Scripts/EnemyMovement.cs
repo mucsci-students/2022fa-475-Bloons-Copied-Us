@@ -14,10 +14,15 @@ public class EnemyMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+    
         // Enemy reaches player base
         if (gameObject.transform.position == target[target.Length - 1].position)
         {
-            GameManager.health -= Mathf.CeilToInt(gameObject.GetComponent<EnemyScript>().health);
+            if(Mathf.CeilToInt(gameObject.GetComponent<EnemyScript>().health) > 0)
+            {
+                GameManager.health -= Mathf.CeilToInt(gameObject.GetComponent<EnemyScript>().health);
+               
+            }
             gameObject.GetComponent<EnemyScript>().Die();
         }
 

@@ -22,10 +22,19 @@ public class DogKnight : MonoBehaviour
     public float damage = 2;
     public int price = 350;
 
+    BoxCollider coll;
+
+    //used so dogknight does not attack when not active 
+    private void Awake()
+    {
+        coll = this.GetComponent<BoxCollider>();
+        coll.enabled = false;
+    }
     public void startDogKnight(){
         if(isActive == false){
             Debug.Log("Dogknight Started");
             isActive = true;
+            coll.enabled = true;
         }
     }
 
@@ -58,7 +67,9 @@ public class DogKnight : MonoBehaviour
                 else 
                 {
                     curr = 0;
+                    coll.enabled = false;
                     isActive = false;
+
                     //transform.position = new Vector3(-27, -2, -2);
                 }
             } 

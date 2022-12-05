@@ -69,6 +69,7 @@ public class EnemyScript : MonoBehaviour
         GameManager.money += GameManager.moneyPerKill;
         --WaveManager.enemies;
         GameOver.EnemiesKilled++;
+        
     }
 
 }
