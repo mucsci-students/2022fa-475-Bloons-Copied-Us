@@ -8,9 +8,8 @@ using UnityEngine;
 public enum TargetMode : int
 {
     FIRST = 0,
-    LAST = 1,
-    STRONGEST = 2,
-    AI = 3
+    STRONGEST = 1,
+    AI = 2
 }
 public class TowerScript : MonoBehaviour
 {

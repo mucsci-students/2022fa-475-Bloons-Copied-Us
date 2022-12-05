@@ -33,6 +33,8 @@ public class BallistaTower1Script : MonoBehaviour
             return;
         }
 
+        targetMode = GetComponent<TowerScript>().target;
+
         GameObject first = null;
         GameObject strongest = null;
         GameObject AITarget = null;

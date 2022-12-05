@@ -9,58 +9,22 @@ using static UnityEngine.GraphicsBuffer;
 public class FireModeUI : MonoBehaviour
 {
     [SerializeField] Dropdown Dropdown;
-    TargetMode First = TargetMode.FIRST; // 0 index
-    TargetMode Strongest = TargetMode.STRONGEST; // 1 index
-    TargetMode Optimal = TargetMode.AI; // 2 index
-
-    TargetMode selected;
-
-
-
 
     //called on event selection
     void Update()
     {
         if (TowerInfo.towerGameobject == null) return;
 
-            Dropdown.GetComponentInChildren<Text>().text = TowerInfo.towerGameobject.GetComponent<TowerScript>().target.ToString();
+        Dropdown.GetComponentInChildren<Text>().text = TowerInfo.towerGameobject.GetComponent<TowerScript>().target.ToString();
+        Dropdown.value = (int) TowerInfo.towerGameobject.GetComponent<TowerScript>().target;
+        //Debug.Log(Dropdown.value);
 
     }
 
     public void OnSubmit()
     {
 
-        switch (Dropdown.value)
-        {
-            case 0:
-                   selected = First;
-                break;
-            case 1:
-                   selected = Strongest;
-                break;
-            case 2:
-                selected = Optimal;
-                break;
-            default:
-                break;
-        }
-        //sets the value as dummy value to unselect selected value 
-        Dropdown.value = 3;
-
-        TowerInfo.towerGameobject.GetComponent<TowerScript>().target = selected;
-
-        if(TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Ballista)
-        {
-            TowerInfo.towerGameobject.GetComponent<BallistaTower1Script>().targetMode = selected;
-        }
-        else if (TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Void)
-        {
-            TowerInfo.towerGameobject.GetComponent<PortalTower1Script>().targetMode = selected;
-        }        
-        else if (TowerInfo.towerGameobject.GetComponent<TowerScript>().type == TowerType.Fire)
-        {
-            TowerInfo.towerGameobject.GetComponent<FireTower1Script>().targetMode = selected;
-        }
+        TowerInfo.towerGameobject.GetComponent<TowerScript>().target = (TargetMode) Dropdown.value;
             
     }
 }
