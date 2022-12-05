@@ -16,6 +16,7 @@ public class MainMenuScript : MonoBehaviour
     [SerializeField] private GameObject ControlsScreen;
     [SerializeField] private GameObject HelpScreen;
     [SerializeField] private GameObject SettingsScreen;
+    [SerializeField] private GameObject CreditsScreen;
 
     // Loading
     [SerializeField] GameObject LoadingIcon;
@@ -97,6 +98,12 @@ public class MainMenuScript : MonoBehaviour
         SettingsScreen.SetActive(true);
     }
 
+    public void OpenCreditsScreen()
+    {
+        SetAllInactive();
+        CreditsScreen.SetActive(true);
+    }
+
 
     private void SetAllInactive()
     {
@@ -105,6 +112,7 @@ public class MainMenuScript : MonoBehaviour
         ControlsScreen.SetActive(false);
         HelpScreen.SetActive(false);
         SettingsScreen.SetActive(false);
+        CreditsScreen.SetActive(false);
     }
 
 }
