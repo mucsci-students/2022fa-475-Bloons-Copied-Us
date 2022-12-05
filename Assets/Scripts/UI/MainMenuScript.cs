@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class MainMenuScript : MonoBehaviour
 {
 
@@ -52,8 +56,10 @@ public class MainMenuScript : MonoBehaviour
 
     public void Quit()
     {
-        Application.Quit(); 
+        Application.Quit();
+        #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
 
     public void OpenMainMenu()
