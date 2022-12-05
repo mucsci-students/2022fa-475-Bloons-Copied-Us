@@ -16,13 +16,25 @@ public class DogKnight : MonoBehaviour
     public float distanceTraveled = 0;   
     [SerializeField] int totalStops;
 
+    //public Vector3 startSpot;
+
     public bool isActive = false; 
     public float damage = 2;
+    public int price = 350;
 
     public void startDogKnight(){
         if(isActive == false){
             Debug.Log("Dogknight Started");
             isActive = true;
+        }
+    }
+
+    public void buyKnight(){
+        if(isActive == false){
+            if(GameManager.money > price){
+                GameManager.money -= price;
+                startDogKnight();
+            }
         }
     }
 
@@ -47,7 +59,7 @@ public class DogKnight : MonoBehaviour
                 {
                     curr = 0;
                     isActive = false;
-                    transform.position = new Vector3(-27, -2, -2);
+                    //transform.position = new Vector3(-27, -2, -2);
                 }
             } 
 
@@ -80,7 +92,7 @@ public class DogKnight : MonoBehaviour
 		{
             //Debug.Log("COLLIDER");
 			other.GetComponent<EnemyScript>().TakeDamage(damage);
-            
+            //doorAnimator2.Play("BedDoorOpen", 0);
 			//Destroy (gameObject);
 		}
 	}

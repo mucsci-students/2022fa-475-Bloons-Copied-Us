@@ -14082,7 +14082,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &173357919
 PrefabInstance:
@@ -15087,7 +15087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4383581881925144380, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4383581881925144380, guid: 0016b792c8ab0cc439ab0a2108053da7, type: 3}
       propertyPath: m_AnchorMax.x
@@ -16266,6 +16266,7 @@ MonoBehaviour:
   totalStops: 0
   isActive: 0
   damage: 2
+  price: 350
 --- !u!65 &260471095
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23469,6 +23470,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 234591621522971709, guid: 5fbb4ad6b1c8a7047b5a7275bdc50df5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 852463782}
+    - target: {fileID: 234591621522971709, guid: 5fbb4ad6b1c8a7047b5a7275bdc50df5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: buyGoblin
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fbb4ad6b1c8a7047b5a7275bdc50df5, type: 3}
 --- !u!1001 &392838913
@@ -26836,7 +26845,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &513624649
 PrefabInstance:
@@ -27675,7 +27684,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 25.821001, y: -10.916, z: 0.455}
 --- !u!114 &534669906
 MonoBehaviour:
@@ -39731,7 +39740,7 @@ Transform:
   - {fileID: 63098426}
   - {fileID: 628401073}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &840804056
 PrefabInstance:
@@ -40233,6 +40242,7 @@ MonoBehaviour:
   distanceTraveled: 0
   isActive: 0
   damage: 1
+  price: 200
 --- !u!153 &852463783
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -54849,7 +54859,7 @@ Transform:
   - {fileID: 593605543}
   - {fileID: 95661634}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1290624278
 PrefabInstance:
@@ -59062,7 +59072,7 @@ Transform:
   - {fileID: 791358307}
   - {fileID: 707701975}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1480868018 stripped
 Transform:
@@ -69547,7 +69557,7 @@ Transform:
   - {fileID: 665007026}
   - {fileID: 581512262}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1519280744 stripped
 Transform:
@@ -85152,6 +85162,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 219134689}
     m_Modifications:
+    - target: {fileID: 2177420761776938754, guid: a9ef71ee13ac52d4e87d5686e0745d50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 260471094}
+    - target: {fileID: 2177420761776938754, guid: a9ef71ee13ac52d4e87d5686e0745d50, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: buyKnight
+      objectReference: {fileID: 0}
     - target: {fileID: 2177420761776938756, guid: a9ef71ee13ac52d4e87d5686e0745d50, type: 3}
       propertyPath: m_Name
       value: DogKnightButton 1

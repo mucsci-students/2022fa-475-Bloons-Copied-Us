@@ -14,14 +14,26 @@ public class Goblin : MonoBehaviour
     public float speed = 3;
     private int curr;
     public float distanceTraveled = 0;
+
+    //public Vector3 startSpot;
     
     public bool isActive = false;
     public float damage = 1;
+    public int price = 200;
 
     public void startGoblin(){
         if(isActive == false){
             Debug.Log("Goblin Started");
             isActive = true;
+        }
+    }
+
+    public void buyGoblin(){
+        if(isActive == false){
+            if(GameManager.money > price){
+                GameManager.money -= price;
+                startGoblin();
+            }
         }
     }
 
@@ -46,7 +58,7 @@ public class Goblin : MonoBehaviour
                 {
                     curr = 0;
                     isActive = false;
-                    transform.position = new Vector3(-27, -2, -2);
+                    //transform.position = new Vector3(-27, -2, -2);
                 }
             } 
 

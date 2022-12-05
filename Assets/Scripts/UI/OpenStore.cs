@@ -63,7 +63,7 @@ public class OpenStore : MonoBehaviour
         bool check = StoreHelper(MultiBallistaPrice);
         if (!check) return;
         tower = MultiBallista;
-        towerprice = BallistaPrice;
+        towerprice = MultiBallistaPrice;
     }
     public void Buyfiretower()
     {
