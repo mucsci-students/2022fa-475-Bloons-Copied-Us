@@ -52,8 +52,8 @@ public class TowerInfo : MonoBehaviour
     public TowerInformation PortalTower3 = new("PortalTower", 3, 7, 35, .75f, 999999, 300);
 
     // fire tower objects
-    public TowerInformation FireTower1 = new("FireTower", 1, 3, 25, 1.5f, 450, 113);
-    public TowerInformation FireTower2 = new("FireTower", 2, 4, 27.5f, 1.5f, 900, 225);
+    public TowerInformation FireTower1 = new("FireTower", 1, 3, 25, 1.5f, 450, 338);
+    public TowerInformation FireTower2 = new("FireTower", 2, 4, 27.5f, 1.5f, 1200, 900);
     public TowerInformation FireTower3 = new("FireTower", 3, 5, 30, 1.5f, 999999, 414);
     //continue with towers
 
