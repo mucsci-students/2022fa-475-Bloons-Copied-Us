@@ -50,12 +50,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   events:
   - spawnInfos:
     - spawnPrefab: {fileID: 1361258479823291120, guid: 91f0502ecb3481f4aa80beca89ece007, type: 3}
@@ -875,3 +869,4 @@ MonoBehaviour:
       amount: 2000
       interval: 0.1
       timeToStart: 26
+  Death: {fileID: 0}
