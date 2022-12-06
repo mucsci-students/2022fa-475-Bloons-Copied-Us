@@ -17,18 +17,17 @@ public class GameManager : MonoBehaviour
     public static int money = 100;
     public static int moneyPerKill = 5;
     public static int health;
-    //deprecated?
-    public bool camOn = false;
+
 
     [SerializeField] TextMeshProUGUI HealthBar;
     [SerializeField] TextMeshProUGUI MoneyUI;
 
-    private int startMoney;
+    private int startMoney = 100;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        startMoney = money;
+       
         health = (100 / ((int)choice));
         OnRestart();
 
@@ -74,5 +73,7 @@ public class GameManager : MonoBehaviour
         GameOver.isDead = false;
         WaveManager.WaveNumber = 0;
         GameManager.money = startMoney;
+        Pause.isPaused = false;
+        WaveManager.enemies = 0;
     }
 }
