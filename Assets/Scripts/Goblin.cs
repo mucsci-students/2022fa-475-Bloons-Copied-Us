@@ -14,15 +14,15 @@ public class Goblin : MonoBehaviour
     public float speed = 3;
     private int curr;
     public float distanceTraveled = 0;
-
-    //public Vector3 startSpot;
     
     public bool isActive = false;
     public float damage = 1;
     public int price = 200;
 
+    private Animator anim;
+
     BoxCollider coll;
-    
+
     void Awake()
     {
         coll = this.GetComponent<BoxCollider>();
@@ -30,10 +30,13 @@ public class Goblin : MonoBehaviour
     }
 
     public void startGoblin(){
+        anim = gameObject.GetComponent<Animator>();
+
         if(isActive == false){
             Debug.Log("Goblin Started");
             isActive = true;
             coll.enabled = true;
+            anim.Play("Move01");
         }
     }
 
@@ -66,9 +69,8 @@ public class Goblin : MonoBehaviour
                 else 
                 {
                     curr = 0;
-                    coll.enabled = false;
                     isActive = false;
-                    //transform.position = new Vector3(-27, -2, -2);
+                    coll.enabled = false;
                 }
             } 
 
@@ -101,7 +103,7 @@ public class Goblin : MonoBehaviour
 		{
             //Debug.Log("COLLIDER");
 			other.GetComponent<EnemyScript>().TakeDamage(damage);
-            
+            anim.Play("Attack01");
 			//Destroy (gameObject);
 		}
 	}

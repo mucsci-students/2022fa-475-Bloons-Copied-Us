@@ -14,13 +14,12 @@ public class DogKnight : MonoBehaviour
     public float speed = 1;
     private int curr;
     public float distanceTraveled = 0;   
-    [SerializeField] int totalStops;
-
-    //public Vector3 startSpot;
 
     public bool isActive = false; 
     public float damage = 2;
-    public int price = 350;
+    public int price = 350; 
+
+    private Animator anim;
 
     BoxCollider coll;
 
@@ -30,11 +29,15 @@ public class DogKnight : MonoBehaviour
         coll = this.GetComponent<BoxCollider>();
         coll.enabled = false;
     }
+
     public void startDogKnight(){
+        anim = gameObject.GetComponent<Animator>();
+    
         if(isActive == false){
             Debug.Log("Dogknight Started");
             isActive = true;
             coll.enabled = true;
+            anim.Play("WalkForwardBattle");
         }
     }
 
@@ -67,10 +70,8 @@ public class DogKnight : MonoBehaviour
                 else 
                 {
                     curr = 0;
-                    coll.enabled = false;
                     isActive = false;
-
-                    //transform.position = new Vector3(-27, -2, -2);
+                    coll.enabled = false;
                 }
             } 
 
@@ -103,13 +104,8 @@ public class DogKnight : MonoBehaviour
 		{
             //Debug.Log("COLLIDER");
 			other.GetComponent<EnemyScript>().TakeDamage(damage);
-            //doorAnimator2.Play("BedDoorOpen", 0);
-			//Destroy (gameObject);
+            anim.Play("Attack02");
 		}
 	}
-
-
-
-
 
 }
