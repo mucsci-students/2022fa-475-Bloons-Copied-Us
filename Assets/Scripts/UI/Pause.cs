@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using JetBrains.Annotations;
+using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
@@ -35,7 +36,18 @@ public class Pause : MonoBehaviour
         }
 
     }
-       
+    public void Menu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void Quit()
+    {
+        Application.Quit();
+    #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+    #endif
+    }
+
     public void LateUpdate()
     {
         // Debug.Log(timeSlider.value);
