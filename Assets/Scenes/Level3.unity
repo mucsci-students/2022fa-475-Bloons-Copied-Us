@@ -16795,7 +16795,7 @@ MonoBehaviour:
   distanceTraveled: 0
   InsuffFundsMessage: {fileID: 39304787}
   isActive: 0
-  damage: 2
+  damage: 5
   price: 350
 --- !u!65 &260471095
 BoxCollider:
@@ -40945,7 +40945,7 @@ MonoBehaviour:
   distanceTraveled: 0
   InsuffFundsMessage: {fileID: 869786756}
   isActive: 0
-  damage: 1
+  damage: 4
   price: 200
 --- !u!153 &852463783
 ConfigurableJoint:
