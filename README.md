@@ -48,6 +48,7 @@ CAMERA MUST BE ENABLED FOR THIS TO WORK. IF UNWANTED PRESS THE INGAME CAMERA BUT
 
 ### Other
   - Space = Starts first wave
+  - ESC = Toggle pause in game
 
 ## Credits
 
@@ -55,6 +56,4 @@ CAMERA MUST BE ENABLED FOR THIS TO WORK. IF UNWANTED PRESS THE INGAME CAMERA BUT
   - [Justin Stevens](https://github.com/JSteve0)
   - [Jon](https://github.com/CodeDog3)
   - [Christian](https://github.com/christianxxgames)
-
-### Assets
 
