@@ -1,6 +1,25 @@
 # 2022fa-475-Bloons-Copied-Us
 3D Tower Defense game with a low poly setting. Built in 3 weeks for game 3 (final) for the game dev course.
 
+## Downloading
+
+### Windows
+
+1. [Download the .zip file](https://drive.google.com/drive/folders/1T6REytQo4Yebr2vUg5wndTpBUIW5AJV3)
+2. Unzip the file through file explorer
+3. Run BloonsCopiedUs.exe by double clicking
+4. Enjoy!
+
+### Mac
+
+1. [Download the .zip file]
+2. Unzip it, either in finder or by navigating to the folder you downloaded it with the terminal: ```unzip ```
+3. If you haven't already, open a terminal session and navigate to the folder where you downloaded it. Run this command to set the executable permissions: ```chmod a+x xxx.app ```
+5. Double click to try and open. Mac will give you a security error.
+6. Navigate to System Preferences > Security and Privacy > General tab. 
+7. At the bottom there should be a button for an app you tried to recently open, BloonsCopiedUsMac. Click run anyways.
+8. Enjoy!
+
 ## Controls
 
 Camera Controls are identcial to the controls in Unity's 3D editor and are largely dependent on the camera direction.
