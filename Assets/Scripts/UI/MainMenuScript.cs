@@ -1,7 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -20,6 +20,10 @@ public class MainMenuScript : MonoBehaviour
 
     // Loading
     [SerializeField] GameObject LoadingIcon;
+
+    // Settings
+    [SerializeField] TMPro.TMP_Dropdown Resolution;
+    [SerializeField] Toggle Fullscreen;
 
     // Start is called before the first frame update
     void Start()
@@ -102,6 +106,29 @@ public class MainMenuScript : MonoBehaviour
     {
         SetAllInactive();
         CreditsScreen.SetActive(true);
+    }
+
+    public void ResolutionChange()
+    {
+        if (Resolution.value == 0)
+        {
+            Screen.SetResolution(1366, 768, Fullscreen.isOn, 0);
+        } if (Resolution.value == 1)
+        {
+            Screen.SetResolution(1920, 1080, Fullscreen.isOn, 0);
+        } else if (Resolution.value == 2)
+        {
+            Screen.SetResolution(2560, 1440, Fullscreen.isOn, 0);
+        }
+        else if (Resolution.value == 3)
+        {
+            Screen.SetResolution(3840, 2160, Fullscreen.isOn, 0);
+        }
+    }
+
+    public void FullscreenChange()
+    {
+        Screen.fullScreen = Fullscreen.isOn; 
     }
 
 
