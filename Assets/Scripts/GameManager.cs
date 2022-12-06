@@ -20,12 +20,15 @@ public class GameManager : MonoBehaviour
     //deprecated?
     public bool camOn = false;
 
-    [SerializeField] TextMeshProUGUI HelathBar;
+    [SerializeField] TextMeshProUGUI HealthBar;
     [SerializeField] TextMeshProUGUI MoneyUI;
+
+    private int startMoney;
 
     // Start is called before the first frame update
     void Start()
     {
+        startMoney = money;
         health = (100 / ((int)choice));
         OnRestart();
 
@@ -58,7 +61,7 @@ public class GameManager : MonoBehaviour
             }
         //********************************************
 
-        HelathBar.SetText("Health: " + health);
+        HealthBar.SetText("Health: " + health);
         MoneyUI.SetText("Money: " + money);
 
     }
@@ -69,6 +72,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         GameOver.isDead = false;
         WaveManager.WaveNumber = 0;
-        GameManager.money = 500;
+        GameManager.money = startMoney;
     }
 }
