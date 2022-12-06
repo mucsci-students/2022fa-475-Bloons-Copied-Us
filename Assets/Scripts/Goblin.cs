@@ -15,6 +15,8 @@ public class Goblin : MonoBehaviour
     private int curr;
     public float distanceTraveled = 0;
     
+    [SerializeField] GameObject InsuffFundsMessage;
+
     public bool isActive = false;
     public float damage = 1;
     public int price = 200;
@@ -46,7 +48,18 @@ public class Goblin : MonoBehaviour
                 GameManager.money -= price;
                 startGoblin();
             }
+            else{
+                StartCoroutine(Waiter(1f));
+            }
         }
+    }
+
+    IEnumerator Waiter(float time)
+    {
+        Debug.Log("INSUFF");
+        InsuffFundsMessage.SetActive(true);
+        yield return new WaitForSeconds(time);
+        InsuffFundsMessage.SetActive(false);
     }
 
     void FixedUpdate()
