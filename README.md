@@ -54,6 +54,6 @@ CAMERA MUST BE ENABLED FOR THIS TO WORK. IF UNWANTED PRESS THE INGAME CAMERA BUT
 
 ### Authors
   - [Justin Stevens](https://github.com/JSteve0)
-  - [Jon](https://github.com/CodeDog3)
+  - [Jon Brennan](https://github.com/CodeDog3)
   - [Christian](https://github.com/christianxxgames)
 
