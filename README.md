@@ -12,9 +12,9 @@
 
 ### Mac
 
-1. [Download the .zip file]
+1. [Download the .zip file](https://drive.google.com/drive/folders/1DRfLHW5C1RFm44G8Oj2-NrGHHerGqqkS)
 2. Unzip it, either in finder or by navigating to the folder you downloaded it with the terminal: ```unzip ```
-3. If you haven't already, open a terminal session and navigate to the folder where you downloaded it. Run this command to set the executable permissions: ```chmod a+x xxx.app ```
+3. If you haven't already, open a terminal session and navigate to the folder where you downloaded it. Run this command to set the executable permissions: ```chmod a+x BloonsCopiedUs.app ```
 5. Double click to try and open. Mac will give you a security error.
 6. Navigate to System Preferences > Security and Privacy > General tab. 
 7. At the bottom there should be a button for an app you tried to recently open, BloonsCopiedUsMac. Click run anyways.
