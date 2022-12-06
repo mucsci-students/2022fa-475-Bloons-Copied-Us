@@ -13,7 +13,9 @@ public class DogKnight : MonoBehaviour
     public Transform[] target;
     public float speed = 1;
     private int curr;
-    public float distanceTraveled = 0;   
+    public float distanceTraveled = 0;  
+
+    [SerializeField] GameObject InsuffFundsMessage; 
 
     public bool isActive = false; 
     public float damage = 2;
@@ -47,7 +49,18 @@ public class DogKnight : MonoBehaviour
                 GameManager.money -= price;
                 startDogKnight();
             }
+            else{
+                StartCoroutine(Waiter(1f));
+            }
         }
+    }
+
+    IEnumerator Waiter(float time)
+    {
+        Debug.Log("INSUFF");
+        InsuffFundsMessage.SetActive(true);
+        yield return new WaitForSeconds(time);
+        InsuffFundsMessage.SetActive(false);
     }
 
     void FixedUpdate()
