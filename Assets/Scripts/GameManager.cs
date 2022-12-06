@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     Pause.PauseMenu.SetActive(false);
+                    Pause.OptionsMenu.SetActive(false);
                     Time.timeScale = Pause.TimeSliderGet;
                     Pause.isPaused = !Pause.isPaused;
                 }

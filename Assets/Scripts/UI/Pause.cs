@@ -12,12 +12,15 @@ public class Pause : MonoBehaviour
     public Slider timeSlider;
     public TextMeshProUGUI sliderspeed;
     [SerializeField] GameObject PauseScreen;
+    [SerializeField] GameObject OptionsScreen;
     public static float TimeSliderGet;
     public static GameObject PauseMenu;
+    public static GameObject OptionsMenu;
 
     void Awake()
     {
         PauseMenu = PauseScreen;
+        OptionsMenu = OptionsScreen;
     }
     public void pauseGame()
     {
@@ -46,6 +49,16 @@ public class Pause : MonoBehaviour
     #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
     #endif
+    }
+    public void Options()
+    {
+        PauseScreen.SetActive(false);
+        OptionsScreen.SetActive(true);
+    }
+    public void Return()
+    {
+        OptionsScreen.SetActive(false);
+        PauseScreen.SetActive(true);
     }
 
     public void LateUpdate()
