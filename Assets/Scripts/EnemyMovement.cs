@@ -4,12 +4,14 @@ public class EnemyMovement : MonoBehaviour
 {
     public Transform[] target;
     public float speed;
-    private int curr;
+    public int curr;
     public float distanceTraveled = 0;
+    public Vector3 start;
 
     void Start()
     {
         GetComponent<Rigidbody>().isKinematic = true;
+        start = transform.position;
     }
 
     void FixedUpdate()
@@ -41,5 +43,16 @@ public class EnemyMovement : MonoBehaviour
         distanceTraveled += Vector3.Distance(previousPos, pos);
         transform.position = pos;
 
+    }
+
+    public Vector3 LastPosition()
+    {
+        if (curr == 0)
+        {
+            return start;
+        } else
+        {
+            return target[curr - 1].position;
+        }
     }
 }
