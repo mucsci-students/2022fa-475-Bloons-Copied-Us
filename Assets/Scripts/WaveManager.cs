@@ -19,6 +19,8 @@ public class WaveManager : MonoBehaviour
     private bool betweenRounds = false;
     private bool autoPlay = false;
 
+    [SerializeField] AudioSource Death;
+
     public void StartWave()
     {
         isPlaying = true;
@@ -43,7 +45,7 @@ public class WaveManager : MonoBehaviour
         if (!isPlaying)
             return;
 
-        if (!betweenRounds && !events[0].RunEvent(path, spawn) && enemies == 0)
+        if (!betweenRounds && !events[0].RunEvent(path, spawn, Death) && enemies == 0)
         {
             Debug.Log("Wave Ended");
             events.RemoveAt(0);
@@ -92,14 +94,14 @@ public class WaveManager : MonoBehaviour
             return enemies;
         }
 
-        public bool RunEvent(Transform[] path, Transform spawn)
+        public bool RunEvent(Transform[] path, Transform spawn, AudioSource Death)
         {
             if (spawnInfos.Count == 0)
                 return false;
 
             for (int i = 0; i < spawnInfos.Count; i++)
             {
-                spawnInfos[i].ReadyToSpawn(path, spawn);
+                spawnInfos[i].ReadyToSpawn(path, spawn, Death);
 
                 if (spawnInfos[i].amount == 0)
                 {
@@ -131,7 +133,7 @@ public class WaveManager : MonoBehaviour
                     spawnInstant = false;
             }
 
-            public void ReadyToSpawn(Transform[] path, Transform spawn)
+            public void ReadyToSpawn(Transform[] path, Transform spawn, AudioSource Death)
             {
                 if (Time.time - startTime < timeToStart)
                     return;
@@ -142,6 +144,8 @@ public class WaveManager : MonoBehaviour
                     temp.transform.position = spawn.position;
                     temp.transform.rotation = spawn.rotation;
                     temp.GetComponent<EnemyMovement>().target = path;
+                    temp.GetComponent<EnemyScript>().Death = Death;
+
                     --amount;
                     lastTime = Time.time;
                     spawnInstant = false;

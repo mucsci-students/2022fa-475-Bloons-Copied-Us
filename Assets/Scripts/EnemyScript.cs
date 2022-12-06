@@ -25,7 +25,7 @@ public class EnemyScript : MonoBehaviour
 {
 
     public float health;
-    [SerializeField] AudioSource Death;
+    public AudioSource Death;
     // types of slimes 
     //public Enemy NormalSlime = new Enemy("Normal_slime", 3, Color.WHITE, Ability.DEFAULT);
     //public Enemy HelmetSlime = new Enemy("Helmet_slime", 3, Color.WHITE, Ability.DEFAULT);
@@ -42,7 +42,7 @@ public class EnemyScript : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        //Death = FindObjectOfType<AudioSource>();
+        Death = FindObjectOfType<AudioSource>();
     }
 
     // Update is called once per frame
@@ -56,7 +56,7 @@ public class EnemyScript : MonoBehaviour
     public void Die()
     {
         Destroy(gameObject);
-        //Death.Play();
+        Death.Play();
     }
 
     public void TakeDamage(float damage)
