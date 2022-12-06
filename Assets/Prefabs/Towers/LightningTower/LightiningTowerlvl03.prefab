@@ -15154,5 +15154,5 @@ MonoBehaviour:
   GroundBelow: {fileID: 0}
   type: 3
   target: 0
-  level: 1
+  level: 3
   IsPlaced: 0

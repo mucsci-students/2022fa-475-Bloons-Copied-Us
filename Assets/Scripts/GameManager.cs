@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI HealthBar;
     [SerializeField] TextMeshProUGUI MoneyUI;
 
-    private int startMoney = 100;
+    private int startMoney = 3000;
 
     // Start is called before the first frame update
     void Awake()

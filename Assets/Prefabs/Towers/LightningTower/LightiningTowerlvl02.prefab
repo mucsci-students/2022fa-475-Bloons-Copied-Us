@@ -14889,7 +14889,7 @@ MonoBehaviour:
   GroundBelow: {fileID: 0}
   type: 3
   target: 0
-  level: 1
+  level: 2
   IsPlaced: 0
 --- !u!135 &8357709939380049525
 SphereCollider:
