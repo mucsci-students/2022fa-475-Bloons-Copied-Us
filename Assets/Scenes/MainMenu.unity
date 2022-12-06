@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3525,7 +3525,8 @@ MonoBehaviour:
     of camera direction\n\tR - Resets camera to initial position\n\tO - Toggles orthographic
     camera mode (default = perspective)\n\t1 - Move camera to top down view\n\t2
     - Move camera to enemy base view\n\t3 - Move camera to ally base view\n\nOther:\n\tSpace
-    - Starts first wave and immediatily starts next wave during between wave cooldown\n"
+    - Starts first wave and immediatily starts next wave during between wave cooldown\n\tESC
+    - Toggles pause menu in game\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
