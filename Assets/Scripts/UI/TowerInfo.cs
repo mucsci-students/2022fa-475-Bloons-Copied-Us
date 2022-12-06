@@ -29,6 +29,9 @@ public class TowerInfo : MonoBehaviour
     [SerializeField] GameObject FirePrefab2;
     [SerializeField] GameObject FirePrefab3;
 
+    [SerializeField] GameObject ZapPrefab2;
+    [SerializeField] GameObject ZapPrefab3;
+
     string Towertext;
     string TowertextUpgrade;
 
@@ -52,9 +55,14 @@ public class TowerInfo : MonoBehaviour
     public TowerInformation PortalTower3 = new("PortalTower", 3, 7, 35, .75f, 999999, 300);
 
     // fire tower objects
-    public TowerInformation FireTower1 = new("FireTower", 1, 3, 25, 1.5f, 450, 338);
-    public TowerInformation FireTower2 = new("FireTower", 2, 4, 27.5f, 1.5f, 1200, 900);
-    public TowerInformation FireTower3 = new("FireTower", 3, 5, 30, 1.5f, 999999, 414);
+    public TowerInformation FireTower1 = new("FireTower", 1, 3, 25, 1.5f, 450, 113);
+    public TowerInformation FireTower2 = new("FireTower", 2, 4, 27.5f, 1.5f, 1200, 338);
+    public TowerInformation FireTower3 = new("FireTower", 3, 5, 30, 1.5f, 999999, 900);
+
+    // zap tower objects 
+    public TowerInformation ZapTower1 = new("ZapTower", 1, 1, 30f, 1f, 500, 150);
+    public TowerInformation ZapTower2 = new("ZapTower", 2, 2, 30f, 1f, 1500, 375);
+    public TowerInformation ZapTower3 = new("ZapTower", 3, 3, 30f, 1f, 999999, 1125);
     //continue with towers
 
 
@@ -78,6 +86,9 @@ public class TowerInfo : MonoBehaviour
         //Fire
         else if (tower.type == TowerScript.TowerType.Fire && tower.level == 1) UpgradeTowerHelper(FireTower1, FirePrefab2);
         else if (tower.type == TowerScript.TowerType.Fire && tower.level == 2) UpgradeTowerHelper(FireTower2, FirePrefab3);
+        //Zap
+        else if (tower.type == TowerScript.TowerType.Lightning && tower.level == 1) UpgradeTowerHelper(ZapTower1, ZapPrefab2);
+        else if (tower.type == TowerScript.TowerType.Lightning && tower.level == 2) UpgradeTowerHelper(ZapTower2, ZapPrefab3);
         TowerInfoClose();
     }
 
@@ -114,6 +125,15 @@ public class TowerInfo : MonoBehaviour
                 break;
             case "FireTowerlvl03(Clone)":
                 GameManager.money += FireTower3.sell;
+                break;
+            case "LightiningTowerlvl01(Clone)":
+                GameManager.money += ZapTower1.sell;
+                break;
+            case "LightiningTowerlvl02(Clone)":
+                GameManager.money += ZapTower2.sell;
+                break;
+            case "LightiningTowerlvl03(Clone)":
+                GameManager.money += ZapTower3.sell;
                 break;
             default:
                 flag = false;
@@ -228,6 +248,23 @@ public class TowerInfo : MonoBehaviour
         {
             SetTowerStatsMax(PortalTower3);
             TowerImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Towers3/PortalTower3");
+        }
+
+        // ZapTower Selection
+        else if (towerSelected == "LightiningTowerlvl01(Clone)")
+        {
+            SetTowerStats(ZapTower1, ZapTower2);
+            TowerImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Towers1/LightningTower1");
+        }
+        else if (towerSelected == "LightiningTowerlvl02(Clone)")
+        {
+            SetTowerStats(ZapTower2, ZapTower3);
+            TowerImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Towers2/LightningTower2");
+        }
+        else if (towerSelected == "LightiningTowerlvl03(Clone)")
+        {
+            SetTowerStatsMax(ZapTower3);
+            TowerImage.GetComponent<Image>().sprite = Resources.Load<Sprite>("Towers3/LightningTower3");
         }
         // Other tower continue from here
         //************************************************************************************************

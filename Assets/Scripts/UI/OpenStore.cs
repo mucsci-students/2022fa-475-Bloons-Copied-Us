@@ -22,7 +22,7 @@ public class OpenStore : MonoBehaviour
     int MultiBallistaPrice = 85;
     int FireTowerPrice = 150;
     int IceTowerPrice = 140;
-    int LightningTowerPrice = 160;
+    int LightningTowerPrice = 200;
     int PortalTowerPrice = 100;
 
     public static bool isStoreOpen = false;

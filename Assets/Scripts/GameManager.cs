@@ -69,6 +69,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         GameOver.isDead = false;
         WaveManager.WaveNumber = 0;
-        GameManager.money = 100;
+        GameManager.money = 500;
     }
 }
